@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe Purchase, type: :model do
-    let(:valid_attributes) { { 'author' => @user, 'name' => 'Apples', 'amount' => 2 } }
+  let(:valid_attributes) { { 'author' => @user, 'name' => 'Apples', 'amount' => 2 } }
   let(:no_name) { { 'author' => @user, 'amount' => 2 } }
   let(:no_author) { { 'name' => 'Apples', 'amount' => 2 } }
   let(:name_too_long) { { 'author' => @user, 'name' => 'A' * 37, 'amount' => 2 } }

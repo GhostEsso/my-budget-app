@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe Group, type: :model do
-    let(:valid_attributes) { { 'user' => @user, 'name' => 'Food', 'icon' => 'missing_avatar.png' } }
+  let(:valid_attributes) { { 'user' => @user, 'name' => 'Food', 'icon' => 'missing_avatar.png' } }
   let(:no_name) { { 'user' => @user, 'icon' => 'missing_avatar.png' } }
   let(:no_user) { { 'name' => 'Food', 'icon' => 'missing_avatar.png' } }
   let(:name_too_long) { { 'user' => @user, 'name' => 'A' * 37, 'icon' => 'missing_avatar.png' } }
