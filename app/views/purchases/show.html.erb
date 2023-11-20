@@ -1,1 +1,11 @@
-<h1>Show purchase details</h1>
+<div>
+  <%= link_to group_purchases_path(params[:group_id]) do %>
+    <%= inline_svg_tag "chevron_left.svg", class: "chevron" %>
+  <% end %>
+</div>
+
+<h1>details</h1>
+<span><%= @purchase.name %></span>
+<span><%= @purchase.amount %></span>
+
+<%= link_to "edit", edit_group_purchase_path(params[:group_id], @purchase) %>
