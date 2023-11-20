@@ -1,1 +1,20 @@
-<h1>List purchases</h1>
+<div class="p-16">
+  <%= link_to groups_path do %>
+    <%= inline_svg_tag "chevron_left.svg", class: "chevron" %>
+  <% end %>
+</div>
+
+<h1>Purchases <%= @group.name %></h1>
+<span>Total amount: <%= total_amount(@group) %> </span>
+<ul>
+  <% @purchases.each do |purchase| %>
+    <li>
+      <%= link_to group_purchase_url(params[:group_id], purchase) do %>
+        <span><%= purchase.name %></span>
+        <span><%= purchase.amount %></span>
+      <% end %>
+    </li>
+  <% end %>
+</ul>
+
+<%= link_to "add transaction", new_group_purchase_path %>
