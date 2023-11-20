@@ -8,9 +8,9 @@
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
 
-user1 = User.create(name: 'Tom')
-user2 = User.create(name: 'Alan')
-user3 = User.create(name: 'Lily')
+user1 = User.create(name: 'Tom', email: 'tom@example.com', password: 'topsecret')
+user2 = User.create(name: 'Alan', email: 'alan@example.com', password: 'topsecret')
+user3 = User.create(name: 'Lily', email: 'lily@example.com', password: 'topsecret')
 
 group1 = Group.create(user: user1, name: 'Lunches', icon: 'missing_avatar.png')
 group2 = Group.create(user: user1, name: 'Cosmetics', icon: 'missing_avatar.png')
