@@ -15,17 +15,17 @@ class PurchasesController < ApplicationController
     # La quantité dépend du nombre de groupes de l'utilisateur actuel
     @groups.size.times { @purchase.group_purchases.build }
   end
-  
+
   def create
     @purchase = current_user.purchases.new(purchase_params)
-  
+
     if @purchase.save
       redirect_to group_purchases_path(params[:group_id]), success: 'Purchase was successfully created!'
     else
       @groups = current_user.groups
       render :new, alert: 'Failed to create purchase!'
     end
-  end  
+  end
 
   def edit; end
 

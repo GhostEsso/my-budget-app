@@ -38,7 +38,6 @@ class GroupsController < ApplicationController
     redirect_to groups_url
   end
 
-
   def group_params
     params.require(:group).permit(:name, :icon)
   end
