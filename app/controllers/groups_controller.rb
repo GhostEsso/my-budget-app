@@ -11,5 +11,16 @@ class GroupsController < ApplicationController
 
   def update; end
 
-  def delete; end
+  def destroy
+    @group = Group.find_by(id: params[:id])
+
+    if @group.nil?
+      flash[:error] = 'Category not found or already deleted.'
+    else
+      @group.destroy
+      flash[:success] = 'Category has been successfully deleted!'
+    end
+
+    redirect_to groups_url
+  end
 end

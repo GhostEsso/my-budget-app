@@ -14,5 +14,16 @@ class PurchasesController < ApplicationController
 
   def update; end
 
-  def delete; end
+  def destroy
+    @purchase = Purchase.find_by(id: params[:id])
+  
+    if @purchase.nil?
+      flash[:error] = 'Transaction not found or already deleted.'
+    else
+      @purchase.destroy
+      flash[:success] = 'Transaction has been successfully deleted!'
+    end
+  
+    redirect_to group_purchases_url(params[:group_id])
+  end  
 end
