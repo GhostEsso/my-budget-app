@@ -1,1 +1,23 @@
-<h1>List groups🤓</h1>
+<section>
+  <h1>categories</h1>
+</section>
+
+<section>
+  <ul>
+    <% @groups.each do |group| %>
+      <% total_amount = total_amount(group) %>
+      <li>
+        <%= link_to group_purchases_url(group) do %>
+          <%= image_tag(group.icon, height: '32', width: '32', class: 'icon', alt: 'group_icon') %>
+          <span><%= group.name %></span>
+          <br>
+          <span>Transactions: <%= total_amount %></span>
+        <% end %>
+      </li>
+    <% end %>
+  </ul>
+</section>
+
+<section>
+  <%= link_to "add category", new_group_path %>
+</section>

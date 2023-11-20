@@ -1,1 +1,32 @@
-<h1>List purchases</h1>
+<section>
+  <%= link_to groups_path do %>
+    <%= inline_svg_tag "chevron_left.svg", class: "chevron" %>
+  <% end %>
+  <h1>transactions</h1>
+</section>
+
+<section>
+  <div>
+    <span><%= @group.name %></span>
+    <span>Total amount: <%= total_amount(@group) %> </span>
+  </div>
+
+  <% if @purchases.empty? %>
+    <%= button_to "delete", {:controller => :groups, :action => 'destroy', :id => @group.id }, :method => :delete %>
+  <% end %>
+
+  <ul>
+    <% @purchases.each do |purchase| %>
+      <li>
+        <%= link_to group_purchase_url(@group, purchase) do %>
+          <span><%= purchase.name %></span>
+          <span><%= purchase.amount %></span>
+        <% end %>
+      </li>
+    <% end %>
+  </ul>
+</section>
+
+<section>
+  <%= link_to "add transaction", new_group_purchase_path %>
+</section>

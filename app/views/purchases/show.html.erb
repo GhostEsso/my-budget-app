@@ -1,1 +1,15 @@
-<h1>Show purchase details</h1>
+<section>
+  <%= link_to group_purchases_path(params[:group_id]) do %>
+    <%= inline_svg_tag "chevron_left.svg", class: "chevron" %>
+  <% end %>
+  <h1>details</h1>
+</section>
+
+<section>
+  <span><%= @purchase.name %></span>
+  <span><%= @purchase.amount %></span>
+
+<section>
+  <%= link_to "edit", edit_group_purchase_path(params[:group_id], @purchase) %>
+  <%= button_to "delete",  {:controller => :purchases, :action => 'destroy'}, method: :delete %>
+</section>
