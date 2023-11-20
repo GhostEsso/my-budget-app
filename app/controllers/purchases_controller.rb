@@ -1,7 +1,12 @@
 class PurchasesController < ApplicationController
-  def index; end
+  def index
+    @group = Group.find(params[:group_id])
+    @purchases = @group.purchases.order(id: :desc)
+  end
 
-  def show; end
+  def show
+    @purchase = Purchase.find(params[:id])
+  end
 
   def new; end
 
