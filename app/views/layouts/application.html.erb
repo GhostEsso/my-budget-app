@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>MyBudgetApp</title>
+    <title>My Budget App 💸</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -10,6 +10,34 @@
   </head>
 
   <body>
+  <header>
+  <nav>
+    <div class='user_info'>
+      <span>Username</span>
+      <br>
+      <span>Email</span>
+    </div>
+    <ul> 
+      <li>Account settings</li>
+      <li>All purchases</li>
+      <li>About</li>
+      <li>
+        <% if current_user %>
+          <%= link_to "Sign out", destroy_user_session_path, 
+          'data-turbo-method': :delete %>
+        <% else %>
+          <%= link_to "Log in", new_user_session_path %>
+        <% end %>
+      </li>
+    </ul>
+  <nav>
+</header>
+
+  <main>
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+
     <%= yield %>
+  </main>
   </body>
 </html>
