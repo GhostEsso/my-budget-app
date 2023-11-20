@@ -1,0 +1,2 @@
+class GroupPurchasesController < ApplicationController
+end
