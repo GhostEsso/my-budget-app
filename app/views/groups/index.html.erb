@@ -8,7 +8,7 @@
       <% total_amount = total_amount(group) %>
       <li>
         <%= link_to group_purchases_url(group) do %>
-          <%= image_tag(group.icon, height: '32', width: '32', class: 'icon', alt: 'group_icon') %>
+          <%= image_tag(check_url(group.icon), height: '32', width: '32', class: 'icon', alt: 'group_icon') %>
           <span><%= group.name %></span>
           <br>
           <span>Transactions: <%= total_amount %></span>

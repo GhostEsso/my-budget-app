@@ -5,7 +5,21 @@ class GroupsController < ApplicationController
 
   def show; end
 
-  def new; end
+  def new
+    @group = Group.new
+  end
+
+  def create
+    @group = current_user.groups.build(group_params)
+
+    if @group.save
+      flash[:success] = 'Category created successfully!'
+      redirect_to group_purchases_path(@group)
+    else
+      flash.now[:alert] = 'Something went wrong!'
+      render :new
+    end
+  end
 
   def edit; end
 
@@ -22,5 +36,9 @@ class GroupsController < ApplicationController
     end
 
     redirect_to groups_url
+  end
+
+  def group_params
+    params.require(:group).permit(:name, :icon)
   end
 end

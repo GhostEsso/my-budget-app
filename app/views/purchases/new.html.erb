@@ -1,1 +1,31 @@
-<h1>Create new purchase</h1>
+<section>
+  <%= link_to group_purchases_path(params[:group_id]) do %>
+    <%= inline_svg_tag "chevron_left.svg", class: "chevron" %>
+  <% end %>
+  <h1>new transaction</h1>
+</section>
+
+<%= form_with(url: group_purchases_path, model: @purchase, class: 'form') do |f| %>
+  <div class="field">
+    <%= f.label :name, "Name:" %><br />
+    <%= f.text_field :name, autofocus: true, autocomplete: "name" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :amount, "Amount:" %><br />
+    <%= f.text_field :amount, autofocus: true, autocomplete: "amount" %>
+  </div>
+
+  <%= f.fields_for :group_purchases do |group_builder| %>
+  <%= group_builder.collection_select :group_id, @groups, :id, :name, :include_hidden => false %>
+    <%# group_builder.collection_check_boxes :group_id, @groups, :id, :name, :include_hidden => false %>
+    <%# <% @groups.each do |gp| %>
+      <%#  group_builder.check_box :group_id, gp, :id %>
+      <%#  group_builder.label :group_id, gp.name %>
+    <%#  end %>
+  <% end %>
+
+  <div class="actions">
+    <%= f.submit "add transaction" %>
+  </div>
+<% end %>
