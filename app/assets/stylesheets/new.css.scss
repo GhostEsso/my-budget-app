@@ -1,0 +1,89 @@
+$blue: #3b74b4;
+$white: #fff;
+$grey: #e4e4e4;
+$secondary-white: #f7f7f7;
+$green: #67b930;
+$normal-grey: #616161;
+$light-grey: #949494;
+$dark-grey: #2b2b2b;
+
+.for_form {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+}
+
+.form {
+  background-color: $white;
+  padding: 2rem;
+  width: 60%;
+  text-transform: uppercase;
+  color: $normal-grey;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.form p {
+  text-transform: none;
+  font-size: 1rem;
+  font-style: italic;
+}
+
+.field {
+  width: 100%;
+}
+
+.field * {
+  display: block;
+}
+
+.field input {
+  padding: 0.2rem;
+  margin-top: 0.2rem;
+  width: 100%;
+  border: 1px solid $light-grey;
+  border-radius: 0.2rem;
+  height: 1.5rem;
+  font-family: proxima-nova, sans-serif;
+  color: $dark-grey;
+  font-weight: 100;
+}
+
+.field input::placeholder {
+  color: $light-grey;
+}
+
+.field input:focus {
+  outline: 1px solid $blue;
+}
+
+.checkbox label:first-of-type {
+  width: 100%;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.checkbox label {
+  text-transform: none;
+  display: inline-block;
+  width: 80%;
+}
+
+.checkbox input {
+  display: inline-block;
+  width: 20%;
+}
+
+.static {
+  display: block;
+  height: 2rem;
+  padding: 0.5rem;
+  font-size: 0.8rem;
+  border: 1px solid $green;
+  border-radius: 0.2rem;
+  color: green;
+  background-color: $white;
+  width: 100%;
+  text-align: center;
+}

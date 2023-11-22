@@ -4,27 +4,35 @@
   <% end %>
   <h1>new transaction</h1>
   <div id="whatever">
-  <%= inline_svg_tag "menu.svg", class: "burger-menu" %>
+    <%= inline_svg_tag "menu.svg", class: "burger-menu" %>
   </div>
 </header>
+
+<main class="with_actions for_form">
+  <% flash.each do |name, msg| -%>
+    <%= content_tag :div, msg, class: name %>
+  <% end -%>
   
-<main>
-  <%= form_with(url: group_purchases_path, model: @purchase, class: 'form') do |f| %>
+  <%= form_with(url: group_purchases_path, model: @purchase, class: "form") do |f| %>
     <div class="field">
-      <%= f.label :name, "Name:" %><br />
-      <%= f.text_field :name, autofocus: true, autocomplete: "name" %>
+      <%= f.label :name, "Name" %>
+      <%= f.text_field :name, autofocus: true, autocomplete: "name", placeholder: "Bodyshop cream" %>
     </div>
 
     <div class="field">
-    <%= f.label :amount, "Amount:" %><br />
-    <%= f.text_field :amount, autofocus: true, autocomplete: "amount" %>
-  </div>
+      <%= f.label :amount, "Amount, $" %>
+      <%= f.text_field :amount, autofocus: true, autocomplete: "amount", placeholder: "15" %>
+    </div>
 
-  <%= f.label :amount, "Choose categories:" %><br />
-  <%= f.collection_check_boxes :group_ids, current_user.groups, :id, :name, :include_hidden => false %>
+    <div class="checkbox">
+      <%= f.label :amount, "categories", class: "categories_label" %><br />
+      <%= f.collection_check_boxes :group_ids, current_user.groups, :id, :name, :include_hidden => false %>
+      <span>No mathing category?</span>
+      <%= link_to "add a new category", new_group_path, data: { turbo: false }, class: "static"  %>
+    </div>
 
-  <div class="actions">
-    <%= f.submit "add transaction", data: { turbo: false }  %>
-  </div>
-<% end %>
+    <div id="actions">
+      <%= f.submit "add transaction", data: { turbo: false }, class: "btn"  %>
+    </div>
+  <% end %>
 </main>

@@ -6,6 +6,10 @@
 </header>
 
 <main class="with_actions">
+<% flash.each do |name, msg| -%>
+  <%= content_tag :div, msg, class: name %>
+<% end -%>
+
   <ul class=group_list>
     <% @groups.each do |group| %>
       <% total_amount = total_amount(group) %>
