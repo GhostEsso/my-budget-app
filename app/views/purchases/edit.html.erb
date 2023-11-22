@@ -1,1 +1,38 @@
-<h1>Edit the purchase</h1>
+<header>
+  <%= link_to group_purchases_path(params[:group_id]), data: { turbo: false }  do %>
+    <%= inline_svg_tag "chevron_left.svg", class: "chevron" %>
+  <% end %>
+  <h1>transaction</h1>
+  <div id="whatever">
+    <%= inline_svg_tag "menu.svg", class: "burger-menu" %>
+  </div>
+</header>
+
+<main class="with_actions for_form">
+  <% flash.each do |name, msg| -%>
+    <%= content_tag :div, msg, class: name %>
+  <% end -%>
+  
+  <%= form_with(url: group_purchase_path, model: @purchase, method: :patch, class: "form") do |f| %>
+    <div class="field">
+      <%= f.label :name, "Name" %>
+      <%= f.text_field :name, autofocus: true, autocomplete: "name", placeholder: "Bodyshop cream" %>
+    </div>
+
+    <div class="field">
+      <%= f.label :amount, "Amount, $" %>
+      <%= f.text_field :amount, autofocus: true, autocomplete: "amount", placeholder: "15" %>
+    </div>
+
+    <div class="checkbox">
+      <%= f.label :amount, "Choose categories:" %><br />
+      <%= f.collection_check_boxes :group_ids, current_user.groups, :id, :name, :include_hidden => false %>
+      <span>No mathing category?</span>
+      <%= link_to "add a new category", new_group_path, data: { turbo: false }, class: "static"  %>
+    </div>
+
+    <div id="actions">
+      <%= f.submit "update", data: { turbo: false }, class: "btn"  %>
+    </div>
+  <% end %>
+</main>

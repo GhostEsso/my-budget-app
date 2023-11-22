@@ -15,43 +15,53 @@ class PurchasesController < ApplicationController
   def create
     @purchase = current_user.purchases.new(purchase_params.except(:group_ids))
     @groups = Group.where(id: purchase_params[:group_ids])
-  
     if @groups.empty?
-      flash.now[:error] = "You must choose at least one category!"
+      flash.now[:error] = 'You must choose at least one category!'
       render :new
-    else
-      ActiveRecord::Base.transaction do
-        if @purchase.save
-          @groups.each { |group| group.purchases << @purchase }
-          flash[:success] = "Transaction was created and added to #{@groups.length} groups!"
-          redirect_to group_purchases_path(params[:group_id])
-        else
-          flash.now[:error] = @purchase.errors.full_messages.to_sentence
-          render :new
-          raise ActiveRecord::Rollback
-        end
+    elsif @purchase.save
+      @groups.each do |group|
+        group.purchases << @purchase
       end
+      flash[:success] = "Transaction was created and added to #{@groups.length} goups!"
+      redirect_to group_purchases_path(params[:group_id])
+    else
+      flash.now[:error] = @purchase.errors.full_messages.to_sentence
+      render :new
     end
   end
-  
 
-  def edit; end
+  def edit
+    @purchase = Purchase.find(params[:id])
+  end
 
-  def update; end
+  def update
+    @purchase = Purchase.find(params[:id])
+    @groups = Group.where(id: purchase_params[:group_ids])
+    if @groups.empty?
+      flash.now[:error] = 'You must choose at least one category!'
+      render :edit
+    elsif @purchase.update(purchase_params.except(:group_ids))
+      @groups.each do |group|
+        group.purchases << @purchase unless group.purchases.include?(@purchase)
+      end
+      flash[:succes] = 'Transaction updated successfully!'
+      redirect_to group_purchase_path(params[:group_id], params[:id])
+    else
+      flash.now[:error] = @purchase.errors.full_messages.to_sentence
+      render :edit
+    end
+  end
 
   def destroy
-    @purchase = Purchase.find_by_id(params[:id])
-  
-    if @purchase
-      @purchase.destroy
-      flash[:success] = 'Transaction was successfully deleted!'
+    @purchase = Purchase.find(params[:id])
+    if @purchase.destroy
+      flash[:success] = 'Transaction was deleted successfully!'
+      redirect_to group_purchases_url(params[:group_id])
     else
-      flash[:error] = 'Transaction not found!'
+      flash.now[:error] = @purchase.errors.full_messages.to_sentence
+      render :show
     end
-  
-    redirect_to group_purchases_url(params[:group_id])
   end
-  
 
   def purchase_params
     params.require(:purchase).permit(:name, :amount, group_ids: [])
