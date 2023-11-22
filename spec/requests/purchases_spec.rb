@@ -1,10 +1,10 @@
 require 'rails_helper'
 
-RSpec.describe "Purchases", type: :request do
-  let(:valid_attributes) { { 'user' => @user, 'name' => 'Food', 'icon' => 'missing_avatar.png' } }
-  let(:group) { Group.create! valid_attributes }
+RSpec.describe 'Purchases', type: :request do
+  let(:group) { Group.create(user: @user, name: 'Food', icon: 'missing_avatar.png') }
   let(:purchase) { Purchase.create(name: 'Apples', amount: 5, author: @user) }
-  let(:groupp_urchase) { GroupPurchase.create(group: group, purchase: purchase) }
+  let(:group_purchase) { GroupPurchase.create(group:, purchase:) }
+  let(:valid_attributes) { { 'name' => 'Bananas', 'amount' => 5, 'author' => @user, 'group_ids' => [group.id] } }
 
   before :each do
     @user = User.create(name: 'Tom', email: 'tom@example.com', password: 'topsecret')
@@ -12,12 +12,12 @@ RSpec.describe "Purchases", type: :request do
     login(@user)
   end
 
-  context "GET /index" do
+  context 'GET /index' do
     before :each do
       get group_purchases_url(group)
     end
 
-    it "returns http success" do
+    it 'returns http success' do
       expect(response).to have_http_status(:success)
     end
 
@@ -30,12 +30,12 @@ RSpec.describe "Purchases", type: :request do
     end
   end
 
-  context "GET /show" do
+  context 'GET /show' do
     before :each do
       get group_purchase_url(group, purchase)
     end
 
-    it "returns http success" do
+    it 'returns http success' do
       expect(response).to have_http_status(:success)
     end
 
@@ -49,12 +49,12 @@ RSpec.describe "Purchases", type: :request do
     end
   end
 
-  context "GET /new" do
+  context 'GET /new' do
     before :each do
       get new_group_purchase_url(group)
     end
 
-    it "returns http success" do
+    it 'returns http success' do
       expect(response).to have_http_status(:success)
     end
 
@@ -67,12 +67,30 @@ RSpec.describe "Purchases", type: :request do
     end
   end
 
-  context "GET /edit" do
+  context 'GET /create' do
+    it 'returns http redirect response' do
+      post group_purchases_path(group), params: { purchase: valid_attributes }
+      expect(response.status).to eq(302)
+    end
+
+    it 'creates a purchase' do
+      expect do
+        post group_purchases_path(group), params: { purchase: valid_attributes }
+      end.to change(Purchase, :count).by(1)
+    end
+
+    it 'redirects to a page' do
+      post group_purchases_path(group), params: { purchase: valid_attributes }
+      expect(response).to redirect_to group_purchase_path(group, Purchase.last)
+    end
+  end
+
+  context 'GET /edit' do
     before :each do
       get edit_group_purchase_url(group, purchase)
     end
 
-    it "returns http success" do
+    it 'returns http success' do
       expect(response).to have_http_status(:success)
     end
 

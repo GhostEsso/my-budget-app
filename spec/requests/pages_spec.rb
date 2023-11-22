@@ -1,18 +1,18 @@
 require 'rails_helper'
 
-RSpec.describe "Pages", type: :request do
+RSpec.describe 'Pages', type: :request do
   before :each do
     user = User.create(name: 'Tom', email: 'tom@example.com', password: 'topsecret')
     user.confirm
     login(user)
   end
 
-  context "GET /splash" do
+  context 'GET /splash' do
     before :each do
-      get "/pages/splash"
+      get '/pages/splash'
     end
 
-    it "returns http success" do
+    it 'returns http success' do
       expect(response).to have_http_status(:success)
     end
 
@@ -25,12 +25,12 @@ RSpec.describe "Pages", type: :request do
     end
   end
 
-  context "GET /about" do
+  context 'GET /about' do
     before :each do
-      get "/pages/about"
+      get '/pages/about'
     end
 
-    it "returns http success" do
+    it 'returns http success' do
       expect(response).to have_http_status(:success)
     end
 
