@@ -8,7 +8,7 @@ module GroupHelper
   end
 
   def check_url(url)
-    default = 'missing_avatar.png'
+    default = 'no-pictures.png'
     return default unless url.present?
 
     extension = File.extname(url)
