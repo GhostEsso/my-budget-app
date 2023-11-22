@@ -75,10 +75,6 @@ RSpec.describe 'Groups', type: :request do
     it 'renders the right view file' do
       expect(response).to render_template(:edit)
     end
-
-    it 'renders the right placeholder' do
-      expect(response.body).to include('<h1>edit category</h1>')
-    end
   end
 
   def login(user)

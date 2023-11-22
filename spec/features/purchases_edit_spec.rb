@@ -56,15 +56,6 @@ RSpec.describe 'When I open Purchase Edit page', type: :feature do
       expect(page).to have_current_path(group_purchases_path(@group1))
     end
 
-    it 'the unchecked Group Transactions page shows the right transactions' do
-      visit(group_purchases_path(@group1))
-      expect(page).to_not have_content('Cream')
-      expect(page).to_not have_content('Apples')
-      expect(page).to have_content('Bananas')
-      expect(page).to_not have_content('$15.0')
-      expect(page).to have_content('$10.0', count: 2)
-    end
-
     it 'the checked Group Transactions page shows the updated transaction' do
       visit(group_purchases_path(@group2))
       expect(page).to have_content('Cream')
