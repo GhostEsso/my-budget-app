@@ -1,23 +1,27 @@
-<section>
+<header>
   <h1>categories</h1>
-</section>
+  <div id="whatever">
+    <%= inline_svg_tag "menu.svg", class: "burger-menu" %>
+  </div>
+</header>
 
-<section>
+<main>
   <ul>
     <% @groups.each do |group| %>
       <% total_amount = total_amount(group) %>
       <li>
-        <%= link_to group_purchases_url(group) do %>
+        <%= link_to group_purchases_url(group), data: { turbo: false } do %>
           <%= image_tag(check_url(group.icon), height: '32', width: '32', class: 'icon', alt: 'group_icon') %>
           <span><%= group.name %></span>
           <br>
-          <span>Transactions: <%= total_amount %></span>
+          <span>Total transactions: <%= total_amount %></span>
+          <span><%= group.created_at.strftime('%d %b %Y') %></span>
         <% end %>
       </li>
     <% end %>
   </ul>
-</section>
+</main>
 
 <section>
-  <%= link_to "add category", new_group_path %>
+  <%= link_to "add category", new_group_path, class: "btn", data: { turbo: false } %>
 </section>
