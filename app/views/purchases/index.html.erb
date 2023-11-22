@@ -18,7 +18,7 @@
       <%= image_tag(check_url(@group.icon), class: 'icon', alt: 'group_icon') %>
       <div class="group_info">
         <span class="name"><%= @group.name %></span>
-        <span class="amount">$<%= total_amount(@group)%></span>
+        
         <span class="date"><%= @group.created_at.strftime('%d %b %Y') %></span>
       </div>
     <% end %>
