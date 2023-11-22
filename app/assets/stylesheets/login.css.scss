@@ -84,9 +84,9 @@ input.login_btn {
   padding-left: 1.5rem;
   margin: 12px auto;
   cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
+  user-select: none;
+  user-select: none;
+  user-select: none;
   user-select: none;
 }
 
@@ -134,8 +134,8 @@ input.login_btn {
   height: 10px;
   border: solid white;
   border-width: 0 3px 3px 0;
-  -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  transform: rotate(45deg);
   transform: rotate(45deg);
 }
 
@@ -148,7 +148,7 @@ input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
 input:-webkit-autofill:active {
-  -webkit-box-shadow: 0 0 0 30px white inset !important;
+  box-shadow: 0 0 0 30px white inset !important;
 }
 
 .new_user input:focus {
