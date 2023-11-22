@@ -21,7 +21,6 @@ $dark-grey: #2b2b2b;
   color: $normal-grey;
   display: flex;
   flex-direction: column;
-  gap: 1rem;
 }
 
 .form p {
@@ -42,12 +41,13 @@ $dark-grey: #2b2b2b;
   padding: 0.2rem;
   margin-top: 0.2rem;
   width: 100%;
-  border: 1px solid $light-grey;
+  border: 1px solid $white;
   border-radius: 0.2rem;
-  height: 1.5rem;
+  height: 2.8rem;
   font-family: proxima-nova, sans-serif;
   color: $dark-grey;
   font-weight: 100;
+  padding-left: 1.2rem;
 }
 
 .field input::placeholder {
