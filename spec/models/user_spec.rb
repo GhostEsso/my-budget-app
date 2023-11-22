@@ -21,11 +21,25 @@ RSpec.describe User, type: :model do
     end
 
     it 'is not valid with blank email' do
-      expect(User.new(name: nil, password: 'topsecret')).to_not be_valid
+      expect(User.new(name: 'Tom', password: 'topsecret')).to_not be_valid
     end
 
     it 'is not valid with email of wrong format' do
       expect(User.new(name: 'A' * 37, email: 'tomexample.com', password: 'topsecret')).to_not be_valid
+    end
+  end
+
+  context 'attribute password' do
+    it 'is valid with existing password' do
+      expect(User.new(name: 'Tom', email: 'tom@example.com', password: 'topsecret')).to be_valid
+    end
+
+    it 'is not valid with blank password' do
+      expect(User.new(name: 'Tom', email: 'tom@example.com')).to_not be_valid
+    end
+
+    it 'is not valid with password less than 6 characters' do
+      expect(User.new(name: 'A' * 37, email: 'tomexample.com', password: 'topt')).to_not be_valid
     end
   end
 end
