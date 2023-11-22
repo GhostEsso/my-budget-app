@@ -14,7 +14,7 @@ RSpec.describe GroupPurchase, type: :model do
   end
 
   before :all do
-    @user = User.create(name: 'Tom')
+    @user = User.create(name: 'Tom', email: 'tom@example.com', password: 'topsecret')
     @purchase = Purchase.create(author: @user, name: 'Apples', amount: 2)
     @group = Group.create(user: @user, name: 'Food', icon: 'missing_avatar.png')
   end

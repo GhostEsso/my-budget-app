@@ -15,12 +15,12 @@
   
   <%= form_with(url: group_purchases_path, model: @purchase, class: "form") do |f| %>
     <div class="field">
-      <%= f.label :name, "Name" %>
+      <%= f.label :name, "name" %>
       <%= f.text_field :name, autofocus: true, autocomplete: "name", placeholder: "Bodyshop cream" %>
     </div>
 
     <div class="field">
-      <%= f.label :amount, "Amount, $" %>
+      <%= f.label :amount, "amount, $" %>
       <%= f.text_field :amount, autofocus: true, autocomplete: "amount", placeholder: "15" %>
     </div>
 
