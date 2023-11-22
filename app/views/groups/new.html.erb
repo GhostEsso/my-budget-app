@@ -1,11 +1,14 @@
-<section>
-  <%= link_to groups_path do %>
+<header>
+  <%= link_to groups_path, data: { turbo: false }  do %>
     <%= inline_svg_tag "chevron_left.svg", class: "chevron" %>
   <% end %>
   <h1>new category</h1>
-</section>
+  <div id="whatever">
+  <%= inline_svg_tag "menu.svg", class: "burger-menu" %>
+</div>
+</header>
 
-<section>
+<main>
   <%= form_with model: @group do |f| %>
     <div class="field">
       <%= f.label :name, "Name:" %><br />
@@ -18,7 +21,7 @@
     </div>
 
     <div class="actions">
-      <%= f.submit "add category" %>
+      <%= f.submit "add category", data: { turbo: false } %>
     </div>
   <% end %>
-</section>
+</main>
