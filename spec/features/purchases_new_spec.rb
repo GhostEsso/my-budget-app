@@ -2,7 +2,6 @@ require 'rails_helper'
 
 RSpec.describe 'When I open New Purchase page', type: :feature do
   before(:each) do
-    User.delete_all
     @user = User.create(name: 'Tom', email: 'tom@example.com', password: 'topsecret')
     @user.confirm
 

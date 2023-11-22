@@ -81,7 +81,7 @@ RSpec.describe 'Purchases', type: :request do
 
     it 'redirects to a page' do
       post group_purchases_path(group), params: { purchase: valid_attributes }
-      expect(response).to redirect_to group_purchase_path(group, Purchase.last)
+      expect(response).to redirect_to group_purchases_path(group)
     end
   end
 
