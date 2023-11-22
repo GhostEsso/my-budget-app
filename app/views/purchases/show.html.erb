@@ -1,15 +1,19 @@
-<section>
-  <%= link_to group_purchases_path(params[:group_id]) do %>
+<header>
+  <%= link_to group_purchases_path(params[:group_id]), data: { turbo: false } do %>
     <%= inline_svg_tag "chevron_left.svg", class: "chevron" %>
   <% end %>
   <h1>details</h1>
-</section>
+    <div id="whatever">
+      <%= inline_svg_tag "menu.svg", class: "burger-menu" %>
+    </div>
+</header>
 
-<section>
+<main>
   <span><%= @purchase.name %></span>
   <span><%= @purchase.amount %></span>
-
-<section>
-  <%= link_to "edit", edit_group_purchase_path(params[:group_id], @purchase) %>
-  <%= button_to "delete",  {:controller => :purchases, :action => 'destroy'}, method: :delete %>
+</main>
+  
+<section id="actions">
+  <%= link_to "edit", edit_group_purchase_path(params[:group_id], @purchase), data: { turbo: false }  %>
+  <%= button_to "delete",  {:controller => :purchases, :action => 'destroy'}, method: :delete, data: { turbo: false }  %>
 </section>
