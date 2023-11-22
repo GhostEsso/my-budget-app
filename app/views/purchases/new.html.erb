@@ -1,31 +1,38 @@
-<section>
-  <%= link_to group_purchases_path(params[:group_id]) do %>
+<header>
+  <%= link_to group_purchases_path(params[:group_id]), data: { turbo: false }  do %>
     <%= inline_svg_tag "chevron_left.svg", class: "chevron" %>
   <% end %>
   <h1>new transaction</h1>
-</section>
-
-<%= form_with(url: group_purchases_path, model: @purchase, class: 'form') do |f| %>
-  <div class="field">
-    <%= f.label :name, "Name:" %><br />
-    <%= f.text_field :name, autofocus: true, autocomplete: "name" %>
+  <div id="whatever">
+    <%= inline_svg_tag "menu.svg", class: "burger-menu" %>
   </div>
+</header>
 
-  <div class="field">
-    <%= f.label :amount, "Amount:" %><br />
-    <%= f.text_field :amount, autofocus: true, autocomplete: "amount" %>
-  </div>
+<main class="with_actions for_form">
+  <% flash.each do |name, msg| -%>
+    <%= content_tag :div, msg, class: name %>
+  <% end -%>
+  
+  <%= form_with(url: group_purchases_path, model: @purchase, class: "form") do |f| %>
+    <div class="field">
+      <%= f.label :name, "Name" %>
+      <%= f.text_field :name, autofocus: true, autocomplete: "name", placeholder: "Bodyshop cream" %>
+    </div>
 
-  <%= f.fields_for :group_purchases do |group_builder| %>
-  <%= group_builder.collection_select :group_id, @groups, :id, :name, :include_hidden => false %>
-    <%# group_builder.collection_check_boxes :group_id, @groups, :id, :name, :include_hidden => false %>
-    <%# <% @groups.each do |gp| %>
-      <%#  group_builder.check_box :group_id, gp, :id %>
-      <%#  group_builder.label :group_id, gp.name %>
-    <%#  end %>
+    <div class="field">
+      <%= f.label :amount, "Amount, $" %>
+      <%= f.text_field :amount, autofocus: true, autocomplete: "amount", placeholder: "15" %>
+    </div>
+
+    <div class="checkbox">
+      <%= f.label :amount, "categories", class: "categories_label" %><br />
+      <%= f.collection_check_boxes :group_ids, current_user.groups, :id, :name, :include_hidden => false %>
+      <span>No mathing category?</span>
+      <%= link_to "add a new category", new_group_path, data: { turbo: false }, class: "static"  %>
+    </div>
+
+    <div id="actions">
+      <%= f.submit "add transaction", data: { turbo: false }, class: "btn"  %>
+    </div>
   <% end %>
-
-  <div class="actions">
-    <%= f.submit "add transaction" %>
-  </div>
-<% end %>
+</main>

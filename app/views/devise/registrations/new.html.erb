@@ -1,34 +1,39 @@
-<h2>Sign up</h2>
-
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= render "devise/shared/error_messages", resource: resource %>
-
-  <div class="field">
-    <%= f.label :name %><br />
-    <%= f.text_field :name, autofocus: true, autocomplete: "name" %>
+<header>
+  <%= link_to pages_splash_path, data: { turbo: false }  do %>
+    <%= inline_svg_tag "chevron_left.svg", class: "chevron" %>
+  <% end %>
+  <h1>sing up</h1>
+  <div id="whatever">
+    <%= inline_svg_tag "menu.svg", class: "burger-menu" %>
   </div>
-  
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-  </div>
+</header>
 
-  <div class="field">
-    <%= f.label :password %>
-    <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "new-password" %>
-  </div>
+<main class="login">
+  <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+    <%= render "devise/shared/error_messages", resource: resource %>
 
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
-  </div>
+    <div class="field">
+      <%= f.text_field :name, autofocus: true, autocomplete: "name", placeholder: "Name" %>
+    </div>
 
-  <div class="actions">
-    <%= f.submit "Sign up" %>
-  </div>
-<% end %>
+    <div class="field">
+      <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Email" %>
+    </div>
 
-<%= render "devise/shared/links" %>
+    <div class="field">
+      <%= f.password_field :password, autocomplete: "new-password", placeholder: "Password #{@minimum_password_length} characters minimum" %>
+    </div>
+
+    <div class="field">
+      <%= f.password_field :password_confirmation, autocomplete: "new-password", placeholder: "Password confirmation" %>
+    </div>
+
+    <div class="login_links">
+      <%= render "devise/shared/links" %>
+    </div>
+
+    <div class="actions">
+      <%= f.submit "Sign up", class: "login_btn", data: { turbo: false } %>
+    </div>
+  <% end %>
+</main>

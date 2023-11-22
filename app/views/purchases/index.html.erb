@@ -1,32 +1,70 @@
-<section>
-  <%= link_to groups_path do %>
+<header>
+  <%= link_to groups_path, data: { turbo: false }  do %>
     <%= inline_svg_tag "chevron_left.svg", class: "chevron" %>
   <% end %>
   <h1>transactions</h1>
-</section>
+  <div id="whatever">
+    <%= inline_svg_tag "menu.svg", class: "burger-menu" %>
+  </div>
+</header>
 
-<section>
-  <div>
-    <span><%= @group.name %></span>
-    <span>Total amount: <%= total_amount(@group) %> </span>
+<main class="with_actions">
+  <% flash.each do |name, msg| -%>
+    <%= content_tag :div, msg, class: name %>
+  <% end -%>
+
+  <div class='top_category'>
+    <%= link_to edit_group_url(@group), data: { turbo: false }, class: 'item' do %>
+      <%= image_tag(check_url(@group.icon), class: 'icon', alt: 'group_icon') %>
+      <div class="group_info">
+        <span class="name"><%= @group.name %></span>
+        <span class="amount">$<%= total_amount(@group)%></span>
+        <span class="date"><%= @group.created_at.strftime('%d %b %Y') %></span>
+      </div>
+    <% end %>
   </div>
 
   <% if @purchases.empty? %>
-    <%= button_to "delete", {:controller => :groups, :action => 'destroy', :id => @group.id }, :method => :delete %>
+    <div class="empty">
+      <p>Group has no transactions.</p>
+    </div>
   <% end %>
 
-  <ul>
+  <ul class="purchase_list">
     <% @purchases.each do |purchase| %>
       <li>
-        <%= link_to group_purchase_url(@group, purchase) do %>
-          <span><%= purchase.name %></span>
-          <span><%= purchase.amount %></span>
+        <%= link_to group_purchase_url(@group, purchase), data: { turbo: false }, class: "item purchase" do %>
+          <div class="group_info no_margin">
+            <span class="name"><%= purchase.name %></span>
+            <span class="amount">$<%= purchase.amount %></span>
+            <div class="date">
+              <%= inline_svg_tag "calendar.svg", class: "calendar" %>
+              <%= purchase.created_at.strftime('%d %b %Y') %>
+            </div>
+          </div>
         <% end %>
+        <ul class="item associated_categories">
+          <% purchase.groups.each do |group| %>
+            <li class="associated_category">
+              <%= image_tag(check_url(group.icon), class: 'icon', alt: 'group_icon') %>
+              <span><%= group.name %></span>
+            </li>
+          <% end %>
+        </ul>
       </li>
     <% end %>
   </ul>
-</section>
+  <div class="item checkout">
+    <span class="name">total expences:</span>
+    <span class="amount">$<%= total_amount(@group)%></span>
+  </div>
+</main>
 
-<section>
-  <%= link_to "add transaction", new_group_purchase_path %>
+<section id="actions">
+  <% if @purchases.empty? %>
+    <%= button_to "delete category", {:controller => :groups, :action => 'destroy', :id => @group.id }, :method => :delete, data: { turbo: false }, class: "btn blue_action" %>
+    <%= link_to "add transaction", new_group_purchase_path, class: "btn upper_action", data: { turbo: false }  %>
+  <% else %>
+    <%= link_to "add transaction", new_group_purchase_path, class: "btn", data: { turbo: false }  %>
+  <% end %>
 </section>
