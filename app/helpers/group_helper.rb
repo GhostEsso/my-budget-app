@@ -1,19 +1,14 @@
 module GroupHelper
-  require 'uri'
-
   def total_amount(group)
     group.purchases.sum(:amount)
-  rescue StandardError
-    0
   end
 
   def check_url(url)
     default = 'no-pictures.png'
-    return default unless url.present?
-
-    extension = File.extname(url)
-    return url if %w[.png .gif .jpg].include?(extension.downcase) && url =~ URI::DEFAULT_PARSER.make_regexp
-
-    default
+    if (File.extname(url) =~ /^(.png|.gif|.jpg)$/) || (url =~ /^#{URI::DEFAULT_PARSER.make_regexp}$/)
+      url
+    else
+      default
+    end
   end
 end
