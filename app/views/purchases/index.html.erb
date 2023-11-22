@@ -8,28 +8,45 @@
 </div>
 </header>
 
-<main>
-  <div>
-    <span><%= @group.name %></span>
-    <span>Total amount: <%= total_amount(@group) %> </span>
+<main class="with_actions">
+  <div class='item top_category'>
+    <%= image_tag(check_url(@group.icon), class: 'icon', alt: 'group_icon') %>
+    <div class="group_info">
+      <span class="name"><%= @group.name %></span>
+      <span class="amount">$<%= total_amount(@group)%></span>
+      <span class="date"><%= @group.created_at.strftime('%d %b %Y') %></span>
+    </div>
   </div>
 
-  <% if @purchases.empty? %>
-  <%= button_to "delete", {:controller => :groups, :action => 'destroy', :id => @group.id }, :method => :delete, data: { turbo: false }  %>
-  <% end %>
-
-  <ul>
+  <ul class="purchase_list">
     <% @purchases.each do |purchase| %>
       <li>
-        <%= link_to group_purchase_url(@group, purchase), data: { turbo: false } do %>
-          <span><%= purchase.name %></span>
-          <span><%= purchase.amount %></span>
+      <%= link_to group_purchase_url(@group, purchase), data: { turbo: false }, class: "item purchase" do %>
+        <div class="group_info no_margin">
+          <span class="name"><%= purchase.name %></span>
+          <span class="amount">$<%= purchase.amount %></span>
+          <span class="date"><%= purchase.created_at.strftime('%d %b %Y') %></span>
+        </div>
         <% end %>
+        <ul class="item associated_categories">
+          <% purchase.groups.each do |group| %>
+            <li class="associated_category">
+              <%= image_tag(check_url(group.icon), class: 'icon', alt: 'group_icon') %>
+              <span><%= group.name %></span>
+            </li>
+          <% end %>
+        </ul>
       </li>
     <% end %>
   </ul>
+  <div class="item checkout">
+    <span class="name">total payment:</span>
+    <span class="amount">$<%= total_amount(@group)%></span>
 </main>
 
 <section id="actions">
+<% if @purchases.empty? %>
+<%= button_to "delete category", {:controller => :groups, :action => 'destroy', :id => @group.id }, :method => :delete, data: { turbo: false }, class: "btn upper_action blue_action" %>
+<% end %>
   <%= link_to "add transaction", new_group_purchase_path, class: "btn", data: { turbo: false }  %>
 </section>

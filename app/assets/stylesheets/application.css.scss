@@ -1,21 +1,236 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+$blue: #3b74b4;
+$white: #fff;
+$grey: #e4e4e4;
+$secondary-white: #f7f7f7;
+$green: #67b930;
+$normal-grey: #616161;
+$light-grey: #8d8d8d;
+$dark-grey: #2b2b2b;
+$red: #c72727;
 
-.chevron {
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'proxima-nova', sans-serif;
+  font-weight: 100;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  min-width: 300px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.chevron,
+.burger-menu {
   width: 2rem;
   height: 2rem;
   color: black;
+}
+
+header {
+  padding: 1rem 0.8rem;
+  display: flex;
+  justify-content: space-between;
+  text-transform: uppercase;
+  background-color: $blue;
+  color: $white;
+}
+
+header h1 {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 36px;
+}
+
+#homepage h1 {
+  margin: auto;
+}
+
+main {
+  background-color: $grey;
+  padding: 0.8rem;
+  flex: 1;
+}
+
+.with_actions {
+  margin-bottom: 5rem;
+}
+
+.with_two_actions {
+  margin-bottom: 10rem;
+}
+
+ul.group_list {
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+}
+
+ul.purchase_list {
+  gap: 0.2rem;
+}
+
+main li {
+  list-style: none;
+}
+
+span {
+  display: block;
+}
+
+.item {
+  background-color: $white;
+  padding: 0.5rem;
+  height: 6rem;
+  display: flex;
+  position: relative;
+}
+
+.checkout {
+  height: 3rem;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0.4rem;
+}
+
+.associated_categories {
+  background-color: $secondary-white;
+  margin-top: 0.1rem;
+  height: unset;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.associated_category {
+  align-items: center;
+  display: flex;
+  height: 1.2rem;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  color: $light-grey;
+}
+
+.icon {
+  height: 100%;
+  margin-right: 1rem;
+}
+
+.associated_category .icon {
+  margin-right: 0.5rem;
+}
+
+.group_info {
+  margin-top: 0.5rem;
+  flex: 1;
+  position: relative;
+}
+
+.group_info span {
+  display: block;
+}
+
+.group_info.no_margin {
+  margin-top: 0;
+}
+
+.purchase {
+  margin-top: 0.4rem;
+  height: 4rem;
+}
+
+.name {
+  color: $normal-grey;
+  font-size: 1.2rem;
+}
+
+.purchase .name {
+  font-size: 1rem;
+}
+
+.checkout .name {
+  text-transform: uppercase;
+  font-size: 1rem;
+}
+
+.amount {
+  color: $dark-grey;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.group_info .amount {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.date {
+  color: $light-grey;
+  font-size: 0.9rem;
+}
+
+.group_info .date {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: flex-end;
+  gap: 0.5rem;
+}
+
+.calendar {
+  height: 2rem;
+  height: 1rem;
+}
+
+.btn {
+  border: none;
+  outline: 1px solid $white;
+  outline-offset: -0.8rem;
+  width: 100%;
+  background-color: $green;
+  height: 5rem;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+  line-height: 5rem;
+  display: block;
+  align-self: center;
+  text-transform: uppercase;
+  color: $white;
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+.blue_action {
+  background-color: $red;
+}
+
+.upper_action {
+  bottom: 5rem;
+}
+
+#popup {
+  height: 50px;
+  width: 200px;
+  text-align: center;
+  vertical-align: middle;
+  background-color: cornflowerblue;
+  color: white;
+  display: none;
+  padding-top: 8px;
+  position: absolute;
+}
+
+.hidden {
+  display: none;
 }

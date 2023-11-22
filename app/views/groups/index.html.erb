@@ -1,27 +1,27 @@
-<header>
+<header id="homepage">
   <h1>categories</h1>
   <div id="whatever">
     <%= inline_svg_tag "menu.svg", class: "burger-menu" %>
   </div>
 </header>
 
-<main>
-  <ul>
+<main class="with_actions">
+  <ul class=group_list>
     <% @groups.each do |group| %>
       <% total_amount = total_amount(group) %>
       <li>
-        <%= link_to group_purchases_url(group), data: { turbo: false } do %>
-          <%= image_tag(check_url(group.icon), height: '32', width: '32', class: 'icon', alt: 'group_icon') %>
-          <span><%= group.name %></span>
-          <br>
-          <span>Total transactions: <%= total_amount %></span>
-          <span><%= group.created_at.strftime('%d %b %Y') %></span>
-        <% end %>
+      <%= link_to group_purchases_url(group), data: { turbo: false }, class: 'item' do %>
+        <%= image_tag(check_url(group.icon), class: 'icon', alt: 'group_icon') %>
+        <div class="group_info">
+          <span class="name"><%= group.name %></span>
+          <span class="amount">$<%= total_amount %></span>
+          <span class="date"><%= group.created_at.strftime('%d %b %Y') %></span>
+        </div>
       </li>
     <% end %>
   </ul>
 </main>
 
-<section>
+<section id="actions">
   <%= link_to "add category", new_group_path, class: "btn", data: { turbo: false } %>
 </section>
