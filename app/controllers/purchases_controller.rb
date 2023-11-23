@@ -63,6 +63,8 @@ class PurchasesController < ApplicationController
     end
   end
 
+  private
+
   def purchase_params
     params.require(:purchase).permit(:name, :amount, group_ids: [])
   end

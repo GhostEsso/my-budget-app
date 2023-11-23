@@ -20,7 +20,7 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :groups do
+  resources :groups, only: [:index, :new, :create, :edit, :update, :destroy] do
     resources :purchases
   end
 
