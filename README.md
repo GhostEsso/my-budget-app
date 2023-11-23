@@ -151,7 +151,7 @@ Open [http://localhost:1080](http://localhost:1080) to view it in your browser.
 
 - GitHub: [@GhostEsso](https://github.com/GhostEsso)
 - Twitter: [@TambanaEssohana](https://twitter.com/TambanaEssohana)
-- LinkedIn: [Tambana Essohanam](https://www.linkedin.com/in/essohanam-tambana)
+- LinkedIn: [Tambana Essohanam](https://www.linkedin.com/in/essohanam-tambana/)
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
