@@ -72,7 +72,9 @@ The **SmartPocket** keeps track of all your expences associated with catogories.
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- The Live Demo is available [here]()
+- The Live Demo is available [here](https://moyin-3unn.onrender.com/)
+
+- The Budget App description [Budget App description](https://drive.google.com/file/d/140nRvlsIpRuQ2Yx00-cgSYnrJBtGVvAC/view?usp=sharing)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -149,7 +151,7 @@ Open [http://localhost:1080](http://localhost:1080) to view it in your browser.
 
 - GitHub: [@GhostEsso](https://github.com/GhostEsso)
 - Twitter: [@TambanaEssohana](https://twitter.com/TambanaEssohana)
-- LinkedIn: [Tambana Essohanam](https://www.linkedin.com/in/essohanam-tambana)
+- LinkedIn: [Tambana Essohanam](https://www.linkedin.com/in/essohanam-tambana/)
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
