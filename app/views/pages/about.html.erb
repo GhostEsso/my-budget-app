@@ -1,0 +1,13 @@
+<header>
+  <%= link_to groups_path, data: { turbo: false }  do %>
+    <%= inline_svg_tag "chevron_left.svg", class: "chevron" %>
+  <% end %>
+  <h1>about</h1>
+  <div id="whatever">
+    <%= inline_svg_tag "menu.svg", class: "burger-menu" %>
+  </div>
+</header>
+
+<main class="splash">
+  <p>Find me in app/views/pages/about.html.erb</p>
+</main>

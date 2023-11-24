@@ -1,0 +1,38 @@
+<header>
+  <%= link_to group_purchases_path(params[:group_id]), data: { turbo: false } do %>
+    <%= inline_svg_tag "chevron_left.svg", class: "chevron" %>
+  <% end %>
+  <h1>details</h1>
+  <div id="whatever">
+    <%= inline_svg_tag "menu.svg", class: "burger-menu" %>
+  </div>
+</header>
+
+<main class="with_two_actions">
+  <% flash.each do |name, msg| -%>
+    <%= content_tag :div, msg, class: name %>
+  <% end -%>
+  <div class="item purchase">
+    <div class="group_info no_margin">
+      <span class="name"><%= @purchase.name %></span>
+      <span class="amount">$<%= @purchase.amount %></span>
+      <div class="date">
+        <%= inline_svg_tag "calendar.svg", class: "calendar" %>
+        <%= @purchase.created_at.strftime('%d %b %Y') %>
+      </div>
+    </div>
+  </div>
+  <ul class="item associated_categories">
+    <% @purchase.groups.each do |group| %>
+      <li class="associated_category">
+        <%= image_tag(check_url(group.icon), class: 'icon', alt: 'group_icon') %>
+        <span><%= group.name %></span>
+      </li>
+    <% end %>
+  </ul>
+</main>
+
+<section id="actions">
+  <%= link_to "edit", edit_group_purchase_path(params[:group_id], @purchase), data: { turbo: false }, class: "btn upper_action" %>
+  <%= button_to "delete",  {:controller => :purchases, :action => 'destroy'}, method: :delete, data: { turbo: false }, class: "btn blue_action"  %>
+</section>

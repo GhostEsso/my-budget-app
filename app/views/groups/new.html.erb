@@ -1,0 +1,32 @@
+<header>
+  <%= link_to groups_path, data: { turbo: false }  do %>
+    <%= inline_svg_tag "chevron_left.svg", class: "chevron" %>
+  <% end %>
+  <h1>new category</h1>
+  <div id="whatever">
+    <%= inline_svg_tag "menu.svg", class: "burger-menu" %>
+  </div>
+</header>
+
+<main class="with_actions for_form">
+  <% flash.each do |name, msg| -%>
+    <%= content_tag :div, msg, class: name %>
+  <% end -%>
+  <%= form_with model: @group, class: "form" do |f| %>
+    <div class="field">
+      <%= f.label :name, "Name" %>
+      <%= f.text_field :name, autofocus: true, autocomplete: "name", placeholder: "Clothes" %>
+    </div>
+
+    <div class="field">
+      <%= f.label :icon, "Icon link *" %>
+      <%= f.text_field :icon, autofocus: true, autocomplete: "icon", placeholder: "https://i.pravatar.cc/300?img=5" %>
+    </div>
+
+    <p>* Please, provide a valid link that starts with <strong>'https:'</strong> and ends with <strong>'png/gif/jpg'</strong>.</p>
+
+    <div class="actions">
+      <%= f.submit "add category", data: { turbo: false }, class: "btn" %>
+    </div>
+  <% end %>
+</main>
