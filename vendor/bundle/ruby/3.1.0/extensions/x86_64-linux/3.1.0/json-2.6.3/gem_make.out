@@ -1,13 +1,16 @@
 current directory: /home/essohanam/MICROVERSE/Module 5/my-budget-app/vendor/bundle/ruby/3.1.0/gems/json-2.6.3/ext/json
-/usr/bin/ruby3.1 -I /usr/lib/ruby/vendor_ruby -r ./siteconf20231119-130452-ivc0bl.rb extconf.rb
+/home/essohanam/.rvm/rubies/ruby-3.1.2/bin/ruby extconf.rb
 creating Makefile
 
 current directory: /home/essohanam/MICROVERSE/Module 5/my-budget-app/vendor/bundle/ruby/3.1.0/gems/json-2.6.3/ext/json
-make DESTDIR\= clean
+make DESTDIR\= sitearchdir\=./.gem.20240616-73748-ni1r3s sitelibdir\=./.gem.20240616-73748-ni1r3s clean
 
 current directory: /home/essohanam/MICROVERSE/Module 5/my-budget-app/vendor/bundle/ruby/3.1.0/gems/json-2.6.3/ext/json
-make DESTDIR\=
+make DESTDIR\= sitearchdir\=./.gem.20240616-73748-ni1r3s sitelibdir\=./.gem.20240616-73748-ni1r3s
 make: rien à faire pour « all ».
 
 current directory: /home/essohanam/MICROVERSE/Module 5/my-budget-app/vendor/bundle/ruby/3.1.0/gems/json-2.6.3/ext/json
-make DESTDIR\= install
+make DESTDIR\= sitearchdir\=./.gem.20240616-73748-ni1r3s sitelibdir\=./.gem.20240616-73748-ni1r3s install
+
+current directory: /home/essohanam/MICROVERSE/Module 5/my-budget-app/vendor/bundle/ruby/3.1.0/gems/json-2.6.3/ext/json
+make DESTDIR\= sitearchdir\=./.gem.20240616-73748-ni1r3s sitelibdir\=./.gem.20240616-73748-ni1r3s clean

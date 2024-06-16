@@ -1,6 +1,6 @@
 have_builtin_func: checking for __builtin_clz()... -------------------- yes
 
-LD_LIBRARY_PATH=.:/usr/lib/x86_64-linux-gnu "x86_64-linux-gnu-gcc -o conftest -I/usr/include/x86_64-linux-gnu/ruby-3.1.0 -I/usr/include/ruby-3.1.0/ruby/backward -I/usr/include/ruby-3.1.0 -I. -Wdate-time -D_FORTIFY_SOURCE=2   -g -O2 -ffile-prefix-map=BUILDDIR=. -fstack-protector-strong -fstack-clash-protection -Wformat -Werror=format-security -fcf-protection -fdebug-prefix-map=BUILDDIR=/usr/src/ruby3.1-3.1.2-7ubuntu3 -fPIC conftest.c  -L. -L/usr/lib/x86_64-linux-gnu -L. -Wl,-Bsymbolic-functions -Wl,-z,relro -Wl,-z,now -fstack-protector-strong -rdynamic -Wl,-export-dynamic -Wl,--no-as-needed     -lruby-3.1  -lm  -lc"
+LD_LIBRARY_PATH=.:/home/essohanam/.rvm/rubies/ruby-3.1.2/lib "gcc -o conftest -I/home/essohanam/.rvm/rubies/ruby-3.1.2/include/ruby-3.1.0/x86_64-linux -I/home/essohanam/.rvm/rubies/ruby-3.1.2/include/ruby-3.1.0/ruby/backward -I/home/essohanam/.rvm/rubies/ruby-3.1.2/include/ruby-3.1.0 -I.    -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wdeprecated-declarations -Wduplicated-cond -Wimplicit-function-declaration -Wimplicit-int -Wmisleading-indentation -Wpointer-arith -Wwrite-strings -Wimplicit-fallthrough=0 -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-packed-bitfield-compat -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wsuggest-attribute=format -Wsuggest-attribute=noreturn -Wunused-variable -Wundef  -fPIC conftest.c  -L. -L/home/essohanam/.rvm/rubies/ruby-3.1.2/lib -Wl,-rpath,/home/essohanam/.rvm/rubies/ruby-3.1.2/lib -L. -fstack-protector-strong -rdynamic -Wl,-export-dynamic -Wl,--no-as-needed     -Wl,-rpath,/home/essohanam/.rvm/rubies/ruby-3.1.2/lib -L/home/essohanam/.rvm/rubies/ruby-3.1.2/lib -lruby  -lm  -lc"
 checked program was:
 /* begin */
 1: #include "ruby.h"
@@ -11,7 +11,7 @@ checked program was:
 6: }
 /* end */
 
-LD_LIBRARY_PATH=.:/usr/lib/x86_64-linux-gnu "x86_64-linux-gnu-gcc -I/usr/include/x86_64-linux-gnu/ruby-3.1.0 -I/usr/include/ruby-3.1.0/ruby/backward -I/usr/include/ruby-3.1.0 -I. -Wdate-time -D_FORTIFY_SOURCE=2   -g -O2 -ffile-prefix-map=BUILDDIR=. -fstack-protector-strong -fstack-clash-protection -Wformat -Werror=format-security -fcf-protection -fdebug-prefix-map=BUILDDIR=/usr/src/ruby3.1-3.1.2-7ubuntu3 -fPIC   -c conftest.c"
+LD_LIBRARY_PATH=.:/home/essohanam/.rvm/rubies/ruby-3.1.2/lib "gcc -I/home/essohanam/.rvm/rubies/ruby-3.1.2/include/ruby-3.1.0/x86_64-linux -I/home/essohanam/.rvm/rubies/ruby-3.1.2/include/ruby-3.1.0/ruby/backward -I/home/essohanam/.rvm/rubies/ruby-3.1.2/include/ruby-3.1.0 -I.    -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wdeprecated-declarations -Wduplicated-cond -Wimplicit-function-declaration -Wimplicit-int -Wmisleading-indentation -Wpointer-arith -Wwrite-strings -Wimplicit-fallthrough=0 -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-packed-bitfield-compat -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wsuggest-attribute=format -Wsuggest-attribute=noreturn -Wunused-variable -Wundef  -fPIC   -c conftest.c"
 checked program was:
 /* begin */
 1: #include "ruby.h"
@@ -24,7 +24,7 @@ checked program was:
 
 have_builtin_func: checking for __builtin_clzl()... -------------------- yes
 
-LD_LIBRARY_PATH=.:/usr/lib/x86_64-linux-gnu "x86_64-linux-gnu-gcc -I/usr/include/x86_64-linux-gnu/ruby-3.1.0 -I/usr/include/ruby-3.1.0/ruby/backward -I/usr/include/ruby-3.1.0 -I. -Wdate-time -D_FORTIFY_SOURCE=2   -g -O2 -ffile-prefix-map=BUILDDIR=. -fstack-protector-strong -fstack-clash-protection -Wformat -Werror=format-security -fcf-protection -fdebug-prefix-map=BUILDDIR=/usr/src/ruby3.1-3.1.2-7ubuntu3 -fPIC   -c conftest.c"
+LD_LIBRARY_PATH=.:/home/essohanam/.rvm/rubies/ruby-3.1.2/lib "gcc -I/home/essohanam/.rvm/rubies/ruby-3.1.2/include/ruby-3.1.0/x86_64-linux -I/home/essohanam/.rvm/rubies/ruby-3.1.2/include/ruby-3.1.0/ruby/backward -I/home/essohanam/.rvm/rubies/ruby-3.1.2/include/ruby-3.1.0 -I.    -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wdeprecated-declarations -Wduplicated-cond -Wimplicit-function-declaration -Wimplicit-int -Wmisleading-indentation -Wpointer-arith -Wwrite-strings -Wimplicit-fallthrough=0 -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-packed-bitfield-compat -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wsuggest-attribute=format -Wsuggest-attribute=noreturn -Wunused-variable -Wundef  -fPIC   -c conftest.c"
 checked program was:
 /* begin */
 1: #include "ruby.h"
@@ -37,7 +37,7 @@ checked program was:
 
 have_builtin_func: checking for __builtin_clzll()... -------------------- yes
 
-LD_LIBRARY_PATH=.:/usr/lib/x86_64-linux-gnu "x86_64-linux-gnu-gcc -I/usr/include/x86_64-linux-gnu/ruby-3.1.0 -I/usr/include/ruby-3.1.0/ruby/backward -I/usr/include/ruby-3.1.0 -I. -Wdate-time -D_FORTIFY_SOURCE=2   -g -O2 -ffile-prefix-map=BUILDDIR=. -fstack-protector-strong -fstack-clash-protection -Wformat -Werror=format-security -fcf-protection -fdebug-prefix-map=BUILDDIR=/usr/src/ruby3.1-3.1.2-7ubuntu3 -fPIC   -c conftest.c"
+LD_LIBRARY_PATH=.:/home/essohanam/.rvm/rubies/ruby-3.1.2/lib "gcc -I/home/essohanam/.rvm/rubies/ruby-3.1.2/include/ruby-3.1.0/x86_64-linux -I/home/essohanam/.rvm/rubies/ruby-3.1.2/include/ruby-3.1.0/ruby/backward -I/home/essohanam/.rvm/rubies/ruby-3.1.2/include/ruby-3.1.0 -I.    -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wdeprecated-declarations -Wduplicated-cond -Wimplicit-function-declaration -Wimplicit-int -Wmisleading-indentation -Wpointer-arith -Wwrite-strings -Wimplicit-fallthrough=0 -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-packed-bitfield-compat -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wsuggest-attribute=format -Wsuggest-attribute=noreturn -Wunused-variable -Wundef  -fPIC   -c conftest.c"
 checked program was:
 /* begin */
 1: #include "ruby.h"
@@ -50,7 +50,7 @@ checked program was:
 
 have_header: checking for float.h... -------------------- yes
 
-LD_LIBRARY_PATH=.:/usr/lib/x86_64-linux-gnu "x86_64-linux-gnu-gcc -I/usr/include/x86_64-linux-gnu/ruby-3.1.0 -I/usr/include/ruby-3.1.0/ruby/backward -I/usr/include/ruby-3.1.0 -I. -Wdate-time -D_FORTIFY_SOURCE=2   -g -O2 -ffile-prefix-map=BUILDDIR=. -fstack-protector-strong -fstack-clash-protection -Wformat -Werror=format-security -fcf-protection -fdebug-prefix-map=BUILDDIR=/usr/src/ruby3.1-3.1.2-7ubuntu3 -fPIC   -c conftest.c"
+LD_LIBRARY_PATH=.:/home/essohanam/.rvm/rubies/ruby-3.1.2/lib "gcc -I/home/essohanam/.rvm/rubies/ruby-3.1.2/include/ruby-3.1.0/x86_64-linux -I/home/essohanam/.rvm/rubies/ruby-3.1.2/include/ruby-3.1.0/ruby/backward -I/home/essohanam/.rvm/rubies/ruby-3.1.2/include/ruby-3.1.0 -I.    -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wdeprecated-declarations -Wduplicated-cond -Wimplicit-function-declaration -Wimplicit-int -Wmisleading-indentation -Wpointer-arith -Wwrite-strings -Wimplicit-fallthrough=0 -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-packed-bitfield-compat -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wsuggest-attribute=format -Wsuggest-attribute=noreturn -Wunused-variable -Wundef  -fPIC   -c conftest.c"
 checked program was:
 /* begin */
 1: #include "ruby.h"
@@ -62,7 +62,7 @@ checked program was:
 
 have_header: checking for math.h... -------------------- yes
 
-LD_LIBRARY_PATH=.:/usr/lib/x86_64-linux-gnu "x86_64-linux-gnu-gcc -I/usr/include/x86_64-linux-gnu/ruby-3.1.0 -I/usr/include/ruby-3.1.0/ruby/backward -I/usr/include/ruby-3.1.0 -I. -Wdate-time -D_FORTIFY_SOURCE=2   -g -O2 -ffile-prefix-map=BUILDDIR=. -fstack-protector-strong -fstack-clash-protection -Wformat -Werror=format-security -fcf-protection -fdebug-prefix-map=BUILDDIR=/usr/src/ruby3.1-3.1.2-7ubuntu3 -fPIC   -c conftest.c"
+LD_LIBRARY_PATH=.:/home/essohanam/.rvm/rubies/ruby-3.1.2/lib "gcc -I/home/essohanam/.rvm/rubies/ruby-3.1.2/include/ruby-3.1.0/x86_64-linux -I/home/essohanam/.rvm/rubies/ruby-3.1.2/include/ruby-3.1.0/ruby/backward -I/home/essohanam/.rvm/rubies/ruby-3.1.2/include/ruby-3.1.0 -I.    -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wdeprecated-declarations -Wduplicated-cond -Wimplicit-function-declaration -Wimplicit-int -Wmisleading-indentation -Wpointer-arith -Wwrite-strings -Wimplicit-fallthrough=0 -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-packed-bitfield-compat -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wsuggest-attribute=format -Wsuggest-attribute=noreturn -Wunused-variable -Wundef  -fPIC   -c conftest.c"
 checked program was:
 /* begin */
 1: #include "ruby.h"
@@ -74,7 +74,7 @@ checked program was:
 
 have_header: checking for stdbool.h... -------------------- yes
 
-LD_LIBRARY_PATH=.:/usr/lib/x86_64-linux-gnu "x86_64-linux-gnu-gcc -I/usr/include/x86_64-linux-gnu/ruby-3.1.0 -I/usr/include/ruby-3.1.0/ruby/backward -I/usr/include/ruby-3.1.0 -I. -Wdate-time -D_FORTIFY_SOURCE=2   -g -O2 -ffile-prefix-map=BUILDDIR=. -fstack-protector-strong -fstack-clash-protection -Wformat -Werror=format-security -fcf-protection -fdebug-prefix-map=BUILDDIR=/usr/src/ruby3.1-3.1.2-7ubuntu3 -fPIC   -c conftest.c"
+LD_LIBRARY_PATH=.:/home/essohanam/.rvm/rubies/ruby-3.1.2/lib "gcc -I/home/essohanam/.rvm/rubies/ruby-3.1.2/include/ruby-3.1.0/x86_64-linux -I/home/essohanam/.rvm/rubies/ruby-3.1.2/include/ruby-3.1.0/ruby/backward -I/home/essohanam/.rvm/rubies/ruby-3.1.2/include/ruby-3.1.0 -I.    -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wdeprecated-declarations -Wduplicated-cond -Wimplicit-function-declaration -Wimplicit-int -Wmisleading-indentation -Wpointer-arith -Wwrite-strings -Wimplicit-fallthrough=0 -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-packed-bitfield-compat -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wsuggest-attribute=format -Wsuggest-attribute=noreturn -Wunused-variable -Wundef  -fPIC   -c conftest.c"
 checked program was:
 /* begin */
 1: #include "ruby.h"
@@ -86,7 +86,7 @@ checked program was:
 
 have_header: checking for stdlib.h... -------------------- yes
 
-LD_LIBRARY_PATH=.:/usr/lib/x86_64-linux-gnu "x86_64-linux-gnu-gcc -I/usr/include/x86_64-linux-gnu/ruby-3.1.0 -I/usr/include/ruby-3.1.0/ruby/backward -I/usr/include/ruby-3.1.0 -I. -Wdate-time -D_FORTIFY_SOURCE=2   -g -O2 -ffile-prefix-map=BUILDDIR=. -fstack-protector-strong -fstack-clash-protection -Wformat -Werror=format-security -fcf-protection -fdebug-prefix-map=BUILDDIR=/usr/src/ruby3.1-3.1.2-7ubuntu3 -fPIC   -c conftest.c"
+LD_LIBRARY_PATH=.:/home/essohanam/.rvm/rubies/ruby-3.1.2/lib "gcc -I/home/essohanam/.rvm/rubies/ruby-3.1.2/include/ruby-3.1.0/x86_64-linux -I/home/essohanam/.rvm/rubies/ruby-3.1.2/include/ruby-3.1.0/ruby/backward -I/home/essohanam/.rvm/rubies/ruby-3.1.2/include/ruby-3.1.0 -I.    -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wdeprecated-declarations -Wduplicated-cond -Wimplicit-function-declaration -Wimplicit-int -Wmisleading-indentation -Wpointer-arith -Wwrite-strings -Wimplicit-fallthrough=0 -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-packed-bitfield-compat -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wsuggest-attribute=format -Wsuggest-attribute=noreturn -Wunused-variable -Wundef  -fPIC   -c conftest.c"
 checked program was:
 /* begin */
 1: #include "ruby.h"
@@ -98,7 +98,7 @@ checked program was:
 
 have_header: checking for x86intrin.h... -------------------- yes
 
-LD_LIBRARY_PATH=.:/usr/lib/x86_64-linux-gnu "x86_64-linux-gnu-gcc -I/usr/include/x86_64-linux-gnu/ruby-3.1.0 -I/usr/include/ruby-3.1.0/ruby/backward -I/usr/include/ruby-3.1.0 -I. -Wdate-time -D_FORTIFY_SOURCE=2   -g -O2 -ffile-prefix-map=BUILDDIR=. -fstack-protector-strong -fstack-clash-protection -Wformat -Werror=format-security -fcf-protection -fdebug-prefix-map=BUILDDIR=/usr/src/ruby3.1-3.1.2-7ubuntu3 -fPIC   -c conftest.c"
+LD_LIBRARY_PATH=.:/home/essohanam/.rvm/rubies/ruby-3.1.2/lib "gcc -I/home/essohanam/.rvm/rubies/ruby-3.1.2/include/ruby-3.1.0/x86_64-linux -I/home/essohanam/.rvm/rubies/ruby-3.1.2/include/ruby-3.1.0/ruby/backward -I/home/essohanam/.rvm/rubies/ruby-3.1.2/include/ruby-3.1.0 -I.    -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wdeprecated-declarations -Wduplicated-cond -Wimplicit-function-declaration -Wimplicit-int -Wmisleading-indentation -Wpointer-arith -Wwrite-strings -Wimplicit-fallthrough=0 -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-packed-bitfield-compat -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wsuggest-attribute=format -Wsuggest-attribute=noreturn -Wunused-variable -Wundef  -fPIC   -c conftest.c"
 checked program was:
 /* begin */
 1: #include "ruby.h"
@@ -110,9 +110,9 @@ checked program was:
 
 have_func: checking for _lzcnt_u32() in x86intrin.h... -------------------- no
 
-LD_LIBRARY_PATH=.:/usr/lib/x86_64-linux-gnu "x86_64-linux-gnu-gcc -o conftest -I/usr/include/x86_64-linux-gnu/ruby-3.1.0 -I/usr/include/ruby-3.1.0/ruby/backward -I/usr/include/ruby-3.1.0 -I. -Wdate-time -D_FORTIFY_SOURCE=2   -g -O2 -ffile-prefix-map=BUILDDIR=. -fstack-protector-strong -fstack-clash-protection -Wformat -Werror=format-security -fcf-protection -fdebug-prefix-map=BUILDDIR=/usr/src/ruby3.1-3.1.2-7ubuntu3 -fPIC conftest.c  -L. -L/usr/lib/x86_64-linux-gnu -L. -Wl,-Bsymbolic-functions -Wl,-z,relro -Wl,-z,now -fstack-protector-strong -rdynamic -Wl,-export-dynamic -Wl,--no-as-needed     -lruby-3.1  -lm  -lc"
-/usr/bin/ld: /tmp/ccbPLr0I.o : dans la fonction « t » :
-/home/essohanam/MICROVERSE/Module 5/my-budget-app/vendor/bundle/ruby/3.1.0/gems/bigdecimal-3.1.4/ext/bigdecimal/conftest.c:16:(.text+0x7): undefined reference to `_lzcnt_u32'
+LD_LIBRARY_PATH=.:/home/essohanam/.rvm/rubies/ruby-3.1.2/lib "gcc -o conftest -I/home/essohanam/.rvm/rubies/ruby-3.1.2/include/ruby-3.1.0/x86_64-linux -I/home/essohanam/.rvm/rubies/ruby-3.1.2/include/ruby-3.1.0/ruby/backward -I/home/essohanam/.rvm/rubies/ruby-3.1.2/include/ruby-3.1.0 -I.    -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wdeprecated-declarations -Wduplicated-cond -Wimplicit-function-declaration -Wimplicit-int -Wmisleading-indentation -Wpointer-arith -Wwrite-strings -Wimplicit-fallthrough=0 -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-packed-bitfield-compat -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wsuggest-attribute=format -Wsuggest-attribute=noreturn -Wunused-variable -Wundef  -fPIC conftest.c  -L. -L/home/essohanam/.rvm/rubies/ruby-3.1.2/lib -Wl,-rpath,/home/essohanam/.rvm/rubies/ruby-3.1.2/lib -L. -fstack-protector-strong -rdynamic -Wl,-export-dynamic -Wl,--no-as-needed     -Wl,-rpath,/home/essohanam/.rvm/rubies/ruby-3.1.2/lib -L/home/essohanam/.rvm/rubies/ruby-3.1.2/lib -lruby  -lm  -lc"
+/usr/bin/ld : /tmp/cca3NZDw.o : dans la fonction « t » :
+/home/essohanam/MICROVERSE/Module 5/my-budget-app/vendor/bundle/ruby/3.1.0/gems/bigdecimal-3.1.4/ext/bigdecimal/conftest.c:16:(.text+0x7) : référence indéfinie vers « _lzcnt_u32 »
 collect2: error: ld returned 1 exit status
 checked program was:
 /* begin */
@@ -134,7 +134,7 @@ checked program was:
 16: int t(void) { void ((*volatile p)()); p = (void ((*)()))_lzcnt_u32; return !p; }
 /* end */
 
-LD_LIBRARY_PATH=.:/usr/lib/x86_64-linux-gnu "x86_64-linux-gnu-gcc -o conftest -I/usr/include/x86_64-linux-gnu/ruby-3.1.0 -I/usr/include/ruby-3.1.0/ruby/backward -I/usr/include/ruby-3.1.0 -I. -Wdate-time -D_FORTIFY_SOURCE=2   -g -O2 -ffile-prefix-map=BUILDDIR=. -fstack-protector-strong -fstack-clash-protection -Wformat -Werror=format-security -fcf-protection -fdebug-prefix-map=BUILDDIR=/usr/src/ruby3.1-3.1.2-7ubuntu3 -fPIC conftest.c  -L. -L/usr/lib/x86_64-linux-gnu -L. -Wl,-Bsymbolic-functions -Wl,-z,relro -Wl,-z,now -fstack-protector-strong -rdynamic -Wl,-export-dynamic -Wl,--no-as-needed     -lruby-3.1  -lm  -lc"
+LD_LIBRARY_PATH=.:/home/essohanam/.rvm/rubies/ruby-3.1.2/lib "gcc -o conftest -I/home/essohanam/.rvm/rubies/ruby-3.1.2/include/ruby-3.1.0/x86_64-linux -I/home/essohanam/.rvm/rubies/ruby-3.1.2/include/ruby-3.1.0/ruby/backward -I/home/essohanam/.rvm/rubies/ruby-3.1.2/include/ruby-3.1.0 -I.    -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wdeprecated-declarations -Wduplicated-cond -Wimplicit-function-declaration -Wimplicit-int -Wmisleading-indentation -Wpointer-arith -Wwrite-strings -Wimplicit-fallthrough=0 -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-packed-bitfield-compat -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wsuggest-attribute=format -Wsuggest-attribute=noreturn -Wunused-variable -Wundef  -fPIC conftest.c  -L. -L/home/essohanam/.rvm/rubies/ruby-3.1.2/lib -Wl,-rpath,/home/essohanam/.rvm/rubies/ruby-3.1.2/lib -L. -fstack-protector-strong -rdynamic -Wl,-export-dynamic -Wl,--no-as-needed     -Wl,-rpath,/home/essohanam/.rvm/rubies/ruby-3.1.2/lib -L/home/essohanam/.rvm/rubies/ruby-3.1.2/lib -lruby  -lm  -lc"
 conftest.c:16:13: error: conflicting types for ‘_lzcnt_u32’; have ‘void()’
    16 | extern void _lzcnt_u32();
       |             ^~~~~~~~~~
@@ -144,6 +144,9 @@ In file included from /usr/lib/gcc/x86_64-linux-gnu/13/include/x86gprintrin.h:61
 /usr/lib/gcc/x86_64-linux-gnu/13/include/lzcntintrin.h:51:1: note: previous definition of ‘_lzcnt_u32’ with type ‘unsigned int(unsigned int)’
    51 | _lzcnt_u32 (unsigned int __X)
       | ^~~~~~~~~~
+cc1: note: unrecognized command-line option ‘-Wno-self-assign’ may have been intended to silence earlier diagnostics
+cc1: note: unrecognized command-line option ‘-Wno-parentheses-equality’ may have been intended to silence earlier diagnostics
+cc1: note: unrecognized command-line option ‘-Wno-constant-logical-operand’ may have been intended to silence earlier diagnostics
 checked program was:
 /* begin */
  1: #include "ruby.h"
@@ -169,9 +172,9 @@ checked program was:
 
 have_func: checking for _lzcnt_u64() in x86intrin.h... -------------------- no
 
-LD_LIBRARY_PATH=.:/usr/lib/x86_64-linux-gnu "x86_64-linux-gnu-gcc -o conftest -I/usr/include/x86_64-linux-gnu/ruby-3.1.0 -I/usr/include/ruby-3.1.0/ruby/backward -I/usr/include/ruby-3.1.0 -I. -Wdate-time -D_FORTIFY_SOURCE=2   -g -O2 -ffile-prefix-map=BUILDDIR=. -fstack-protector-strong -fstack-clash-protection -Wformat -Werror=format-security -fcf-protection -fdebug-prefix-map=BUILDDIR=/usr/src/ruby3.1-3.1.2-7ubuntu3 -fPIC conftest.c  -L. -L/usr/lib/x86_64-linux-gnu -L. -Wl,-Bsymbolic-functions -Wl,-z,relro -Wl,-z,now -fstack-protector-strong -rdynamic -Wl,-export-dynamic -Wl,--no-as-needed     -lruby-3.1  -lm  -lc"
-/usr/bin/ld: /tmp/ccO3Trpv.o : dans la fonction « t » :
-/home/essohanam/MICROVERSE/Module 5/my-budget-app/vendor/bundle/ruby/3.1.0/gems/bigdecimal-3.1.4/ext/bigdecimal/conftest.c:16:(.text+0x7): undefined reference to `_lzcnt_u64'
+LD_LIBRARY_PATH=.:/home/essohanam/.rvm/rubies/ruby-3.1.2/lib "gcc -o conftest -I/home/essohanam/.rvm/rubies/ruby-3.1.2/include/ruby-3.1.0/x86_64-linux -I/home/essohanam/.rvm/rubies/ruby-3.1.2/include/ruby-3.1.0/ruby/backward -I/home/essohanam/.rvm/rubies/ruby-3.1.2/include/ruby-3.1.0 -I.    -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wdeprecated-declarations -Wduplicated-cond -Wimplicit-function-declaration -Wimplicit-int -Wmisleading-indentation -Wpointer-arith -Wwrite-strings -Wimplicit-fallthrough=0 -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-packed-bitfield-compat -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wsuggest-attribute=format -Wsuggest-attribute=noreturn -Wunused-variable -Wundef  -fPIC conftest.c  -L. -L/home/essohanam/.rvm/rubies/ruby-3.1.2/lib -Wl,-rpath,/home/essohanam/.rvm/rubies/ruby-3.1.2/lib -L. -fstack-protector-strong -rdynamic -Wl,-export-dynamic -Wl,--no-as-needed     -Wl,-rpath,/home/essohanam/.rvm/rubies/ruby-3.1.2/lib -L/home/essohanam/.rvm/rubies/ruby-3.1.2/lib -lruby  -lm  -lc"
+/usr/bin/ld : /tmp/cc8UBgOX.o : dans la fonction « t » :
+/home/essohanam/MICROVERSE/Module 5/my-budget-app/vendor/bundle/ruby/3.1.0/gems/bigdecimal-3.1.4/ext/bigdecimal/conftest.c:16:(.text+0x7) : référence indéfinie vers « _lzcnt_u64 »
 collect2: error: ld returned 1 exit status
 checked program was:
 /* begin */
@@ -193,7 +196,7 @@ checked program was:
 16: int t(void) { void ((*volatile p)()); p = (void ((*)()))_lzcnt_u64; return !p; }
 /* end */
 
-LD_LIBRARY_PATH=.:/usr/lib/x86_64-linux-gnu "x86_64-linux-gnu-gcc -o conftest -I/usr/include/x86_64-linux-gnu/ruby-3.1.0 -I/usr/include/ruby-3.1.0/ruby/backward -I/usr/include/ruby-3.1.0 -I. -Wdate-time -D_FORTIFY_SOURCE=2   -g -O2 -ffile-prefix-map=BUILDDIR=. -fstack-protector-strong -fstack-clash-protection -Wformat -Werror=format-security -fcf-protection -fdebug-prefix-map=BUILDDIR=/usr/src/ruby3.1-3.1.2-7ubuntu3 -fPIC conftest.c  -L. -L/usr/lib/x86_64-linux-gnu -L. -Wl,-Bsymbolic-functions -Wl,-z,relro -Wl,-z,now -fstack-protector-strong -rdynamic -Wl,-export-dynamic -Wl,--no-as-needed     -lruby-3.1  -lm  -lc"
+LD_LIBRARY_PATH=.:/home/essohanam/.rvm/rubies/ruby-3.1.2/lib "gcc -o conftest -I/home/essohanam/.rvm/rubies/ruby-3.1.2/include/ruby-3.1.0/x86_64-linux -I/home/essohanam/.rvm/rubies/ruby-3.1.2/include/ruby-3.1.0/ruby/backward -I/home/essohanam/.rvm/rubies/ruby-3.1.2/include/ruby-3.1.0 -I.    -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wdeprecated-declarations -Wduplicated-cond -Wimplicit-function-declaration -Wimplicit-int -Wmisleading-indentation -Wpointer-arith -Wwrite-strings -Wimplicit-fallthrough=0 -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-packed-bitfield-compat -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wsuggest-attribute=format -Wsuggest-attribute=noreturn -Wunused-variable -Wundef  -fPIC conftest.c  -L. -L/home/essohanam/.rvm/rubies/ruby-3.1.2/lib -Wl,-rpath,/home/essohanam/.rvm/rubies/ruby-3.1.2/lib -L. -fstack-protector-strong -rdynamic -Wl,-export-dynamic -Wl,--no-as-needed     -Wl,-rpath,/home/essohanam/.rvm/rubies/ruby-3.1.2/lib -L/home/essohanam/.rvm/rubies/ruby-3.1.2/lib -lruby  -lm  -lc"
 conftest.c:16:13: error: conflicting types for ‘_lzcnt_u64’; have ‘void()’
    16 | extern void _lzcnt_u64();
       |             ^~~~~~~~~~
@@ -203,6 +206,9 @@ In file included from /usr/lib/gcc/x86_64-linux-gnu/13/include/x86gprintrin.h:61
 /usr/lib/gcc/x86_64-linux-gnu/13/include/lzcntintrin.h:64:1: note: previous definition of ‘_lzcnt_u64’ with type ‘long long unsigned int(long long unsigned int)’
    64 | _lzcnt_u64 (unsigned long long __X)
       | ^~~~~~~~~~
+cc1: note: unrecognized command-line option ‘-Wno-self-assign’ may have been intended to silence earlier diagnostics
+cc1: note: unrecognized command-line option ‘-Wno-parentheses-equality’ may have been intended to silence earlier diagnostics
+cc1: note: unrecognized command-line option ‘-Wno-constant-logical-operand’ may have been intended to silence earlier diagnostics
 checked program was:
 /* begin */
  1: #include "ruby.h"
@@ -228,7 +234,7 @@ checked program was:
 
 have_header: checking for intrin.h... -------------------- no
 
-LD_LIBRARY_PATH=.:/usr/lib/x86_64-linux-gnu "x86_64-linux-gnu-gcc -I/usr/include/x86_64-linux-gnu/ruby-3.1.0 -I/usr/include/ruby-3.1.0/ruby/backward -I/usr/include/ruby-3.1.0 -I. -Wdate-time -D_FORTIFY_SOURCE=2   -g -O2 -ffile-prefix-map=BUILDDIR=. -fstack-protector-strong -fstack-clash-protection -Wformat -Werror=format-security -fcf-protection -fdebug-prefix-map=BUILDDIR=/usr/src/ruby3.1-3.1.2-7ubuntu3 -fPIC   -c conftest.c"
+LD_LIBRARY_PATH=.:/home/essohanam/.rvm/rubies/ruby-3.1.2/lib "gcc -I/home/essohanam/.rvm/rubies/ruby-3.1.2/include/ruby-3.1.0/x86_64-linux -I/home/essohanam/.rvm/rubies/ruby-3.1.2/include/ruby-3.1.0/ruby/backward -I/home/essohanam/.rvm/rubies/ruby-3.1.2/include/ruby-3.1.0 -I.    -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wdeprecated-declarations -Wduplicated-cond -Wimplicit-function-declaration -Wimplicit-int -Wmisleading-indentation -Wpointer-arith -Wwrite-strings -Wimplicit-fallthrough=0 -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-packed-bitfield-compat -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wsuggest-attribute=format -Wsuggest-attribute=noreturn -Wunused-variable -Wundef  -fPIC   -c conftest.c"
 conftest.c:3:10: fatal error: intrin.h: Aucun fichier ou dossier de ce type
     3 | #include <intrin.h>
       |          ^~~~~~~~~~
@@ -244,7 +250,7 @@ checked program was:
 
 have_func: checking for __lzcnt() in intrin.h... -------------------- no
 
-LD_LIBRARY_PATH=.:/usr/lib/x86_64-linux-gnu "x86_64-linux-gnu-gcc -o conftest -I/usr/include/x86_64-linux-gnu/ruby-3.1.0 -I/usr/include/ruby-3.1.0/ruby/backward -I/usr/include/ruby-3.1.0 -I. -Wdate-time -D_FORTIFY_SOURCE=2   -g -O2 -ffile-prefix-map=BUILDDIR=. -fstack-protector-strong -fstack-clash-protection -Wformat -Werror=format-security -fcf-protection -fdebug-prefix-map=BUILDDIR=/usr/src/ruby3.1-3.1.2-7ubuntu3 -fPIC conftest.c  -L. -L/usr/lib/x86_64-linux-gnu -L. -Wl,-Bsymbolic-functions -Wl,-z,relro -Wl,-z,now -fstack-protector-strong -rdynamic -Wl,-export-dynamic -Wl,--no-as-needed     -lruby-3.1  -lm  -lc"
+LD_LIBRARY_PATH=.:/home/essohanam/.rvm/rubies/ruby-3.1.2/lib "gcc -o conftest -I/home/essohanam/.rvm/rubies/ruby-3.1.2/include/ruby-3.1.0/x86_64-linux -I/home/essohanam/.rvm/rubies/ruby-3.1.2/include/ruby-3.1.0/ruby/backward -I/home/essohanam/.rvm/rubies/ruby-3.1.2/include/ruby-3.1.0 -I.    -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wdeprecated-declarations -Wduplicated-cond -Wimplicit-function-declaration -Wimplicit-int -Wmisleading-indentation -Wpointer-arith -Wwrite-strings -Wimplicit-fallthrough=0 -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-packed-bitfield-compat -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wsuggest-attribute=format -Wsuggest-attribute=noreturn -Wunused-variable -Wundef  -fPIC conftest.c  -L. -L/home/essohanam/.rvm/rubies/ruby-3.1.2/lib -Wl,-rpath,/home/essohanam/.rvm/rubies/ruby-3.1.2/lib -L. -fstack-protector-strong -rdynamic -Wl,-export-dynamic -Wl,--no-as-needed     -Wl,-rpath,/home/essohanam/.rvm/rubies/ruby-3.1.2/lib -L/home/essohanam/.rvm/rubies/ruby-3.1.2/lib -lruby  -lm  -lc"
 conftest.c:3:10: fatal error: intrin.h: Aucun fichier ou dossier de ce type
     3 | #include <intrin.h>
       |          ^~~~~~~~~~
@@ -269,7 +275,7 @@ checked program was:
 16: int t(void) { void ((*volatile p)()); p = (void ((*)()))__lzcnt; return !p; }
 /* end */
 
-LD_LIBRARY_PATH=.:/usr/lib/x86_64-linux-gnu "x86_64-linux-gnu-gcc -o conftest -I/usr/include/x86_64-linux-gnu/ruby-3.1.0 -I/usr/include/ruby-3.1.0/ruby/backward -I/usr/include/ruby-3.1.0 -I. -Wdate-time -D_FORTIFY_SOURCE=2   -g -O2 -ffile-prefix-map=BUILDDIR=. -fstack-protector-strong -fstack-clash-protection -Wformat -Werror=format-security -fcf-protection -fdebug-prefix-map=BUILDDIR=/usr/src/ruby3.1-3.1.2-7ubuntu3 -fPIC conftest.c  -L. -L/usr/lib/x86_64-linux-gnu -L. -Wl,-Bsymbolic-functions -Wl,-z,relro -Wl,-z,now -fstack-protector-strong -rdynamic -Wl,-export-dynamic -Wl,--no-as-needed     -lruby-3.1  -lm  -lc"
+LD_LIBRARY_PATH=.:/home/essohanam/.rvm/rubies/ruby-3.1.2/lib "gcc -o conftest -I/home/essohanam/.rvm/rubies/ruby-3.1.2/include/ruby-3.1.0/x86_64-linux -I/home/essohanam/.rvm/rubies/ruby-3.1.2/include/ruby-3.1.0/ruby/backward -I/home/essohanam/.rvm/rubies/ruby-3.1.2/include/ruby-3.1.0 -I.    -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wdeprecated-declarations -Wduplicated-cond -Wimplicit-function-declaration -Wimplicit-int -Wmisleading-indentation -Wpointer-arith -Wwrite-strings -Wimplicit-fallthrough=0 -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-packed-bitfield-compat -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wsuggest-attribute=format -Wsuggest-attribute=noreturn -Wunused-variable -Wundef  -fPIC conftest.c  -L. -L/home/essohanam/.rvm/rubies/ruby-3.1.2/lib -Wl,-rpath,/home/essohanam/.rvm/rubies/ruby-3.1.2/lib -L. -fstack-protector-strong -rdynamic -Wl,-export-dynamic -Wl,--no-as-needed     -Wl,-rpath,/home/essohanam/.rvm/rubies/ruby-3.1.2/lib -L/home/essohanam/.rvm/rubies/ruby-3.1.2/lib -lruby  -lm  -lc"
 conftest.c:3:10: fatal error: intrin.h: Aucun fichier ou dossier de ce type
     3 | #include <intrin.h>
       |          ^~~~~~~~~~
@@ -299,7 +305,7 @@ checked program was:
 
 have_func: checking for __lzcnt64() in intrin.h... -------------------- no
 
-LD_LIBRARY_PATH=.:/usr/lib/x86_64-linux-gnu "x86_64-linux-gnu-gcc -o conftest -I/usr/include/x86_64-linux-gnu/ruby-3.1.0 -I/usr/include/ruby-3.1.0/ruby/backward -I/usr/include/ruby-3.1.0 -I. -Wdate-time -D_FORTIFY_SOURCE=2   -g -O2 -ffile-prefix-map=BUILDDIR=. -fstack-protector-strong -fstack-clash-protection -Wformat -Werror=format-security -fcf-protection -fdebug-prefix-map=BUILDDIR=/usr/src/ruby3.1-3.1.2-7ubuntu3 -fPIC conftest.c  -L. -L/usr/lib/x86_64-linux-gnu -L. -Wl,-Bsymbolic-functions -Wl,-z,relro -Wl,-z,now -fstack-protector-strong -rdynamic -Wl,-export-dynamic -Wl,--no-as-needed     -lruby-3.1  -lm  -lc"
+LD_LIBRARY_PATH=.:/home/essohanam/.rvm/rubies/ruby-3.1.2/lib "gcc -o conftest -I/home/essohanam/.rvm/rubies/ruby-3.1.2/include/ruby-3.1.0/x86_64-linux -I/home/essohanam/.rvm/rubies/ruby-3.1.2/include/ruby-3.1.0/ruby/backward -I/home/essohanam/.rvm/rubies/ruby-3.1.2/include/ruby-3.1.0 -I.    -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wdeprecated-declarations -Wduplicated-cond -Wimplicit-function-declaration -Wimplicit-int -Wmisleading-indentation -Wpointer-arith -Wwrite-strings -Wimplicit-fallthrough=0 -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-packed-bitfield-compat -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wsuggest-attribute=format -Wsuggest-attribute=noreturn -Wunused-variable -Wundef  -fPIC conftest.c  -L. -L/home/essohanam/.rvm/rubies/ruby-3.1.2/lib -Wl,-rpath,/home/essohanam/.rvm/rubies/ruby-3.1.2/lib -L. -fstack-protector-strong -rdynamic -Wl,-export-dynamic -Wl,--no-as-needed     -Wl,-rpath,/home/essohanam/.rvm/rubies/ruby-3.1.2/lib -L/home/essohanam/.rvm/rubies/ruby-3.1.2/lib -lruby  -lm  -lc"
 conftest.c:3:10: fatal error: intrin.h: Aucun fichier ou dossier de ce type
     3 | #include <intrin.h>
       |          ^~~~~~~~~~
@@ -324,7 +330,7 @@ checked program was:
 16: int t(void) { void ((*volatile p)()); p = (void ((*)()))__lzcnt64; return !p; }
 /* end */
 
-LD_LIBRARY_PATH=.:/usr/lib/x86_64-linux-gnu "x86_64-linux-gnu-gcc -o conftest -I/usr/include/x86_64-linux-gnu/ruby-3.1.0 -I/usr/include/ruby-3.1.0/ruby/backward -I/usr/include/ruby-3.1.0 -I. -Wdate-time -D_FORTIFY_SOURCE=2   -g -O2 -ffile-prefix-map=BUILDDIR=. -fstack-protector-strong -fstack-clash-protection -Wformat -Werror=format-security -fcf-protection -fdebug-prefix-map=BUILDDIR=/usr/src/ruby3.1-3.1.2-7ubuntu3 -fPIC conftest.c  -L. -L/usr/lib/x86_64-linux-gnu -L. -Wl,-Bsymbolic-functions -Wl,-z,relro -Wl,-z,now -fstack-protector-strong -rdynamic -Wl,-export-dynamic -Wl,--no-as-needed     -lruby-3.1  -lm  -lc"
+LD_LIBRARY_PATH=.:/home/essohanam/.rvm/rubies/ruby-3.1.2/lib "gcc -o conftest -I/home/essohanam/.rvm/rubies/ruby-3.1.2/include/ruby-3.1.0/x86_64-linux -I/home/essohanam/.rvm/rubies/ruby-3.1.2/include/ruby-3.1.0/ruby/backward -I/home/essohanam/.rvm/rubies/ruby-3.1.2/include/ruby-3.1.0 -I.    -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wdeprecated-declarations -Wduplicated-cond -Wimplicit-function-declaration -Wimplicit-int -Wmisleading-indentation -Wpointer-arith -Wwrite-strings -Wimplicit-fallthrough=0 -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-packed-bitfield-compat -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wsuggest-attribute=format -Wsuggest-attribute=noreturn -Wunused-variable -Wundef  -fPIC conftest.c  -L. -L/home/essohanam/.rvm/rubies/ruby-3.1.2/lib -Wl,-rpath,/home/essohanam/.rvm/rubies/ruby-3.1.2/lib -L. -fstack-protector-strong -rdynamic -Wl,-export-dynamic -Wl,--no-as-needed     -Wl,-rpath,/home/essohanam/.rvm/rubies/ruby-3.1.2/lib -L/home/essohanam/.rvm/rubies/ruby-3.1.2/lib -lruby  -lm  -lc"
 conftest.c:3:10: fatal error: intrin.h: Aucun fichier ou dossier de ce type
     3 | #include <intrin.h>
       |          ^~~~~~~~~~
@@ -354,7 +360,7 @@ checked program was:
 
 have_func: checking for _BitScanReverse() in intrin.h... -------------------- no
 
-LD_LIBRARY_PATH=.:/usr/lib/x86_64-linux-gnu "x86_64-linux-gnu-gcc -o conftest -I/usr/include/x86_64-linux-gnu/ruby-3.1.0 -I/usr/include/ruby-3.1.0/ruby/backward -I/usr/include/ruby-3.1.0 -I. -Wdate-time -D_FORTIFY_SOURCE=2   -g -O2 -ffile-prefix-map=BUILDDIR=. -fstack-protector-strong -fstack-clash-protection -Wformat -Werror=format-security -fcf-protection -fdebug-prefix-map=BUILDDIR=/usr/src/ruby3.1-3.1.2-7ubuntu3 -fPIC conftest.c  -L. -L/usr/lib/x86_64-linux-gnu -L. -Wl,-Bsymbolic-functions -Wl,-z,relro -Wl,-z,now -fstack-protector-strong -rdynamic -Wl,-export-dynamic -Wl,--no-as-needed     -lruby-3.1  -lm  -lc"
+LD_LIBRARY_PATH=.:/home/essohanam/.rvm/rubies/ruby-3.1.2/lib "gcc -o conftest -I/home/essohanam/.rvm/rubies/ruby-3.1.2/include/ruby-3.1.0/x86_64-linux -I/home/essohanam/.rvm/rubies/ruby-3.1.2/include/ruby-3.1.0/ruby/backward -I/home/essohanam/.rvm/rubies/ruby-3.1.2/include/ruby-3.1.0 -I.    -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wdeprecated-declarations -Wduplicated-cond -Wimplicit-function-declaration -Wimplicit-int -Wmisleading-indentation -Wpointer-arith -Wwrite-strings -Wimplicit-fallthrough=0 -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-packed-bitfield-compat -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wsuggest-attribute=format -Wsuggest-attribute=noreturn -Wunused-variable -Wundef  -fPIC conftest.c  -L. -L/home/essohanam/.rvm/rubies/ruby-3.1.2/lib -Wl,-rpath,/home/essohanam/.rvm/rubies/ruby-3.1.2/lib -L. -fstack-protector-strong -rdynamic -Wl,-export-dynamic -Wl,--no-as-needed     -Wl,-rpath,/home/essohanam/.rvm/rubies/ruby-3.1.2/lib -L/home/essohanam/.rvm/rubies/ruby-3.1.2/lib -lruby  -lm  -lc"
 conftest.c:3:10: fatal error: intrin.h: Aucun fichier ou dossier de ce type
     3 | #include <intrin.h>
       |          ^~~~~~~~~~
@@ -379,7 +385,7 @@ checked program was:
 16: int t(void) { void ((*volatile p)()); p = (void ((*)()))_BitScanReverse; return !p; }
 /* end */
 
-LD_LIBRARY_PATH=.:/usr/lib/x86_64-linux-gnu "x86_64-linux-gnu-gcc -o conftest -I/usr/include/x86_64-linux-gnu/ruby-3.1.0 -I/usr/include/ruby-3.1.0/ruby/backward -I/usr/include/ruby-3.1.0 -I. -Wdate-time -D_FORTIFY_SOURCE=2   -g -O2 -ffile-prefix-map=BUILDDIR=. -fstack-protector-strong -fstack-clash-protection -Wformat -Werror=format-security -fcf-protection -fdebug-prefix-map=BUILDDIR=/usr/src/ruby3.1-3.1.2-7ubuntu3 -fPIC conftest.c  -L. -L/usr/lib/x86_64-linux-gnu -L. -Wl,-Bsymbolic-functions -Wl,-z,relro -Wl,-z,now -fstack-protector-strong -rdynamic -Wl,-export-dynamic -Wl,--no-as-needed     -lruby-3.1  -lm  -lc"
+LD_LIBRARY_PATH=.:/home/essohanam/.rvm/rubies/ruby-3.1.2/lib "gcc -o conftest -I/home/essohanam/.rvm/rubies/ruby-3.1.2/include/ruby-3.1.0/x86_64-linux -I/home/essohanam/.rvm/rubies/ruby-3.1.2/include/ruby-3.1.0/ruby/backward -I/home/essohanam/.rvm/rubies/ruby-3.1.2/include/ruby-3.1.0 -I.    -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wdeprecated-declarations -Wduplicated-cond -Wimplicit-function-declaration -Wimplicit-int -Wmisleading-indentation -Wpointer-arith -Wwrite-strings -Wimplicit-fallthrough=0 -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-packed-bitfield-compat -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wsuggest-attribute=format -Wsuggest-attribute=noreturn -Wunused-variable -Wundef  -fPIC conftest.c  -L. -L/home/essohanam/.rvm/rubies/ruby-3.1.2/lib -Wl,-rpath,/home/essohanam/.rvm/rubies/ruby-3.1.2/lib -L. -fstack-protector-strong -rdynamic -Wl,-export-dynamic -Wl,--no-as-needed     -Wl,-rpath,/home/essohanam/.rvm/rubies/ruby-3.1.2/lib -L/home/essohanam/.rvm/rubies/ruby-3.1.2/lib -lruby  -lm  -lc"
 conftest.c:3:10: fatal error: intrin.h: Aucun fichier ou dossier de ce type
     3 | #include <intrin.h>
       |          ^~~~~~~~~~
@@ -409,7 +415,7 @@ checked program was:
 
 have_func: checking for _BitScanReverse64() in intrin.h... -------------------- no
 
-LD_LIBRARY_PATH=.:/usr/lib/x86_64-linux-gnu "x86_64-linux-gnu-gcc -o conftest -I/usr/include/x86_64-linux-gnu/ruby-3.1.0 -I/usr/include/ruby-3.1.0/ruby/backward -I/usr/include/ruby-3.1.0 -I. -Wdate-time -D_FORTIFY_SOURCE=2   -g -O2 -ffile-prefix-map=BUILDDIR=. -fstack-protector-strong -fstack-clash-protection -Wformat -Werror=format-security -fcf-protection -fdebug-prefix-map=BUILDDIR=/usr/src/ruby3.1-3.1.2-7ubuntu3 -fPIC conftest.c  -L. -L/usr/lib/x86_64-linux-gnu -L. -Wl,-Bsymbolic-functions -Wl,-z,relro -Wl,-z,now -fstack-protector-strong -rdynamic -Wl,-export-dynamic -Wl,--no-as-needed     -lruby-3.1  -lm  -lc"
+LD_LIBRARY_PATH=.:/home/essohanam/.rvm/rubies/ruby-3.1.2/lib "gcc -o conftest -I/home/essohanam/.rvm/rubies/ruby-3.1.2/include/ruby-3.1.0/x86_64-linux -I/home/essohanam/.rvm/rubies/ruby-3.1.2/include/ruby-3.1.0/ruby/backward -I/home/essohanam/.rvm/rubies/ruby-3.1.2/include/ruby-3.1.0 -I.    -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wdeprecated-declarations -Wduplicated-cond -Wimplicit-function-declaration -Wimplicit-int -Wmisleading-indentation -Wpointer-arith -Wwrite-strings -Wimplicit-fallthrough=0 -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-packed-bitfield-compat -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wsuggest-attribute=format -Wsuggest-attribute=noreturn -Wunused-variable -Wundef  -fPIC conftest.c  -L. -L/home/essohanam/.rvm/rubies/ruby-3.1.2/lib -Wl,-rpath,/home/essohanam/.rvm/rubies/ruby-3.1.2/lib -L. -fstack-protector-strong -rdynamic -Wl,-export-dynamic -Wl,--no-as-needed     -Wl,-rpath,/home/essohanam/.rvm/rubies/ruby-3.1.2/lib -L/home/essohanam/.rvm/rubies/ruby-3.1.2/lib -lruby  -lm  -lc"
 conftest.c:3:10: fatal error: intrin.h: Aucun fichier ou dossier de ce type
     3 | #include <intrin.h>
       |          ^~~~~~~~~~
@@ -434,7 +440,7 @@ checked program was:
 16: int t(void) { void ((*volatile p)()); p = (void ((*)()))_BitScanReverse64; return !p; }
 /* end */
 
-LD_LIBRARY_PATH=.:/usr/lib/x86_64-linux-gnu "x86_64-linux-gnu-gcc -o conftest -I/usr/include/x86_64-linux-gnu/ruby-3.1.0 -I/usr/include/ruby-3.1.0/ruby/backward -I/usr/include/ruby-3.1.0 -I. -Wdate-time -D_FORTIFY_SOURCE=2   -g -O2 -ffile-prefix-map=BUILDDIR=. -fstack-protector-strong -fstack-clash-protection -Wformat -Werror=format-security -fcf-protection -fdebug-prefix-map=BUILDDIR=/usr/src/ruby3.1-3.1.2-7ubuntu3 -fPIC conftest.c  -L. -L/usr/lib/x86_64-linux-gnu -L. -Wl,-Bsymbolic-functions -Wl,-z,relro -Wl,-z,now -fstack-protector-strong -rdynamic -Wl,-export-dynamic -Wl,--no-as-needed     -lruby-3.1  -lm  -lc"
+LD_LIBRARY_PATH=.:/home/essohanam/.rvm/rubies/ruby-3.1.2/lib "gcc -o conftest -I/home/essohanam/.rvm/rubies/ruby-3.1.2/include/ruby-3.1.0/x86_64-linux -I/home/essohanam/.rvm/rubies/ruby-3.1.2/include/ruby-3.1.0/ruby/backward -I/home/essohanam/.rvm/rubies/ruby-3.1.2/include/ruby-3.1.0 -I.    -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wdeprecated-declarations -Wduplicated-cond -Wimplicit-function-declaration -Wimplicit-int -Wmisleading-indentation -Wpointer-arith -Wwrite-strings -Wimplicit-fallthrough=0 -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-packed-bitfield-compat -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wsuggest-attribute=format -Wsuggest-attribute=noreturn -Wunused-variable -Wundef  -fPIC conftest.c  -L. -L/home/essohanam/.rvm/rubies/ruby-3.1.2/lib -Wl,-rpath,/home/essohanam/.rvm/rubies/ruby-3.1.2/lib -L. -fstack-protector-strong -rdynamic -Wl,-export-dynamic -Wl,--no-as-needed     -Wl,-rpath,/home/essohanam/.rvm/rubies/ruby-3.1.2/lib -L/home/essohanam/.rvm/rubies/ruby-3.1.2/lib -lruby  -lm  -lc"
 conftest.c:3:10: fatal error: intrin.h: Aucun fichier ou dossier de ce type
     3 | #include <intrin.h>
       |          ^~~~~~~~~~
@@ -464,7 +470,7 @@ checked program was:
 
 have_func: checking for labs() in stdlib.h... -------------------- yes
 
-LD_LIBRARY_PATH=.:/usr/lib/x86_64-linux-gnu "x86_64-linux-gnu-gcc -o conftest -I/usr/include/x86_64-linux-gnu/ruby-3.1.0 -I/usr/include/ruby-3.1.0/ruby/backward -I/usr/include/ruby-3.1.0 -I. -Wdate-time -D_FORTIFY_SOURCE=2   -g -O2 -ffile-prefix-map=BUILDDIR=. -fstack-protector-strong -fstack-clash-protection -Wformat -Werror=format-security -fcf-protection -fdebug-prefix-map=BUILDDIR=/usr/src/ruby3.1-3.1.2-7ubuntu3 -fPIC conftest.c  -L. -L/usr/lib/x86_64-linux-gnu -L. -Wl,-Bsymbolic-functions -Wl,-z,relro -Wl,-z,now -fstack-protector-strong -rdynamic -Wl,-export-dynamic -Wl,--no-as-needed     -lruby-3.1  -lm  -lc"
+LD_LIBRARY_PATH=.:/home/essohanam/.rvm/rubies/ruby-3.1.2/lib "gcc -o conftest -I/home/essohanam/.rvm/rubies/ruby-3.1.2/include/ruby-3.1.0/x86_64-linux -I/home/essohanam/.rvm/rubies/ruby-3.1.2/include/ruby-3.1.0/ruby/backward -I/home/essohanam/.rvm/rubies/ruby-3.1.2/include/ruby-3.1.0 -I.    -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wdeprecated-declarations -Wduplicated-cond -Wimplicit-function-declaration -Wimplicit-int -Wmisleading-indentation -Wpointer-arith -Wwrite-strings -Wimplicit-fallthrough=0 -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-packed-bitfield-compat -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wsuggest-attribute=format -Wsuggest-attribute=noreturn -Wunused-variable -Wundef  -fPIC conftest.c  -L. -L/home/essohanam/.rvm/rubies/ruby-3.1.2/lib -Wl,-rpath,/home/essohanam/.rvm/rubies/ruby-3.1.2/lib -L. -fstack-protector-strong -rdynamic -Wl,-export-dynamic -Wl,--no-as-needed     -Wl,-rpath,/home/essohanam/.rvm/rubies/ruby-3.1.2/lib -L/home/essohanam/.rvm/rubies/ruby-3.1.2/lib -lruby  -lm  -lc"
 checked program was:
 /* begin */
  1: #include "ruby.h"
@@ -489,7 +495,7 @@ checked program was:
 
 have_func: checking for llabs() in stdlib.h... -------------------- yes
 
-LD_LIBRARY_PATH=.:/usr/lib/x86_64-linux-gnu "x86_64-linux-gnu-gcc -o conftest -I/usr/include/x86_64-linux-gnu/ruby-3.1.0 -I/usr/include/ruby-3.1.0/ruby/backward -I/usr/include/ruby-3.1.0 -I. -Wdate-time -D_FORTIFY_SOURCE=2   -g -O2 -ffile-prefix-map=BUILDDIR=. -fstack-protector-strong -fstack-clash-protection -Wformat -Werror=format-security -fcf-protection -fdebug-prefix-map=BUILDDIR=/usr/src/ruby3.1-3.1.2-7ubuntu3 -fPIC conftest.c  -L. -L/usr/lib/x86_64-linux-gnu -L. -Wl,-Bsymbolic-functions -Wl,-z,relro -Wl,-z,now -fstack-protector-strong -rdynamic -Wl,-export-dynamic -Wl,--no-as-needed     -lruby-3.1  -lm  -lc"
+LD_LIBRARY_PATH=.:/home/essohanam/.rvm/rubies/ruby-3.1.2/lib "gcc -o conftest -I/home/essohanam/.rvm/rubies/ruby-3.1.2/include/ruby-3.1.0/x86_64-linux -I/home/essohanam/.rvm/rubies/ruby-3.1.2/include/ruby-3.1.0/ruby/backward -I/home/essohanam/.rvm/rubies/ruby-3.1.2/include/ruby-3.1.0 -I.    -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wdeprecated-declarations -Wduplicated-cond -Wimplicit-function-declaration -Wimplicit-int -Wmisleading-indentation -Wpointer-arith -Wwrite-strings -Wimplicit-fallthrough=0 -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-packed-bitfield-compat -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wsuggest-attribute=format -Wsuggest-attribute=noreturn -Wunused-variable -Wundef  -fPIC conftest.c  -L. -L/home/essohanam/.rvm/rubies/ruby-3.1.2/lib -Wl,-rpath,/home/essohanam/.rvm/rubies/ruby-3.1.2/lib -L. -fstack-protector-strong -rdynamic -Wl,-export-dynamic -Wl,--no-as-needed     -Wl,-rpath,/home/essohanam/.rvm/rubies/ruby-3.1.2/lib -L/home/essohanam/.rvm/rubies/ruby-3.1.2/lib -lruby  -lm  -lc"
 checked program was:
 /* begin */
  1: #include "ruby.h"
@@ -514,7 +520,7 @@ checked program was:
 
 have_func: checking for finite() in math.h... -------------------- yes
 
-LD_LIBRARY_PATH=.:/usr/lib/x86_64-linux-gnu "x86_64-linux-gnu-gcc -o conftest -I/usr/include/x86_64-linux-gnu/ruby-3.1.0 -I/usr/include/ruby-3.1.0/ruby/backward -I/usr/include/ruby-3.1.0 -I. -Wdate-time -D_FORTIFY_SOURCE=2   -g -O2 -ffile-prefix-map=BUILDDIR=. -fstack-protector-strong -fstack-clash-protection -Wformat -Werror=format-security -fcf-protection -fdebug-prefix-map=BUILDDIR=/usr/src/ruby3.1-3.1.2-7ubuntu3 -fPIC conftest.c  -L. -L/usr/lib/x86_64-linux-gnu -L. -Wl,-Bsymbolic-functions -Wl,-z,relro -Wl,-z,now -fstack-protector-strong -rdynamic -Wl,-export-dynamic -Wl,--no-as-needed     -lruby-3.1  -lm  -lc"
+LD_LIBRARY_PATH=.:/home/essohanam/.rvm/rubies/ruby-3.1.2/lib "gcc -o conftest -I/home/essohanam/.rvm/rubies/ruby-3.1.2/include/ruby-3.1.0/x86_64-linux -I/home/essohanam/.rvm/rubies/ruby-3.1.2/include/ruby-3.1.0/ruby/backward -I/home/essohanam/.rvm/rubies/ruby-3.1.2/include/ruby-3.1.0 -I.    -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wdeprecated-declarations -Wduplicated-cond -Wimplicit-function-declaration -Wimplicit-int -Wmisleading-indentation -Wpointer-arith -Wwrite-strings -Wimplicit-fallthrough=0 -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-packed-bitfield-compat -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wsuggest-attribute=format -Wsuggest-attribute=noreturn -Wunused-variable -Wundef  -fPIC conftest.c  -L. -L/home/essohanam/.rvm/rubies/ruby-3.1.2/lib -Wl,-rpath,/home/essohanam/.rvm/rubies/ruby-3.1.2/lib -L. -fstack-protector-strong -rdynamic -Wl,-export-dynamic -Wl,--no-as-needed     -Wl,-rpath,/home/essohanam/.rvm/rubies/ruby-3.1.2/lib -L/home/essohanam/.rvm/rubies/ruby-3.1.2/lib -lruby  -lm  -lc"
 checked program was:
 /* begin */
  1: #include "ruby.h"
@@ -539,13 +545,17 @@ checked program was:
 
 have_func: checking for isfinite() in math.h... -------------------- no
 
-LD_LIBRARY_PATH=.:/usr/lib/x86_64-linux-gnu "x86_64-linux-gnu-gcc -o conftest -I/usr/include/x86_64-linux-gnu/ruby-3.1.0 -I/usr/include/ruby-3.1.0/ruby/backward -I/usr/include/ruby-3.1.0 -I. -Wdate-time -D_FORTIFY_SOURCE=2   -g -O2 -ffile-prefix-map=BUILDDIR=. -fstack-protector-strong -fstack-clash-protection -Wformat -Werror=format-security -fcf-protection -fdebug-prefix-map=BUILDDIR=/usr/src/ruby3.1-3.1.2-7ubuntu3 -fPIC conftest.c  -L. -L/usr/lib/x86_64-linux-gnu -L. -Wl,-Bsymbolic-functions -Wl,-z,relro -Wl,-z,now -fstack-protector-strong -rdynamic -Wl,-export-dynamic -Wl,--no-as-needed     -lruby-3.1  -lm  -lc"
+LD_LIBRARY_PATH=.:/home/essohanam/.rvm/rubies/ruby-3.1.2/lib "gcc -o conftest -I/home/essohanam/.rvm/rubies/ruby-3.1.2/include/ruby-3.1.0/x86_64-linux -I/home/essohanam/.rvm/rubies/ruby-3.1.2/include/ruby-3.1.0/ruby/backward -I/home/essohanam/.rvm/rubies/ruby-3.1.2/include/ruby-3.1.0 -I.    -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wdeprecated-declarations -Wduplicated-cond -Wimplicit-function-declaration -Wimplicit-int -Wmisleading-indentation -Wpointer-arith -Wwrite-strings -Wimplicit-fallthrough=0 -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-packed-bitfield-compat -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wsuggest-attribute=format -Wsuggest-attribute=noreturn -Wunused-variable -Wundef  -fPIC conftest.c  -L. -L/home/essohanam/.rvm/rubies/ruby-3.1.2/lib -Wl,-rpath,/home/essohanam/.rvm/rubies/ruby-3.1.2/lib -L. -fstack-protector-strong -rdynamic -Wl,-export-dynamic -Wl,--no-as-needed     -Wl,-rpath,/home/essohanam/.rvm/rubies/ruby-3.1.2/lib -L/home/essohanam/.rvm/rubies/ruby-3.1.2/lib -lruby  -lm  -lc"
 conftest.c: In function ‘t’:
 conftest.c:16:57: error: ‘isfinite’ undeclared (first use in this function); did you mean ‘finite’?
    16 | int t(void) { void ((*volatile p)()); p = (void ((*)()))isfinite; return !p; }
       |                                                         ^~~~~~~~
       |                                                         finite
 conftest.c:16:57: note: each undeclared identifier is reported only once for each function it appears in
+At top level:
+cc1: note: unrecognized command-line option ‘-Wno-self-assign’ may have been intended to silence earlier diagnostics
+cc1: note: unrecognized command-line option ‘-Wno-parentheses-equality’ may have been intended to silence earlier diagnostics
+cc1: note: unrecognized command-line option ‘-Wno-constant-logical-operand’ may have been intended to silence earlier diagnostics
 checked program was:
 /* begin */
  1: #include "ruby.h"
@@ -566,9 +576,9 @@ checked program was:
 16: int t(void) { void ((*volatile p)()); p = (void ((*)()))isfinite; return !p; }
 /* end */
 
-LD_LIBRARY_PATH=.:/usr/lib/x86_64-linux-gnu "x86_64-linux-gnu-gcc -o conftest -I/usr/include/x86_64-linux-gnu/ruby-3.1.0 -I/usr/include/ruby-3.1.0/ruby/backward -I/usr/include/ruby-3.1.0 -I. -Wdate-time -D_FORTIFY_SOURCE=2   -g -O2 -ffile-prefix-map=BUILDDIR=. -fstack-protector-strong -fstack-clash-protection -Wformat -Werror=format-security -fcf-protection -fdebug-prefix-map=BUILDDIR=/usr/src/ruby3.1-3.1.2-7ubuntu3 -fPIC conftest.c  -L. -L/usr/lib/x86_64-linux-gnu -L. -Wl,-Bsymbolic-functions -Wl,-z,relro -Wl,-z,now -fstack-protector-strong -rdynamic -Wl,-export-dynamic -Wl,--no-as-needed     -lruby-3.1  -lm  -lc"
-/usr/bin/ld: /tmp/ccuurW9o.o : dans la fonction « t » :
-/home/essohanam/MICROVERSE/Module 5/my-budget-app/vendor/bundle/ruby/3.1.0/gems/bigdecimal-3.1.4/ext/bigdecimal/conftest.c:17:(.text+0xb): undefined reference to `__builtin_isfinite'
+LD_LIBRARY_PATH=.:/home/essohanam/.rvm/rubies/ruby-3.1.2/lib "gcc -o conftest -I/home/essohanam/.rvm/rubies/ruby-3.1.2/include/ruby-3.1.0/x86_64-linux -I/home/essohanam/.rvm/rubies/ruby-3.1.2/include/ruby-3.1.0/ruby/backward -I/home/essohanam/.rvm/rubies/ruby-3.1.2/include/ruby-3.1.0 -I.    -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wdeprecated-declarations -Wduplicated-cond -Wimplicit-function-declaration -Wimplicit-int -Wmisleading-indentation -Wpointer-arith -Wwrite-strings -Wimplicit-fallthrough=0 -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-packed-bitfield-compat -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wsuggest-attribute=format -Wsuggest-attribute=noreturn -Wunused-variable -Wundef  -fPIC conftest.c  -L. -L/home/essohanam/.rvm/rubies/ruby-3.1.2/lib -Wl,-rpath,/home/essohanam/.rvm/rubies/ruby-3.1.2/lib -L. -fstack-protector-strong -rdynamic -Wl,-export-dynamic -Wl,--no-as-needed     -Wl,-rpath,/home/essohanam/.rvm/rubies/ruby-3.1.2/lib -L/home/essohanam/.rvm/rubies/ruby-3.1.2/lib -lruby  -lm  -lc"
+/usr/bin/ld : /tmp/ccG9pF09.o : dans la fonction « t » :
+/home/essohanam/MICROVERSE/Module 5/my-budget-app/vendor/bundle/ruby/3.1.0/gems/bigdecimal-3.1.4/ext/bigdecimal/conftest.c:17:(.text+0xb) : référence indéfinie vers « __builtin_isfinite »
 collect2: error: ld returned 1 exit status
 checked program was:
 /* begin */
@@ -595,7 +605,7 @@ checked program was:
 
 have_header: checking for ruby/atomic.h... -------------------- yes
 
-LD_LIBRARY_PATH=.:/usr/lib/x86_64-linux-gnu "x86_64-linux-gnu-gcc -I/usr/include/x86_64-linux-gnu/ruby-3.1.0 -I/usr/include/ruby-3.1.0/ruby/backward -I/usr/include/ruby-3.1.0 -I. -Wdate-time -D_FORTIFY_SOURCE=2   -g -O2 -ffile-prefix-map=BUILDDIR=. -fstack-protector-strong -fstack-clash-protection -Wformat -Werror=format-security -fcf-protection -fdebug-prefix-map=BUILDDIR=/usr/src/ruby3.1-3.1.2-7ubuntu3 -fPIC   -c conftest.c"
+LD_LIBRARY_PATH=.:/home/essohanam/.rvm/rubies/ruby-3.1.2/lib "gcc -I/home/essohanam/.rvm/rubies/ruby-3.1.2/include/ruby-3.1.0/x86_64-linux -I/home/essohanam/.rvm/rubies/ruby-3.1.2/include/ruby-3.1.0/ruby/backward -I/home/essohanam/.rvm/rubies/ruby-3.1.2/include/ruby-3.1.0 -I.    -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wdeprecated-declarations -Wduplicated-cond -Wimplicit-function-declaration -Wimplicit-int -Wmisleading-indentation -Wpointer-arith -Wwrite-strings -Wimplicit-fallthrough=0 -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-packed-bitfield-compat -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wsuggest-attribute=format -Wsuggest-attribute=noreturn -Wunused-variable -Wundef  -fPIC   -c conftest.c"
 checked program was:
 /* begin */
 1: #include "ruby.h"
@@ -607,7 +617,7 @@ checked program was:
 
 have_header: checking for ruby/internal/has/builtin.h... -------------------- yes
 
-LD_LIBRARY_PATH=.:/usr/lib/x86_64-linux-gnu "x86_64-linux-gnu-gcc -I/usr/include/x86_64-linux-gnu/ruby-3.1.0 -I/usr/include/ruby-3.1.0/ruby/backward -I/usr/include/ruby-3.1.0 -I. -Wdate-time -D_FORTIFY_SOURCE=2   -g -O2 -ffile-prefix-map=BUILDDIR=. -fstack-protector-strong -fstack-clash-protection -Wformat -Werror=format-security -fcf-protection -fdebug-prefix-map=BUILDDIR=/usr/src/ruby3.1-3.1.2-7ubuntu3 -fPIC   -c conftest.c"
+LD_LIBRARY_PATH=.:/home/essohanam/.rvm/rubies/ruby-3.1.2/lib "gcc -I/home/essohanam/.rvm/rubies/ruby-3.1.2/include/ruby-3.1.0/x86_64-linux -I/home/essohanam/.rvm/rubies/ruby-3.1.2/include/ruby-3.1.0/ruby/backward -I/home/essohanam/.rvm/rubies/ruby-3.1.2/include/ruby-3.1.0 -I.    -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wdeprecated-declarations -Wduplicated-cond -Wimplicit-function-declaration -Wimplicit-int -Wmisleading-indentation -Wpointer-arith -Wwrite-strings -Wimplicit-fallthrough=0 -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-packed-bitfield-compat -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wsuggest-attribute=format -Wsuggest-attribute=noreturn -Wunused-variable -Wundef  -fPIC   -c conftest.c"
 checked program was:
 /* begin */
 1: #include "ruby.h"
@@ -619,7 +629,7 @@ checked program was:
 
 have_header: checking for ruby/internal/static_assert.h... -------------------- yes
 
-LD_LIBRARY_PATH=.:/usr/lib/x86_64-linux-gnu "x86_64-linux-gnu-gcc -I/usr/include/x86_64-linux-gnu/ruby-3.1.0 -I/usr/include/ruby-3.1.0/ruby/backward -I/usr/include/ruby-3.1.0 -I. -Wdate-time -D_FORTIFY_SOURCE=2   -g -O2 -ffile-prefix-map=BUILDDIR=. -fstack-protector-strong -fstack-clash-protection -Wformat -Werror=format-security -fcf-protection -fdebug-prefix-map=BUILDDIR=/usr/src/ruby3.1-3.1.2-7ubuntu3 -fPIC   -c conftest.c"
+LD_LIBRARY_PATH=.:/home/essohanam/.rvm/rubies/ruby-3.1.2/lib "gcc -I/home/essohanam/.rvm/rubies/ruby-3.1.2/include/ruby-3.1.0/x86_64-linux -I/home/essohanam/.rvm/rubies/ruby-3.1.2/include/ruby-3.1.0/ruby/backward -I/home/essohanam/.rvm/rubies/ruby-3.1.2/include/ruby-3.1.0 -I.    -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wdeprecated-declarations -Wduplicated-cond -Wimplicit-function-declaration -Wimplicit-int -Wmisleading-indentation -Wpointer-arith -Wwrite-strings -Wimplicit-fallthrough=0 -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-packed-bitfield-compat -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wsuggest-attribute=format -Wsuggest-attribute=noreturn -Wunused-variable -Wundef  -fPIC   -c conftest.c"
 checked program was:
 /* begin */
 1: #include "ruby.h"
@@ -631,7 +641,7 @@ checked program was:
 
 have_func: checking for rb_rational_num() in ruby.h... -------------------- yes
 
-LD_LIBRARY_PATH=.:/usr/lib/x86_64-linux-gnu "x86_64-linux-gnu-gcc -o conftest -I/usr/include/x86_64-linux-gnu/ruby-3.1.0 -I/usr/include/ruby-3.1.0/ruby/backward -I/usr/include/ruby-3.1.0 -I. -Wdate-time -D_FORTIFY_SOURCE=2   -g -O2 -ffile-prefix-map=BUILDDIR=. -fstack-protector-strong -fstack-clash-protection -Wformat -Werror=format-security -fcf-protection -fdebug-prefix-map=BUILDDIR=/usr/src/ruby3.1-3.1.2-7ubuntu3 -fPIC conftest.c  -L. -L/usr/lib/x86_64-linux-gnu -L. -Wl,-Bsymbolic-functions -Wl,-z,relro -Wl,-z,now -fstack-protector-strong -rdynamic -Wl,-export-dynamic -Wl,--no-as-needed     -lruby-3.1  -lm  -lc"
+LD_LIBRARY_PATH=.:/home/essohanam/.rvm/rubies/ruby-3.1.2/lib "gcc -o conftest -I/home/essohanam/.rvm/rubies/ruby-3.1.2/include/ruby-3.1.0/x86_64-linux -I/home/essohanam/.rvm/rubies/ruby-3.1.2/include/ruby-3.1.0/ruby/backward -I/home/essohanam/.rvm/rubies/ruby-3.1.2/include/ruby-3.1.0 -I.    -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wdeprecated-declarations -Wduplicated-cond -Wimplicit-function-declaration -Wimplicit-int -Wmisleading-indentation -Wpointer-arith -Wwrite-strings -Wimplicit-fallthrough=0 -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-packed-bitfield-compat -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wsuggest-attribute=format -Wsuggest-attribute=noreturn -Wunused-variable -Wundef  -fPIC conftest.c  -L. -L/home/essohanam/.rvm/rubies/ruby-3.1.2/lib -Wl,-rpath,/home/essohanam/.rvm/rubies/ruby-3.1.2/lib -L. -fstack-protector-strong -rdynamic -Wl,-export-dynamic -Wl,--no-as-needed     -Wl,-rpath,/home/essohanam/.rvm/rubies/ruby-3.1.2/lib -L/home/essohanam/.rvm/rubies/ruby-3.1.2/lib -lruby  -lm  -lc"
 checked program was:
 /* begin */
  1: #include "ruby.h"
@@ -656,7 +666,7 @@ checked program was:
 
 have_func: checking for rb_rational_den() in ruby.h... -------------------- yes
 
-LD_LIBRARY_PATH=.:/usr/lib/x86_64-linux-gnu "x86_64-linux-gnu-gcc -o conftest -I/usr/include/x86_64-linux-gnu/ruby-3.1.0 -I/usr/include/ruby-3.1.0/ruby/backward -I/usr/include/ruby-3.1.0 -I. -Wdate-time -D_FORTIFY_SOURCE=2   -g -O2 -ffile-prefix-map=BUILDDIR=. -fstack-protector-strong -fstack-clash-protection -Wformat -Werror=format-security -fcf-protection -fdebug-prefix-map=BUILDDIR=/usr/src/ruby3.1-3.1.2-7ubuntu3 -fPIC conftest.c  -L. -L/usr/lib/x86_64-linux-gnu -L. -Wl,-Bsymbolic-functions -Wl,-z,relro -Wl,-z,now -fstack-protector-strong -rdynamic -Wl,-export-dynamic -Wl,--no-as-needed     -lruby-3.1  -lm  -lc"
+LD_LIBRARY_PATH=.:/home/essohanam/.rvm/rubies/ruby-3.1.2/lib "gcc -o conftest -I/home/essohanam/.rvm/rubies/ruby-3.1.2/include/ruby-3.1.0/x86_64-linux -I/home/essohanam/.rvm/rubies/ruby-3.1.2/include/ruby-3.1.0/ruby/backward -I/home/essohanam/.rvm/rubies/ruby-3.1.2/include/ruby-3.1.0 -I.    -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wdeprecated-declarations -Wduplicated-cond -Wimplicit-function-declaration -Wimplicit-int -Wmisleading-indentation -Wpointer-arith -Wwrite-strings -Wimplicit-fallthrough=0 -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-packed-bitfield-compat -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wsuggest-attribute=format -Wsuggest-attribute=noreturn -Wunused-variable -Wundef  -fPIC conftest.c  -L. -L/home/essohanam/.rvm/rubies/ruby-3.1.2/lib -Wl,-rpath,/home/essohanam/.rvm/rubies/ruby-3.1.2/lib -L. -fstack-protector-strong -rdynamic -Wl,-export-dynamic -Wl,--no-as-needed     -Wl,-rpath,/home/essohanam/.rvm/rubies/ruby-3.1.2/lib -L/home/essohanam/.rvm/rubies/ruby-3.1.2/lib -lruby  -lm  -lc"
 checked program was:
 /* begin */
  1: #include "ruby.h"
@@ -681,7 +691,7 @@ checked program was:
 
 have_func: checking for rb_complex_real() in ruby.h... -------------------- yes
 
-LD_LIBRARY_PATH=.:/usr/lib/x86_64-linux-gnu "x86_64-linux-gnu-gcc -o conftest -I/usr/include/x86_64-linux-gnu/ruby-3.1.0 -I/usr/include/ruby-3.1.0/ruby/backward -I/usr/include/ruby-3.1.0 -I. -Wdate-time -D_FORTIFY_SOURCE=2   -g -O2 -ffile-prefix-map=BUILDDIR=. -fstack-protector-strong -fstack-clash-protection -Wformat -Werror=format-security -fcf-protection -fdebug-prefix-map=BUILDDIR=/usr/src/ruby3.1-3.1.2-7ubuntu3 -fPIC conftest.c  -L. -L/usr/lib/x86_64-linux-gnu -L. -Wl,-Bsymbolic-functions -Wl,-z,relro -Wl,-z,now -fstack-protector-strong -rdynamic -Wl,-export-dynamic -Wl,--no-as-needed     -lruby-3.1  -lm  -lc"
+LD_LIBRARY_PATH=.:/home/essohanam/.rvm/rubies/ruby-3.1.2/lib "gcc -o conftest -I/home/essohanam/.rvm/rubies/ruby-3.1.2/include/ruby-3.1.0/x86_64-linux -I/home/essohanam/.rvm/rubies/ruby-3.1.2/include/ruby-3.1.0/ruby/backward -I/home/essohanam/.rvm/rubies/ruby-3.1.2/include/ruby-3.1.0 -I.    -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wdeprecated-declarations -Wduplicated-cond -Wimplicit-function-declaration -Wimplicit-int -Wmisleading-indentation -Wpointer-arith -Wwrite-strings -Wimplicit-fallthrough=0 -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-packed-bitfield-compat -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wsuggest-attribute=format -Wsuggest-attribute=noreturn -Wunused-variable -Wundef  -fPIC conftest.c  -L. -L/home/essohanam/.rvm/rubies/ruby-3.1.2/lib -Wl,-rpath,/home/essohanam/.rvm/rubies/ruby-3.1.2/lib -L. -fstack-protector-strong -rdynamic -Wl,-export-dynamic -Wl,--no-as-needed     -Wl,-rpath,/home/essohanam/.rvm/rubies/ruby-3.1.2/lib -L/home/essohanam/.rvm/rubies/ruby-3.1.2/lib -lruby  -lm  -lc"
 checked program was:
 /* begin */
  1: #include "ruby.h"
@@ -706,7 +716,7 @@ checked program was:
 
 have_func: checking for rb_complex_imag() in ruby.h... -------------------- yes
 
-LD_LIBRARY_PATH=.:/usr/lib/x86_64-linux-gnu "x86_64-linux-gnu-gcc -o conftest -I/usr/include/x86_64-linux-gnu/ruby-3.1.0 -I/usr/include/ruby-3.1.0/ruby/backward -I/usr/include/ruby-3.1.0 -I. -Wdate-time -D_FORTIFY_SOURCE=2   -g -O2 -ffile-prefix-map=BUILDDIR=. -fstack-protector-strong -fstack-clash-protection -Wformat -Werror=format-security -fcf-protection -fdebug-prefix-map=BUILDDIR=/usr/src/ruby3.1-3.1.2-7ubuntu3 -fPIC conftest.c  -L. -L/usr/lib/x86_64-linux-gnu -L. -Wl,-Bsymbolic-functions -Wl,-z,relro -Wl,-z,now -fstack-protector-strong -rdynamic -Wl,-export-dynamic -Wl,--no-as-needed     -lruby-3.1  -lm  -lc"
+LD_LIBRARY_PATH=.:/home/essohanam/.rvm/rubies/ruby-3.1.2/lib "gcc -o conftest -I/home/essohanam/.rvm/rubies/ruby-3.1.2/include/ruby-3.1.0/x86_64-linux -I/home/essohanam/.rvm/rubies/ruby-3.1.2/include/ruby-3.1.0/ruby/backward -I/home/essohanam/.rvm/rubies/ruby-3.1.2/include/ruby-3.1.0 -I.    -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wdeprecated-declarations -Wduplicated-cond -Wimplicit-function-declaration -Wimplicit-int -Wmisleading-indentation -Wpointer-arith -Wwrite-strings -Wimplicit-fallthrough=0 -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-packed-bitfield-compat -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wsuggest-attribute=format -Wsuggest-attribute=noreturn -Wunused-variable -Wundef  -fPIC conftest.c  -L. -L/home/essohanam/.rvm/rubies/ruby-3.1.2/lib -Wl,-rpath,/home/essohanam/.rvm/rubies/ruby-3.1.2/lib -L. -fstack-protector-strong -rdynamic -Wl,-export-dynamic -Wl,--no-as-needed     -Wl,-rpath,/home/essohanam/.rvm/rubies/ruby-3.1.2/lib -L/home/essohanam/.rvm/rubies/ruby-3.1.2/lib -lruby  -lm  -lc"
 checked program was:
 /* begin */
  1: #include "ruby.h"
@@ -731,13 +741,17 @@ checked program was:
 
 have_func: checking for rb_opts_exception_p() in ruby.h... -------------------- yes
 
-LD_LIBRARY_PATH=.:/usr/lib/x86_64-linux-gnu "x86_64-linux-gnu-gcc -o conftest -I/usr/include/x86_64-linux-gnu/ruby-3.1.0 -I/usr/include/ruby-3.1.0/ruby/backward -I/usr/include/ruby-3.1.0 -I. -Wdate-time -D_FORTIFY_SOURCE=2   -g -O2 -ffile-prefix-map=BUILDDIR=. -fstack-protector-strong -fstack-clash-protection -Wformat -Werror=format-security -fcf-protection -fdebug-prefix-map=BUILDDIR=/usr/src/ruby3.1-3.1.2-7ubuntu3 -fPIC conftest.c  -L. -L/usr/lib/x86_64-linux-gnu -L. -Wl,-Bsymbolic-functions -Wl,-z,relro -Wl,-z,now -fstack-protector-strong -rdynamic -Wl,-export-dynamic -Wl,--no-as-needed     -lruby-3.1  -lm  -lc"
+LD_LIBRARY_PATH=.:/home/essohanam/.rvm/rubies/ruby-3.1.2/lib "gcc -o conftest -I/home/essohanam/.rvm/rubies/ruby-3.1.2/include/ruby-3.1.0/x86_64-linux -I/home/essohanam/.rvm/rubies/ruby-3.1.2/include/ruby-3.1.0/ruby/backward -I/home/essohanam/.rvm/rubies/ruby-3.1.2/include/ruby-3.1.0 -I.    -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wdeprecated-declarations -Wduplicated-cond -Wimplicit-function-declaration -Wimplicit-int -Wmisleading-indentation -Wpointer-arith -Wwrite-strings -Wimplicit-fallthrough=0 -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-packed-bitfield-compat -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wsuggest-attribute=format -Wsuggest-attribute=noreturn -Wunused-variable -Wundef  -fPIC conftest.c  -L. -L/home/essohanam/.rvm/rubies/ruby-3.1.2/lib -Wl,-rpath,/home/essohanam/.rvm/rubies/ruby-3.1.2/lib -L. -fstack-protector-strong -rdynamic -Wl,-export-dynamic -Wl,--no-as-needed     -Wl,-rpath,/home/essohanam/.rvm/rubies/ruby-3.1.2/lib -L/home/essohanam/.rvm/rubies/ruby-3.1.2/lib -lruby  -lm  -lc"
 conftest.c: In function ‘t’:
 conftest.c:16:57: error: ‘rb_opts_exception_p’ undeclared (first use in this function); did you mean ‘rb_make_exception’?
    16 | int t(void) { void ((*volatile p)()); p = (void ((*)()))rb_opts_exception_p; return !p; }
       |                                                         ^~~~~~~~~~~~~~~~~~~
       |                                                         rb_make_exception
 conftest.c:16:57: note: each undeclared identifier is reported only once for each function it appears in
+At top level:
+cc1: note: unrecognized command-line option ‘-Wno-self-assign’ may have been intended to silence earlier diagnostics
+cc1: note: unrecognized command-line option ‘-Wno-parentheses-equality’ may have been intended to silence earlier diagnostics
+cc1: note: unrecognized command-line option ‘-Wno-constant-logical-operand’ may have been intended to silence earlier diagnostics
 checked program was:
 /* begin */
  1: #include "ruby.h"
@@ -758,7 +772,7 @@ checked program was:
 16: int t(void) { void ((*volatile p)()); p = (void ((*)()))rb_opts_exception_p; return !p; }
 /* end */
 
-LD_LIBRARY_PATH=.:/usr/lib/x86_64-linux-gnu "x86_64-linux-gnu-gcc -o conftest -I/usr/include/x86_64-linux-gnu/ruby-3.1.0 -I/usr/include/ruby-3.1.0/ruby/backward -I/usr/include/ruby-3.1.0 -I. -Wdate-time -D_FORTIFY_SOURCE=2   -g -O2 -ffile-prefix-map=BUILDDIR=. -fstack-protector-strong -fstack-clash-protection -Wformat -Werror=format-security -fcf-protection -fdebug-prefix-map=BUILDDIR=/usr/src/ruby3.1-3.1.2-7ubuntu3 -fPIC conftest.c  -L. -L/usr/lib/x86_64-linux-gnu -L. -Wl,-Bsymbolic-functions -Wl,-z,relro -Wl,-z,now -fstack-protector-strong -rdynamic -Wl,-export-dynamic -Wl,--no-as-needed     -lruby-3.1  -lm  -lc"
+LD_LIBRARY_PATH=.:/home/essohanam/.rvm/rubies/ruby-3.1.2/lib "gcc -o conftest -I/home/essohanam/.rvm/rubies/ruby-3.1.2/include/ruby-3.1.0/x86_64-linux -I/home/essohanam/.rvm/rubies/ruby-3.1.2/include/ruby-3.1.0/ruby/backward -I/home/essohanam/.rvm/rubies/ruby-3.1.2/include/ruby-3.1.0 -I.    -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wdeprecated-declarations -Wduplicated-cond -Wimplicit-function-declaration -Wimplicit-int -Wmisleading-indentation -Wpointer-arith -Wwrite-strings -Wimplicit-fallthrough=0 -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-packed-bitfield-compat -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wsuggest-attribute=format -Wsuggest-attribute=noreturn -Wunused-variable -Wundef  -fPIC conftest.c  -L. -L/home/essohanam/.rvm/rubies/ruby-3.1.2/lib -Wl,-rpath,/home/essohanam/.rvm/rubies/ruby-3.1.2/lib -L. -fstack-protector-strong -rdynamic -Wl,-export-dynamic -Wl,--no-as-needed     -Wl,-rpath,/home/essohanam/.rvm/rubies/ruby-3.1.2/lib -L/home/essohanam/.rvm/rubies/ruby-3.1.2/lib -lruby  -lm  -lc"
 checked program was:
 /* begin */
  1: #include "ruby.h"
@@ -784,7 +798,7 @@ checked program was:
 
 have_func: checking for rb_category_warn() in ruby.h... -------------------- yes
 
-LD_LIBRARY_PATH=.:/usr/lib/x86_64-linux-gnu "x86_64-linux-gnu-gcc -o conftest -I/usr/include/x86_64-linux-gnu/ruby-3.1.0 -I/usr/include/ruby-3.1.0/ruby/backward -I/usr/include/ruby-3.1.0 -I. -Wdate-time -D_FORTIFY_SOURCE=2   -g -O2 -ffile-prefix-map=BUILDDIR=. -fstack-protector-strong -fstack-clash-protection -Wformat -Werror=format-security -fcf-protection -fdebug-prefix-map=BUILDDIR=/usr/src/ruby3.1-3.1.2-7ubuntu3 -fPIC conftest.c  -L. -L/usr/lib/x86_64-linux-gnu -L. -Wl,-Bsymbolic-functions -Wl,-z,relro -Wl,-z,now -fstack-protector-strong -rdynamic -Wl,-export-dynamic -Wl,--no-as-needed     -lruby-3.1  -lm  -lc"
+LD_LIBRARY_PATH=.:/home/essohanam/.rvm/rubies/ruby-3.1.2/lib "gcc -o conftest -I/home/essohanam/.rvm/rubies/ruby-3.1.2/include/ruby-3.1.0/x86_64-linux -I/home/essohanam/.rvm/rubies/ruby-3.1.2/include/ruby-3.1.0/ruby/backward -I/home/essohanam/.rvm/rubies/ruby-3.1.2/include/ruby-3.1.0 -I.    -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wdeprecated-declarations -Wduplicated-cond -Wimplicit-function-declaration -Wimplicit-int -Wmisleading-indentation -Wpointer-arith -Wwrite-strings -Wimplicit-fallthrough=0 -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-packed-bitfield-compat -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wsuggest-attribute=format -Wsuggest-attribute=noreturn -Wunused-variable -Wundef  -fPIC conftest.c  -L. -L/home/essohanam/.rvm/rubies/ruby-3.1.2/lib -Wl,-rpath,/home/essohanam/.rvm/rubies/ruby-3.1.2/lib -L. -fstack-protector-strong -rdynamic -Wl,-export-dynamic -Wl,--no-as-needed     -Wl,-rpath,/home/essohanam/.rvm/rubies/ruby-3.1.2/lib -L/home/essohanam/.rvm/rubies/ruby-3.1.2/lib -lruby  -lm  -lc"
 checked program was:
 /* begin */
  1: #include "ruby.h"
@@ -809,7 +823,7 @@ checked program was:
 
 have_const: checking for RB_WARN_CATEGORY_DEPRECATED in ruby.h... -------------------- yes
 
-LD_LIBRARY_PATH=.:/usr/lib/x86_64-linux-gnu "x86_64-linux-gnu-gcc -I/usr/include/x86_64-linux-gnu/ruby-3.1.0 -I/usr/include/ruby-3.1.0/ruby/backward -I/usr/include/ruby-3.1.0 -I. -Wdate-time -D_FORTIFY_SOURCE=2   -g -O2 -ffile-prefix-map=BUILDDIR=. -fstack-protector-strong -fstack-clash-protection -Wformat -Werror=format-security -fcf-protection -fdebug-prefix-map=BUILDDIR=/usr/src/ruby3.1-3.1.2-7ubuntu3 -fPIC   -c conftest.c"
+LD_LIBRARY_PATH=.:/home/essohanam/.rvm/rubies/ruby-3.1.2/lib "gcc -I/home/essohanam/.rvm/rubies/ruby-3.1.2/include/ruby-3.1.0/x86_64-linux -I/home/essohanam/.rvm/rubies/ruby-3.1.2/include/ruby-3.1.0/ruby/backward -I/home/essohanam/.rvm/rubies/ruby-3.1.2/include/ruby-3.1.0 -I.    -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wdeprecated-declarations -Wduplicated-cond -Wimplicit-function-declaration -Wimplicit-int -Wmisleading-indentation -Wpointer-arith -Wwrite-strings -Wimplicit-fallthrough=0 -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-packed-bitfield-compat -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wsuggest-attribute=format -Wsuggest-attribute=noreturn -Wunused-variable -Wundef  -fPIC   -c conftest.c"
 checked program was:
 /* begin */
 1: #include "ruby.h"

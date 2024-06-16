@@ -1,5 +1,5 @@
 current directory: /home/essohanam/MICROVERSE/Module 5/my-budget-app/vendor/bundle/ruby/3.1.0/gems/bigdecimal-3.1.4/ext/bigdecimal
-/usr/bin/ruby3.1 -I /usr/lib/ruby/vendor_ruby -r ./siteconf20231119-128975-9pg6qc.rb extconf.rb
+/home/essohanam/.rvm/rubies/ruby-3.1.2/bin/ruby extconf.rb
 checking for __builtin_clz()... yes
 checking for __builtin_clzl()... yes
 checking for __builtin_clzll()... yes
@@ -32,14 +32,17 @@ checking for RB_WARN_CATEGORY_DEPRECATED in ruby.h... yes
 creating Makefile
 
 current directory: /home/essohanam/MICROVERSE/Module 5/my-budget-app/vendor/bundle/ruby/3.1.0/gems/bigdecimal-3.1.4/ext/bigdecimal
-make DESTDIR\= clean
+make DESTDIR\= sitearchdir\=./.gem.20240616-73748-xuxmkh sitelibdir\=./.gem.20240616-73748-xuxmkh clean
 
 current directory: /home/essohanam/MICROVERSE/Module 5/my-budget-app/vendor/bundle/ruby/3.1.0/gems/bigdecimal-3.1.4/ext/bigdecimal
-make DESTDIR\=
+make DESTDIR\= sitearchdir\=./.gem.20240616-73748-xuxmkh sitelibdir\=./.gem.20240616-73748-xuxmkh
 compiling bigdecimal.c
 compiling missing.c
 linking shared-object bigdecimal.so
 
 current directory: /home/essohanam/MICROVERSE/Module 5/my-budget-app/vendor/bundle/ruby/3.1.0/gems/bigdecimal-3.1.4/ext/bigdecimal
-make DESTDIR\= install
-/usr/bin/install -c -m 0755 bigdecimal.so ./.gem.20231119-128975-8e4h
+make DESTDIR\= sitearchdir\=./.gem.20240616-73748-xuxmkh sitelibdir\=./.gem.20240616-73748-xuxmkh install
+/usr/bin/install -c -m 0755 bigdecimal.so ./.gem.20240616-73748-xuxmkh
+
+current directory: /home/essohanam/MICROVERSE/Module 5/my-budget-app/vendor/bundle/ruby/3.1.0/gems/bigdecimal-3.1.4/ext/bigdecimal
+make DESTDIR\= sitearchdir\=./.gem.20240616-73748-xuxmkh sitelibdir\=./.gem.20240616-73748-xuxmkh clean

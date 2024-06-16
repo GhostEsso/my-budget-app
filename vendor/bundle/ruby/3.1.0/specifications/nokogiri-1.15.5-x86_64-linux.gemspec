@@ -3,7 +3,7 @@
 
 Gem::Specification.new do |s|
   s.name = "nokogiri".freeze
-  s.version = "1.15.5"
+  s.version = "1.15.5".freeze
   s.platform = "x86_64-linux".freeze
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0".freeze) if s.respond_to? :required_rubygems_version=
@@ -20,18 +20,12 @@ Gem::Specification.new do |s|
   s.licenses = ["MIT".freeze]
   s.rdoc_options = ["--main".freeze, "README.md".freeze]
   s.required_ruby_version = Gem::Requirement.new([">= 2.7".freeze, "< 3.3.dev".freeze])
-  s.rubygems_version = "3.3.15".freeze
+  s.rubygems_version = "3.3.26".freeze
   s.summary = "Nokogiri (\u92F8) makes it easy and painless to work with XML and HTML from Ruby.".freeze
 
-  s.installed_by_version = "3.3.15" if s.respond_to? :installed_by_version
+  s.installed_by_version = "3.5.13".freeze if s.respond_to? :installed_by_version
 
-  if s.respond_to? :specification_version then
-    s.specification_version = 4
-  end
+  s.specification_version = 4
 
-  if s.respond_to? :add_runtime_dependency then
-    s.add_runtime_dependency(%q<racc>.freeze, ["~> 1.4"])
-  else
-    s.add_dependency(%q<racc>.freeze, ["~> 1.4"])
-  end
+  s.add_runtime_dependency(%q<racc>.freeze, ["~> 1.4".freeze])
 end

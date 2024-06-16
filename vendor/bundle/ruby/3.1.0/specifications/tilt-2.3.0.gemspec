@@ -3,7 +3,7 @@
 
 Gem::Specification.new do |s|
   s.name = "tilt".freeze
-  s.version = "2.3.0"
+  s.version = "2.3.0".freeze
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0".freeze) if s.respond_to? :required_rubygems_version=
   s.metadata = { "bug_tracker_uri" => "https://github.com/jeremyevans/tilt/issues", "changelog_uri" => "https://github.com/jeremyevans/tilt/blob/master/CHANGELOG.md", "mailing_list_uri" => "https://github.com/jeremyevans/tilt/discussions", "source_code_uri" => "https://github.com/jeremyevans/tilt" } if s.respond_to? :metadata=
@@ -18,8 +18,8 @@ Gem::Specification.new do |s|
   s.licenses = ["MIT".freeze]
   s.rdoc_options = ["--line-numbers".freeze, "--inline-source".freeze, "--title".freeze, "Tilt".freeze, "--main".freeze, "Tilt".freeze]
   s.required_ruby_version = Gem::Requirement.new(">= 2.0".freeze)
-  s.rubygems_version = "3.3.15".freeze
+  s.rubygems_version = "3.4.10".freeze
   s.summary = "Generic interface to multiple Ruby template engines".freeze
 
-  s.installed_by_version = "3.3.15" if s.respond_to? :installed_by_version
+  s.installed_by_version = "3.5.13".freeze if s.respond_to? :installed_by_version
 end

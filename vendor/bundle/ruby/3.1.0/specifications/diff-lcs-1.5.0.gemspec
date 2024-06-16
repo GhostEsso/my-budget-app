@@ -3,7 +3,7 @@
 
 Gem::Specification.new do |s|
   s.name = "diff-lcs".freeze
-  s.version = "1.5.0"
+  s.version = "1.5.0".freeze
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0".freeze) if s.respond_to? :required_rubygems_version=
   s.metadata = { "bug_tracker_uri" => "https://github.com/halostatue/diff-lcs/issues", "homepage_uri" => "https://github.com/halostatue/diff-lcs", "source_code_uri" => "https://github.com/halostatue/diff-lcs" } if s.respond_to? :metadata=
@@ -19,32 +19,19 @@ Gem::Specification.new do |s|
   s.licenses = ["MIT".freeze, "Artistic-2.0".freeze, "GPL-2.0+".freeze]
   s.rdoc_options = ["--main".freeze, "README.rdoc".freeze]
   s.required_ruby_version = Gem::Requirement.new(">= 1.8".freeze)
-  s.rubygems_version = "3.3.15".freeze
+  s.rubygems_version = "3.1.6".freeze
   s.summary = "Diff::LCS computes the difference between two Enumerable sequences using the McIlroy-Hunt longest common subsequence (LCS) algorithm".freeze
 
-  s.installed_by_version = "3.3.15" if s.respond_to? :installed_by_version
+  s.installed_by_version = "3.5.13".freeze if s.respond_to? :installed_by_version
 
-  if s.respond_to? :specification_version then
-    s.specification_version = 4
-  end
+  s.specification_version = 4
 
-  if s.respond_to? :add_runtime_dependency then
-    s.add_development_dependency(%q<hoe-doofus>.freeze, ["~> 1.0"])
-    s.add_development_dependency(%q<hoe-gemspec2>.freeze, ["~> 1.1"])
-    s.add_development_dependency(%q<hoe-git>.freeze, ["~> 1.6"])
-    s.add_development_dependency(%q<hoe-rubygems>.freeze, ["~> 1.0"])
-    s.add_development_dependency(%q<rspec>.freeze, [">= 2.0", "< 4"])
-    s.add_development_dependency(%q<rake>.freeze, [">= 10.0", "< 14"])
-    s.add_development_dependency(%q<rdoc>.freeze, [">= 6.3.1", "< 7"])
-    s.add_development_dependency(%q<hoe>.freeze, ["~> 3.23"])
-  else
-    s.add_dependency(%q<hoe-doofus>.freeze, ["~> 1.0"])
-    s.add_dependency(%q<hoe-gemspec2>.freeze, ["~> 1.1"])
-    s.add_dependency(%q<hoe-git>.freeze, ["~> 1.6"])
-    s.add_dependency(%q<hoe-rubygems>.freeze, ["~> 1.0"])
-    s.add_dependency(%q<rspec>.freeze, [">= 2.0", "< 4"])
-    s.add_dependency(%q<rake>.freeze, [">= 10.0", "< 14"])
-    s.add_dependency(%q<rdoc>.freeze, [">= 6.3.1", "< 7"])
-    s.add_dependency(%q<hoe>.freeze, ["~> 3.23"])
-  end
+  s.add_development_dependency(%q<hoe-doofus>.freeze, ["~> 1.0".freeze])
+  s.add_development_dependency(%q<hoe-gemspec2>.freeze, ["~> 1.1".freeze])
+  s.add_development_dependency(%q<hoe-git>.freeze, ["~> 1.6".freeze])
+  s.add_development_dependency(%q<hoe-rubygems>.freeze, ["~> 1.0".freeze])
+  s.add_development_dependency(%q<rspec>.freeze, [">= 2.0".freeze, "< 4".freeze])
+  s.add_development_dependency(%q<rake>.freeze, [">= 10.0".freeze, "< 14".freeze])
+  s.add_development_dependency(%q<rdoc>.freeze, [">= 6.3.1".freeze, "< 7".freeze])
+  s.add_development_dependency(%q<hoe>.freeze, ["~> 3.23".freeze])
 end

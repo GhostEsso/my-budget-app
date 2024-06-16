@@ -1,6 +1,6 @@
 have_func: checking for rb_enc_interned_str() in ruby.h... -------------------- yes
 
-LD_LIBRARY_PATH=.:/usr/lib/x86_64-linux-gnu "x86_64-linux-gnu-gcc -o conftest -I/usr/include/x86_64-linux-gnu/ruby-3.1.0 -I/usr/include/ruby-3.1.0/ruby/backward -I/usr/include/ruby-3.1.0 -I. -Wdate-time -D_FORTIFY_SOURCE=2   -g -O2 -ffile-prefix-map=BUILDDIR=. -fstack-protector-strong -fstack-clash-protection -Wformat -Werror=format-security -fcf-protection -fdebug-prefix-map=BUILDDIR=/usr/src/ruby3.1-3.1.2-7ubuntu3 -fPIC conftest.c  -L. -L/usr/lib/x86_64-linux-gnu -L. -Wl,-Bsymbolic-functions -Wl,-z,relro -Wl,-z,now -fstack-protector-strong -rdynamic -Wl,-export-dynamic -Wl,--no-as-needed     -lruby-3.1  -lm  -lc"
+LD_LIBRARY_PATH=.:/home/essohanam/.rvm/rubies/ruby-3.1.2/lib "gcc -o conftest -I/home/essohanam/.rvm/rubies/ruby-3.1.2/include/ruby-3.1.0/x86_64-linux -I/home/essohanam/.rvm/rubies/ruby-3.1.2/include/ruby-3.1.0/ruby/backward -I/home/essohanam/.rvm/rubies/ruby-3.1.2/include/ruby-3.1.0 -I.    -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wdeprecated-declarations -Wduplicated-cond -Wimplicit-function-declaration -Wimplicit-int -Wmisleading-indentation -Wpointer-arith -Wwrite-strings -Wimplicit-fallthrough=0 -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-packed-bitfield-compat -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wsuggest-attribute=format -Wsuggest-attribute=noreturn -Wunused-variable -Wundef  -fPIC conftest.c  -L. -L/home/essohanam/.rvm/rubies/ruby-3.1.2/lib -Wl,-rpath,/home/essohanam/.rvm/rubies/ruby-3.1.2/lib -L. -fstack-protector-strong -rdynamic -Wl,-export-dynamic -Wl,--no-as-needed     -Wl,-rpath,/home/essohanam/.rvm/rubies/ruby-3.1.2/lib -L/home/essohanam/.rvm/rubies/ruby-3.1.2/lib -lruby  -lm  -lc"
 checked program was:
 /* begin */
 1: #include "ruby.h"
@@ -11,13 +11,17 @@ checked program was:
 6: }
 /* end */
 
-LD_LIBRARY_PATH=.:/usr/lib/x86_64-linux-gnu "x86_64-linux-gnu-gcc -o conftest -I/usr/include/x86_64-linux-gnu/ruby-3.1.0 -I/usr/include/ruby-3.1.0/ruby/backward -I/usr/include/ruby-3.1.0 -I. -Wdate-time -D_FORTIFY_SOURCE=2   -g -O2 -ffile-prefix-map=BUILDDIR=. -fstack-protector-strong -fstack-clash-protection -Wformat -Werror=format-security -fcf-protection -fdebug-prefix-map=BUILDDIR=/usr/src/ruby3.1-3.1.2-7ubuntu3 -fPIC conftest.c  -L. -L/usr/lib/x86_64-linux-gnu -L. -Wl,-Bsymbolic-functions -Wl,-z,relro -Wl,-z,now -fstack-protector-strong -rdynamic -Wl,-export-dynamic -Wl,--no-as-needed     -lruby-3.1  -lm  -lc"
+LD_LIBRARY_PATH=.:/home/essohanam/.rvm/rubies/ruby-3.1.2/lib "gcc -o conftest -I/home/essohanam/.rvm/rubies/ruby-3.1.2/include/ruby-3.1.0/x86_64-linux -I/home/essohanam/.rvm/rubies/ruby-3.1.2/include/ruby-3.1.0/ruby/backward -I/home/essohanam/.rvm/rubies/ruby-3.1.2/include/ruby-3.1.0 -I.    -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wdeprecated-declarations -Wduplicated-cond -Wimplicit-function-declaration -Wimplicit-int -Wmisleading-indentation -Wpointer-arith -Wwrite-strings -Wimplicit-fallthrough=0 -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-packed-bitfield-compat -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wsuggest-attribute=format -Wsuggest-attribute=noreturn -Wunused-variable -Wundef  -fPIC conftest.c  -L. -L/home/essohanam/.rvm/rubies/ruby-3.1.2/lib -Wl,-rpath,/home/essohanam/.rvm/rubies/ruby-3.1.2/lib -L. -fstack-protector-strong -rdynamic -Wl,-export-dynamic -Wl,--no-as-needed     -Wl,-rpath,/home/essohanam/.rvm/rubies/ruby-3.1.2/lib -L/home/essohanam/.rvm/rubies/ruby-3.1.2/lib -lruby  -lm  -lc"
 conftest.c: In function ‘t’:
 conftest.c:16:57: error: ‘rb_enc_interned_str’ undeclared (first use in this function); did you mean ‘rb_interned_str’?
    16 | int t(void) { void ((*volatile p)()); p = (void ((*)()))rb_enc_interned_str; return !p; }
       |                                                         ^~~~~~~~~~~~~~~~~~~
       |                                                         rb_interned_str
 conftest.c:16:57: note: each undeclared identifier is reported only once for each function it appears in
+At top level:
+cc1: note: unrecognized command-line option ‘-Wno-self-assign’ may have been intended to silence earlier diagnostics
+cc1: note: unrecognized command-line option ‘-Wno-parentheses-equality’ may have been intended to silence earlier diagnostics
+cc1: note: unrecognized command-line option ‘-Wno-constant-logical-operand’ may have been intended to silence earlier diagnostics
 checked program was:
 /* begin */
  1: #include "ruby.h"
@@ -38,7 +42,7 @@ checked program was:
 16: int t(void) { void ((*volatile p)()); p = (void ((*)()))rb_enc_interned_str; return !p; }
 /* end */
 
-LD_LIBRARY_PATH=.:/usr/lib/x86_64-linux-gnu "x86_64-linux-gnu-gcc -o conftest -I/usr/include/x86_64-linux-gnu/ruby-3.1.0 -I/usr/include/ruby-3.1.0/ruby/backward -I/usr/include/ruby-3.1.0 -I. -Wdate-time -D_FORTIFY_SOURCE=2   -g -O2 -ffile-prefix-map=BUILDDIR=. -fstack-protector-strong -fstack-clash-protection -Wformat -Werror=format-security -fcf-protection -fdebug-prefix-map=BUILDDIR=/usr/src/ruby3.1-3.1.2-7ubuntu3 -fPIC conftest.c  -L. -L/usr/lib/x86_64-linux-gnu -L. -Wl,-Bsymbolic-functions -Wl,-z,relro -Wl,-z,now -fstack-protector-strong -rdynamic -Wl,-export-dynamic -Wl,--no-as-needed     -lruby-3.1  -lm  -lc"
+LD_LIBRARY_PATH=.:/home/essohanam/.rvm/rubies/ruby-3.1.2/lib "gcc -o conftest -I/home/essohanam/.rvm/rubies/ruby-3.1.2/include/ruby-3.1.0/x86_64-linux -I/home/essohanam/.rvm/rubies/ruby-3.1.2/include/ruby-3.1.0/ruby/backward -I/home/essohanam/.rvm/rubies/ruby-3.1.2/include/ruby-3.1.0 -I.    -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wdeprecated-declarations -Wduplicated-cond -Wimplicit-function-declaration -Wimplicit-int -Wmisleading-indentation -Wpointer-arith -Wwrite-strings -Wimplicit-fallthrough=0 -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-packed-bitfield-compat -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wsuggest-attribute=format -Wsuggest-attribute=noreturn -Wunused-variable -Wundef  -fPIC conftest.c  -L. -L/home/essohanam/.rvm/rubies/ruby-3.1.2/lib -Wl,-rpath,/home/essohanam/.rvm/rubies/ruby-3.1.2/lib -L. -fstack-protector-strong -rdynamic -Wl,-export-dynamic -Wl,--no-as-needed     -Wl,-rpath,/home/essohanam/.rvm/rubies/ruby-3.1.2/lib -L/home/essohanam/.rvm/rubies/ruby-3.1.2/lib -lruby  -lm  -lc"
 checked program was:
 /* begin */
  1: #include "ruby.h"
@@ -64,13 +68,17 @@ checked program was:
 
 have_func: checking for rb_hash_new_capa() in ruby.h... -------------------- no
 
-LD_LIBRARY_PATH=.:/usr/lib/x86_64-linux-gnu "x86_64-linux-gnu-gcc -o conftest -I/usr/include/x86_64-linux-gnu/ruby-3.1.0 -I/usr/include/ruby-3.1.0/ruby/backward -I/usr/include/ruby-3.1.0 -I. -Wdate-time -D_FORTIFY_SOURCE=2   -g -O2 -ffile-prefix-map=BUILDDIR=. -fstack-protector-strong -fstack-clash-protection -Wformat -Werror=format-security -fcf-protection -fdebug-prefix-map=BUILDDIR=/usr/src/ruby3.1-3.1.2-7ubuntu3 -fPIC conftest.c  -L. -L/usr/lib/x86_64-linux-gnu -L. -Wl,-Bsymbolic-functions -Wl,-z,relro -Wl,-z,now -fstack-protector-strong -rdynamic -Wl,-export-dynamic -Wl,--no-as-needed     -lruby-3.1  -lm  -lc"
+LD_LIBRARY_PATH=.:/home/essohanam/.rvm/rubies/ruby-3.1.2/lib "gcc -o conftest -I/home/essohanam/.rvm/rubies/ruby-3.1.2/include/ruby-3.1.0/x86_64-linux -I/home/essohanam/.rvm/rubies/ruby-3.1.2/include/ruby-3.1.0/ruby/backward -I/home/essohanam/.rvm/rubies/ruby-3.1.2/include/ruby-3.1.0 -I.    -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wdeprecated-declarations -Wduplicated-cond -Wimplicit-function-declaration -Wimplicit-int -Wmisleading-indentation -Wpointer-arith -Wwrite-strings -Wimplicit-fallthrough=0 -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-packed-bitfield-compat -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wsuggest-attribute=format -Wsuggest-attribute=noreturn -Wunused-variable -Wundef  -fPIC conftest.c  -L. -L/home/essohanam/.rvm/rubies/ruby-3.1.2/lib -Wl,-rpath,/home/essohanam/.rvm/rubies/ruby-3.1.2/lib -L. -fstack-protector-strong -rdynamic -Wl,-export-dynamic -Wl,--no-as-needed     -Wl,-rpath,/home/essohanam/.rvm/rubies/ruby-3.1.2/lib -L/home/essohanam/.rvm/rubies/ruby-3.1.2/lib -lruby  -lm  -lc"
 conftest.c: In function ‘t’:
 conftest.c:16:57: error: ‘rb_hash_new_capa’ undeclared (first use in this function); did you mean ‘rb_ary_new_capa’?
    16 | int t(void) { void ((*volatile p)()); p = (void ((*)()))rb_hash_new_capa; return !p; }
       |                                                         ^~~~~~~~~~~~~~~~
       |                                                         rb_ary_new_capa
 conftest.c:16:57: note: each undeclared identifier is reported only once for each function it appears in
+At top level:
+cc1: note: unrecognized command-line option ‘-Wno-self-assign’ may have been intended to silence earlier diagnostics
+cc1: note: unrecognized command-line option ‘-Wno-parentheses-equality’ may have been intended to silence earlier diagnostics
+cc1: note: unrecognized command-line option ‘-Wno-constant-logical-operand’ may have been intended to silence earlier diagnostics
 checked program was:
 /* begin */
  1: #include "ruby.h"
@@ -91,9 +99,9 @@ checked program was:
 16: int t(void) { void ((*volatile p)()); p = (void ((*)()))rb_hash_new_capa; return !p; }
 /* end */
 
-LD_LIBRARY_PATH=.:/usr/lib/x86_64-linux-gnu "x86_64-linux-gnu-gcc -o conftest -I/usr/include/x86_64-linux-gnu/ruby-3.1.0 -I/usr/include/ruby-3.1.0/ruby/backward -I/usr/include/ruby-3.1.0 -I. -Wdate-time -D_FORTIFY_SOURCE=2   -g -O2 -ffile-prefix-map=BUILDDIR=. -fstack-protector-strong -fstack-clash-protection -Wformat -Werror=format-security -fcf-protection -fdebug-prefix-map=BUILDDIR=/usr/src/ruby3.1-3.1.2-7ubuntu3 -fPIC conftest.c  -L. -L/usr/lib/x86_64-linux-gnu -L. -Wl,-Bsymbolic-functions -Wl,-z,relro -Wl,-z,now -fstack-protector-strong -rdynamic -Wl,-export-dynamic -Wl,--no-as-needed     -lruby-3.1  -lm  -lc"
-/usr/bin/ld: /tmp/ccuySdn3.o : dans la fonction « t » :
-/home/essohanam/MICROVERSE/Module 5/my-budget-app/vendor/bundle/ruby/3.1.0/gems/msgpack-1.7.2/ext/msgpack/conftest.c:17:(.text+0xb): undefined reference to `rb_hash_new_capa'
+LD_LIBRARY_PATH=.:/home/essohanam/.rvm/rubies/ruby-3.1.2/lib "gcc -o conftest -I/home/essohanam/.rvm/rubies/ruby-3.1.2/include/ruby-3.1.0/x86_64-linux -I/home/essohanam/.rvm/rubies/ruby-3.1.2/include/ruby-3.1.0/ruby/backward -I/home/essohanam/.rvm/rubies/ruby-3.1.2/include/ruby-3.1.0 -I.    -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wdeprecated-declarations -Wduplicated-cond -Wimplicit-function-declaration -Wimplicit-int -Wmisleading-indentation -Wpointer-arith -Wwrite-strings -Wimplicit-fallthrough=0 -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-packed-bitfield-compat -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wsuggest-attribute=format -Wsuggest-attribute=noreturn -Wunused-variable -Wundef  -fPIC conftest.c  -L. -L/home/essohanam/.rvm/rubies/ruby-3.1.2/lib -Wl,-rpath,/home/essohanam/.rvm/rubies/ruby-3.1.2/lib -L. -fstack-protector-strong -rdynamic -Wl,-export-dynamic -Wl,--no-as-needed     -Wl,-rpath,/home/essohanam/.rvm/rubies/ruby-3.1.2/lib -L/home/essohanam/.rvm/rubies/ruby-3.1.2/lib -lruby  -lm  -lc"
+/usr/bin/ld : /tmp/ccS6HfJX.o : dans la fonction « t » :
+/home/essohanam/MICROVERSE/Module 5/my-budget-app/vendor/bundle/ruby/3.1.0/gems/msgpack-1.7.2/ext/msgpack/conftest.c:17:(.text+0xb) : référence indéfinie vers « rb_hash_new_capa »
 collect2: error: ld returned 1 exit status
 checked program was:
 /* begin */
@@ -120,7 +128,7 @@ checked program was:
 
 have_func: checking for rb_proc_call_with_block() in ruby.h... -------------------- yes
 
-LD_LIBRARY_PATH=.:/usr/lib/x86_64-linux-gnu "x86_64-linux-gnu-gcc -o conftest -I/usr/include/x86_64-linux-gnu/ruby-3.1.0 -I/usr/include/ruby-3.1.0/ruby/backward -I/usr/include/ruby-3.1.0 -I. -Wdate-time -D_FORTIFY_SOURCE=2   -g -O2 -ffile-prefix-map=BUILDDIR=. -fstack-protector-strong -fstack-clash-protection -Wformat -Werror=format-security -fcf-protection -fdebug-prefix-map=BUILDDIR=/usr/src/ruby3.1-3.1.2-7ubuntu3 -fPIC conftest.c  -L. -L/usr/lib/x86_64-linux-gnu -L. -Wl,-Bsymbolic-functions -Wl,-z,relro -Wl,-z,now -fstack-protector-strong -rdynamic -Wl,-export-dynamic -Wl,--no-as-needed     -lruby-3.1  -lm  -lc"
+LD_LIBRARY_PATH=.:/home/essohanam/.rvm/rubies/ruby-3.1.2/lib "gcc -o conftest -I/home/essohanam/.rvm/rubies/ruby-3.1.2/include/ruby-3.1.0/x86_64-linux -I/home/essohanam/.rvm/rubies/ruby-3.1.2/include/ruby-3.1.0/ruby/backward -I/home/essohanam/.rvm/rubies/ruby-3.1.2/include/ruby-3.1.0 -I.    -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wdeprecated-declarations -Wduplicated-cond -Wimplicit-function-declaration -Wimplicit-int -Wmisleading-indentation -Wpointer-arith -Wwrite-strings -Wimplicit-fallthrough=0 -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-packed-bitfield-compat -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wsuggest-attribute=format -Wsuggest-attribute=noreturn -Wunused-variable -Wundef  -fPIC conftest.c  -L. -L/home/essohanam/.rvm/rubies/ruby-3.1.2/lib -Wl,-rpath,/home/essohanam/.rvm/rubies/ruby-3.1.2/lib -L. -fstack-protector-strong -rdynamic -Wl,-export-dynamic -Wl,--no-as-needed     -Wl,-rpath,/home/essohanam/.rvm/rubies/ruby-3.1.2/lib -L/home/essohanam/.rvm/rubies/ruby-3.1.2/lib -lruby  -lm  -lc"
 checked program was:
 /* begin */
  1: #include "ruby.h"
@@ -145,7 +153,7 @@ checked program was:
 
 block in append_cflags: checking for whether -fvisibility=hidden is accepted as CFLAGS... -------------------- yes
 
-LD_LIBRARY_PATH=.:/usr/lib/x86_64-linux-gnu "x86_64-linux-gnu-gcc -I/usr/include/x86_64-linux-gnu/ruby-3.1.0 -I/usr/include/ruby-3.1.0/ruby/backward -I/usr/include/ruby-3.1.0 -I. -Wdate-time -D_FORTIFY_SOURCE=2   -g -O2 -ffile-prefix-map=BUILDDIR=. -fstack-protector-strong -fstack-clash-protection -Wformat -Werror=format-security -fcf-protection -fdebug-prefix-map=BUILDDIR=/usr/src/ruby3.1-3.1.2-7ubuntu3 -fPIC  -fvisibility=hidden -Werror -c conftest.c"
+LD_LIBRARY_PATH=.:/home/essohanam/.rvm/rubies/ruby-3.1.2/lib "gcc -I/home/essohanam/.rvm/rubies/ruby-3.1.2/include/ruby-3.1.0/x86_64-linux -I/home/essohanam/.rvm/rubies/ruby-3.1.2/include/ruby-3.1.0/ruby/backward -I/home/essohanam/.rvm/rubies/ruby-3.1.2/include/ruby-3.1.0 -I.    -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wdeprecated-declarations -Wduplicated-cond -Wimplicit-function-declaration -Wimplicit-int -Wmisleading-indentation -Wpointer-arith -Wwrite-strings -Wimplicit-fallthrough=0 -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-packed-bitfield-compat -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wsuggest-attribute=format -Wsuggest-attribute=noreturn -Wunused-variable -Wundef  -fPIC  -fvisibility=hidden -Werror -c conftest.c"
 checked program was:
 /* begin */
 1: #include "ruby.h"
@@ -160,7 +168,7 @@ checked program was:
 
 block in append_cflags: checking for whether -I.. is accepted as CFLAGS... -------------------- yes
 
-LD_LIBRARY_PATH=.:/usr/lib/x86_64-linux-gnu "x86_64-linux-gnu-gcc -I/usr/include/x86_64-linux-gnu/ruby-3.1.0 -I/usr/include/ruby-3.1.0/ruby/backward -I/usr/include/ruby-3.1.0 -I. -Wdate-time -D_FORTIFY_SOURCE=2   -g -O2 -ffile-prefix-map=BUILDDIR=. -fstack-protector-strong -fstack-clash-protection -Wformat -Werror=format-security -fcf-protection -fdebug-prefix-map=BUILDDIR=/usr/src/ruby3.1-3.1.2-7ubuntu3 -fPIC -fvisibility=hidden  -I.. -Werror -c conftest.c"
+LD_LIBRARY_PATH=.:/home/essohanam/.rvm/rubies/ruby-3.1.2/lib "gcc -I/home/essohanam/.rvm/rubies/ruby-3.1.2/include/ruby-3.1.0/x86_64-linux -I/home/essohanam/.rvm/rubies/ruby-3.1.2/include/ruby-3.1.0/ruby/backward -I/home/essohanam/.rvm/rubies/ruby-3.1.2/include/ruby-3.1.0 -I.    -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wdeprecated-declarations -Wduplicated-cond -Wimplicit-function-declaration -Wimplicit-int -Wmisleading-indentation -Wpointer-arith -Wwrite-strings -Wimplicit-fallthrough=0 -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-packed-bitfield-compat -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wsuggest-attribute=format -Wsuggest-attribute=noreturn -Wunused-variable -Wundef  -fPIC -fvisibility=hidden  -I.. -Werror -c conftest.c"
 checked program was:
 /* begin */
 1: #include "ruby.h"
@@ -175,7 +183,7 @@ checked program was:
 
 block in append_cflags: checking for whether -Wall is accepted as CFLAGS... -------------------- yes
 
-LD_LIBRARY_PATH=.:/usr/lib/x86_64-linux-gnu "x86_64-linux-gnu-gcc -I/usr/include/x86_64-linux-gnu/ruby-3.1.0 -I/usr/include/ruby-3.1.0/ruby/backward -I/usr/include/ruby-3.1.0 -I. -Wdate-time -D_FORTIFY_SOURCE=2   -g -O2 -ffile-prefix-map=BUILDDIR=. -fstack-protector-strong -fstack-clash-protection -Wformat -Werror=format-security -fcf-protection -fdebug-prefix-map=BUILDDIR=/usr/src/ruby3.1-3.1.2-7ubuntu3 -fPIC -fvisibility=hidden -I..  -Wall -Werror -c conftest.c"
+LD_LIBRARY_PATH=.:/home/essohanam/.rvm/rubies/ruby-3.1.2/lib "gcc -I/home/essohanam/.rvm/rubies/ruby-3.1.2/include/ruby-3.1.0/x86_64-linux -I/home/essohanam/.rvm/rubies/ruby-3.1.2/include/ruby-3.1.0/ruby/backward -I/home/essohanam/.rvm/rubies/ruby-3.1.2/include/ruby-3.1.0 -I.    -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wdeprecated-declarations -Wduplicated-cond -Wimplicit-function-declaration -Wimplicit-int -Wmisleading-indentation -Wpointer-arith -Wwrite-strings -Wimplicit-fallthrough=0 -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-packed-bitfield-compat -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wsuggest-attribute=format -Wsuggest-attribute=noreturn -Wunused-variable -Wundef  -fPIC -fvisibility=hidden -I..  -Wall -Werror -c conftest.c"
 checked program was:
 /* begin */
 1: #include "ruby.h"
@@ -190,7 +198,7 @@ checked program was:
 
 block in append_cflags: checking for whether -O3 is accepted as CFLAGS... -------------------- yes
 
-LD_LIBRARY_PATH=.:/usr/lib/x86_64-linux-gnu "x86_64-linux-gnu-gcc -I/usr/include/x86_64-linux-gnu/ruby-3.1.0 -I/usr/include/ruby-3.1.0/ruby/backward -I/usr/include/ruby-3.1.0 -I. -Wdate-time -D_FORTIFY_SOURCE=2   -g -O2 -ffile-prefix-map=BUILDDIR=. -fstack-protector-strong -fstack-clash-protection -Wformat -Werror=format-security -fcf-protection -fdebug-prefix-map=BUILDDIR=/usr/src/ruby3.1-3.1.2-7ubuntu3 -fPIC -fvisibility=hidden -I.. -Wall  -O3 -Werror -c conftest.c"
+LD_LIBRARY_PATH=.:/home/essohanam/.rvm/rubies/ruby-3.1.2/lib "gcc -I/home/essohanam/.rvm/rubies/ruby-3.1.2/include/ruby-3.1.0/x86_64-linux -I/home/essohanam/.rvm/rubies/ruby-3.1.2/include/ruby-3.1.0/ruby/backward -I/home/essohanam/.rvm/rubies/ruby-3.1.2/include/ruby-3.1.0 -I.    -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wdeprecated-declarations -Wduplicated-cond -Wimplicit-function-declaration -Wimplicit-int -Wmisleading-indentation -Wpointer-arith -Wwrite-strings -Wimplicit-fallthrough=0 -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-packed-bitfield-compat -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wsuggest-attribute=format -Wsuggest-attribute=noreturn -Wunused-variable -Wundef  -fPIC -fvisibility=hidden -I.. -Wall  -O3 -Werror -c conftest.c"
 checked program was:
 /* begin */
 1: #include "ruby.h"
@@ -205,7 +213,7 @@ checked program was:
 
 block in append_cflags: checking for whether -std=gnu99 is accepted as CFLAGS... -------------------- yes
 
-LD_LIBRARY_PATH=.:/usr/lib/x86_64-linux-gnu "x86_64-linux-gnu-gcc -I/usr/include/x86_64-linux-gnu/ruby-3.1.0 -I/usr/include/ruby-3.1.0/ruby/backward -I/usr/include/ruby-3.1.0 -I. -Wdate-time -D_FORTIFY_SOURCE=2   -g -O2 -ffile-prefix-map=BUILDDIR=. -fstack-protector-strong -fstack-clash-protection -Wformat -Werror=format-security -fcf-protection -fdebug-prefix-map=BUILDDIR=/usr/src/ruby3.1-3.1.2-7ubuntu3 -fPIC -fvisibility=hidden -I.. -Wall -O3  -std=gnu99 -Werror -c conftest.c"
+LD_LIBRARY_PATH=.:/home/essohanam/.rvm/rubies/ruby-3.1.2/lib "gcc -I/home/essohanam/.rvm/rubies/ruby-3.1.2/include/ruby-3.1.0/x86_64-linux -I/home/essohanam/.rvm/rubies/ruby-3.1.2/include/ruby-3.1.0/ruby/backward -I/home/essohanam/.rvm/rubies/ruby-3.1.2/include/ruby-3.1.0 -I.    -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wdeprecated-declarations -Wduplicated-cond -Wimplicit-function-declaration -Wimplicit-int -Wmisleading-indentation -Wpointer-arith -Wwrite-strings -Wimplicit-fallthrough=0 -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-packed-bitfield-compat -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wsuggest-attribute=format -Wsuggest-attribute=noreturn -Wunused-variable -Wundef  -fPIC -fvisibility=hidden -I.. -Wall -O3  -std=gnu99 -Werror -c conftest.c"
 checked program was:
 /* begin */
 1: #include "ruby.h"
@@ -220,7 +228,7 @@ checked program was:
 
 block in append_cflags: checking for whether -ggdb3 is accepted as CFLAGS... -------------------- yes
 
-LD_LIBRARY_PATH=.:/usr/lib/x86_64-linux-gnu "x86_64-linux-gnu-gcc -I/usr/include/x86_64-linux-gnu/ruby-3.1.0 -I/usr/include/ruby-3.1.0/ruby/backward -I/usr/include/ruby-3.1.0 -I. -Wdate-time -D_FORTIFY_SOURCE=2   -g -O2 -ffile-prefix-map=BUILDDIR=. -fstack-protector-strong -fstack-clash-protection -Wformat -Werror=format-security -fcf-protection -fdebug-prefix-map=BUILDDIR=/usr/src/ruby3.1-3.1.2-7ubuntu3 -fPIC -fvisibility=hidden -I.. -Wall -O3 -std=gnu99  -ggdb3 -Werror -c conftest.c"
+LD_LIBRARY_PATH=.:/home/essohanam/.rvm/rubies/ruby-3.1.2/lib "gcc -I/home/essohanam/.rvm/rubies/ruby-3.1.2/include/ruby-3.1.0/x86_64-linux -I/home/essohanam/.rvm/rubies/ruby-3.1.2/include/ruby-3.1.0/ruby/backward -I/home/essohanam/.rvm/rubies/ruby-3.1.2/include/ruby-3.1.0 -I.    -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wdeprecated-declarations -Wduplicated-cond -Wimplicit-function-declaration -Wimplicit-int -Wmisleading-indentation -Wpointer-arith -Wwrite-strings -Wimplicit-fallthrough=0 -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-packed-bitfield-compat -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wsuggest-attribute=format -Wsuggest-attribute=noreturn -Wunused-variable -Wundef  -fPIC -fvisibility=hidden -I.. -Wall -O3 -std=gnu99  -ggdb3 -Werror -c conftest.c"
 checked program was:
 /* begin */
 1: #include "ruby.h"
@@ -235,7 +243,7 @@ checked program was:
 
 block in append_cflags: checking for whether -DHASH_ASET_DEDUPE=1 is accepted as CFLAGS... -------------------- yes
 
-LD_LIBRARY_PATH=.:/usr/lib/x86_64-linux-gnu "x86_64-linux-gnu-gcc -I/usr/include/x86_64-linux-gnu/ruby-3.1.0 -I/usr/include/ruby-3.1.0/ruby/backward -I/usr/include/ruby-3.1.0 -I. -Wdate-time -D_FORTIFY_SOURCE=2   -g -O2 -ffile-prefix-map=BUILDDIR=. -fstack-protector-strong -fstack-clash-protection -Wformat -Werror=format-security -fcf-protection -fdebug-prefix-map=BUILDDIR=/usr/src/ruby3.1-3.1.2-7ubuntu3 -fPIC -fvisibility=hidden -I.. -Wall -O3 -std=gnu99 -ggdb3  -DHASH_ASET_DEDUPE=1 -Werror -c conftest.c"
+LD_LIBRARY_PATH=.:/home/essohanam/.rvm/rubies/ruby-3.1.2/lib "gcc -I/home/essohanam/.rvm/rubies/ruby-3.1.2/include/ruby-3.1.0/x86_64-linux -I/home/essohanam/.rvm/rubies/ruby-3.1.2/include/ruby-3.1.0/ruby/backward -I/home/essohanam/.rvm/rubies/ruby-3.1.2/include/ruby-3.1.0 -I.    -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wdeprecated-declarations -Wduplicated-cond -Wimplicit-function-declaration -Wimplicit-int -Wmisleading-indentation -Wpointer-arith -Wwrite-strings -Wimplicit-fallthrough=0 -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-packed-bitfield-compat -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wsuggest-attribute=format -Wsuggest-attribute=noreturn -Wunused-variable -Wundef  -fPIC -fvisibility=hidden -I.. -Wall -O3 -std=gnu99 -ggdb3  -DHASH_ASET_DEDUPE=1 -Werror -c conftest.c"
 checked program was:
 /* begin */
 1: #include "ruby.h"
@@ -250,7 +258,7 @@ checked program was:
 
 block in append_cflags: checking for whether -DSTR_UMINUS_DEDUPE_FROZEN=1 is accepted as CFLAGS... -------------------- yes
 
-LD_LIBRARY_PATH=.:/usr/lib/x86_64-linux-gnu "x86_64-linux-gnu-gcc -I/usr/include/x86_64-linux-gnu/ruby-3.1.0 -I/usr/include/ruby-3.1.0/ruby/backward -I/usr/include/ruby-3.1.0 -I. -Wdate-time -D_FORTIFY_SOURCE=2   -g -O2 -ffile-prefix-map=BUILDDIR=. -fstack-protector-strong -fstack-clash-protection -Wformat -Werror=format-security -fcf-protection -fdebug-prefix-map=BUILDDIR=/usr/src/ruby3.1-3.1.2-7ubuntu3 -fPIC -fvisibility=hidden -I.. -Wall -O3 -std=gnu99 -ggdb3 -DHASH_ASET_DEDUPE=1  -DSTR_UMINUS_DEDUPE_FROZEN=1 -Werror -c conftest.c"
+LD_LIBRARY_PATH=.:/home/essohanam/.rvm/rubies/ruby-3.1.2/lib "gcc -I/home/essohanam/.rvm/rubies/ruby-3.1.2/include/ruby-3.1.0/x86_64-linux -I/home/essohanam/.rvm/rubies/ruby-3.1.2/include/ruby-3.1.0/ruby/backward -I/home/essohanam/.rvm/rubies/ruby-3.1.2/include/ruby-3.1.0 -I.    -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wdeprecated-declarations -Wduplicated-cond -Wimplicit-function-declaration -Wimplicit-int -Wmisleading-indentation -Wpointer-arith -Wwrite-strings -Wimplicit-fallthrough=0 -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-packed-bitfield-compat -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wsuggest-attribute=format -Wsuggest-attribute=noreturn -Wunused-variable -Wundef  -fPIC -fvisibility=hidden -I.. -Wall -O3 -std=gnu99 -ggdb3 -DHASH_ASET_DEDUPE=1  -DSTR_UMINUS_DEDUPE_FROZEN=1 -Werror -c conftest.c"
 checked program was:
 /* begin */
 1: #include "ruby.h"

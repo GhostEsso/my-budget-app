@@ -4,7 +4,7 @@
 
 Gem::Specification.new do |s|
   s.name = "io-console".freeze
-  s.version = "0.6.0"
+  s.version = "0.6.0".freeze
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0".freeze) if s.respond_to? :required_rubygems_version=
   s.metadata = { "source_code_url" => "https://github.com/ruby/io-console" } if s.respond_to? :metadata=
@@ -18,8 +18,8 @@ Gem::Specification.new do |s|
   s.homepage = "https://github.com/ruby/io-console".freeze
   s.licenses = ["Ruby".freeze, "BSD-2-Clause".freeze]
   s.required_ruby_version = Gem::Requirement.new(">= 2.6.0".freeze)
-  s.rubygems_version = "3.3.15".freeze
+  s.rubygems_version = "3.4.0.dev".freeze
   s.summary = "Console interface".freeze
 
-  s.installed_by_version = "3.3.15" if s.respond_to? :installed_by_version
+  s.installed_by_version = "3.5.13".freeze if s.respond_to? :installed_by_version
 end

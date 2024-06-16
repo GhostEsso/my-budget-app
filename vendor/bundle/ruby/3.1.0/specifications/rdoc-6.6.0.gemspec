@@ -3,7 +3,7 @@
 
 Gem::Specification.new do |s|
   s.name = "rdoc".freeze
-  s.version = "6.6.0"
+  s.version = "6.6.0".freeze
 
   s.required_rubygems_version = Gem::Requirement.new(">= 2.2".freeze) if s.respond_to? :required_rubygems_version=
   s.metadata = { "changelog_uri" => "https://github.com/ruby/rdoc/releases", "homepage_uri" => "https://ruby.github.io/rdoc", "source_code_uri" => "https://github.com/ruby/rdoc" } if s.respond_to? :metadata=
@@ -20,18 +20,12 @@ Gem::Specification.new do |s|
   s.licenses = ["Ruby".freeze]
   s.rdoc_options = ["--main".freeze, "README.rdoc".freeze]
   s.required_ruby_version = Gem::Requirement.new(">= 2.6.0".freeze)
-  s.rubygems_version = "3.3.15".freeze
+  s.rubygems_version = "3.5.0.dev".freeze
   s.summary = "RDoc produces HTML and command-line documentation for Ruby projects".freeze
 
-  s.installed_by_version = "3.3.15" if s.respond_to? :installed_by_version
+  s.installed_by_version = "3.5.13".freeze if s.respond_to? :installed_by_version
 
-  if s.respond_to? :specification_version then
-    s.specification_version = 4
-  end
+  s.specification_version = 4
 
-  if s.respond_to? :add_runtime_dependency then
-    s.add_runtime_dependency(%q<psych>.freeze, [">= 4.0.0"])
-  else
-    s.add_dependency(%q<psych>.freeze, [">= 4.0.0"])
-  end
+  s.add_runtime_dependency(%q<psych>.freeze, [">= 4.0.0".freeze])
 end

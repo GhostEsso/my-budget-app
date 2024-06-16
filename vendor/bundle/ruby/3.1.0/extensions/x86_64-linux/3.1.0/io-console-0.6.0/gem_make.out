@@ -1,5 +1,5 @@
 current directory: /home/essohanam/MICROVERSE/Module 5/my-budget-app/vendor/bundle/ruby/3.1.0/gems/io-console-0.6.0/ext/io/console
-/usr/bin/ruby3.1 -I /usr/lib/ruby/vendor_ruby -r ./siteconf20231119-128975-2q0zzi.rb extconf.rb
+/home/essohanam/.rvm/rubies/ruby-3.1.2/bin/ruby extconf.rb
 checking for termios.h... yes
 checking for cfmakeraw() in termios.h... yes
 checking for sys/ioctl.h... yes
@@ -7,13 +7,16 @@ checking for HAVE_RUBY_FIBER_SCHEDULER_H... yes
 creating Makefile
 
 current directory: /home/essohanam/MICROVERSE/Module 5/my-budget-app/vendor/bundle/ruby/3.1.0/gems/io-console-0.6.0/ext/io/console
-make DESTDIR\= clean
+make DESTDIR\= sitearchdir\=./.gem.20240616-73748-o77d16 sitelibdir\=./.gem.20240616-73748-o77d16 clean
 
 current directory: /home/essohanam/MICROVERSE/Module 5/my-budget-app/vendor/bundle/ruby/3.1.0/gems/io-console-0.6.0/ext/io/console
-make DESTDIR\=
+make DESTDIR\= sitearchdir\=./.gem.20240616-73748-o77d16 sitelibdir\=./.gem.20240616-73748-o77d16
 compiling console.c
 linking shared-object io/console.so
 
 current directory: /home/essohanam/MICROVERSE/Module 5/my-budget-app/vendor/bundle/ruby/3.1.0/gems/io-console-0.6.0/ext/io/console
-make DESTDIR\= install
-/usr/bin/install -c -m 0755 console.so ./.gem.20231119-128975-h4cgoz/io
+make DESTDIR\= sitearchdir\=./.gem.20240616-73748-o77d16 sitelibdir\=./.gem.20240616-73748-o77d16 install
+/usr/bin/install -c -m 0755 console.so ./.gem.20240616-73748-o77d16/io
+
+current directory: /home/essohanam/MICROVERSE/Module 5/my-budget-app/vendor/bundle/ruby/3.1.0/gems/io-console-0.6.0/ext/io/console
+make DESTDIR\= sitearchdir\=./.gem.20240616-73748-o77d16 sitelibdir\=./.gem.20240616-73748-o77d16 clean

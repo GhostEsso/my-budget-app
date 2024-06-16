@@ -1,5 +1,5 @@
 current directory: /home/essohanam/MICROVERSE/Module 5/my-budget-app/vendor/bundle/ruby/3.1.0/gems/msgpack-1.7.2/ext/msgpack
-/usr/bin/ruby3.1 -I /usr/lib/ruby/vendor_ruby -r ./siteconf20231119-128975-sciu4v.rb extconf.rb
+/home/essohanam/.rvm/rubies/ruby-3.1.2/bin/ruby extconf.rb
 checking for rb_enc_interned_str() in ruby.h... yes
 checking for rb_hash_new_capa() in ruby.h... no
 checking for rb_proc_call_with_block() in ruby.h... yes
@@ -14,10 +14,10 @@ checking for whether -DSTR_UMINUS_DEDUPE_FROZEN=1 is accepted as CFLAGS... yes
 creating Makefile
 
 current directory: /home/essohanam/MICROVERSE/Module 5/my-budget-app/vendor/bundle/ruby/3.1.0/gems/msgpack-1.7.2/ext/msgpack
-make DESTDIR\= clean
+make DESTDIR\= sitearchdir\=./.gem.20240616-73748-rr7r4o sitelibdir\=./.gem.20240616-73748-rr7r4o clean
 
 current directory: /home/essohanam/MICROVERSE/Module 5/my-budget-app/vendor/bundle/ruby/3.1.0/gems/msgpack-1.7.2/ext/msgpack
-make DESTDIR\=
+make DESTDIR\= sitearchdir\=./.gem.20240616-73748-rr7r4o sitelibdir\=./.gem.20240616-73748-rr7r4o
 compiling buffer.c
 compiling buffer_class.c
 compiling extension_value_class.c
@@ -33,5 +33,8 @@ compiling unpacker_ext_registry.c
 linking shared-object msgpack/msgpack.so
 
 current directory: /home/essohanam/MICROVERSE/Module 5/my-budget-app/vendor/bundle/ruby/3.1.0/gems/msgpack-1.7.2/ext/msgpack
-make DESTDIR\= install
-/usr/bin/install -c -m 0755 msgpack.so ./.gem.20231119-128975-j0bwx4/msgpack
+make DESTDIR\= sitearchdir\=./.gem.20240616-73748-rr7r4o sitelibdir\=./.gem.20240616-73748-rr7r4o install
+/usr/bin/install -c -m 0755 msgpack.so ./.gem.20240616-73748-rr7r4o/msgpack
+
+current directory: /home/essohanam/MICROVERSE/Module 5/my-budget-app/vendor/bundle/ruby/3.1.0/gems/msgpack-1.7.2/ext/msgpack
+make DESTDIR\= sitearchdir\=./.gem.20240616-73748-rr7r4o sitelibdir\=./.gem.20240616-73748-rr7r4o clean

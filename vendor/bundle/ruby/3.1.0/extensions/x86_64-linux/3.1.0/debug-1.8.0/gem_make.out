@@ -1,16 +1,19 @@
 current directory: /home/essohanam/MICROVERSE/Module 5/my-budget-app/vendor/bundle/ruby/3.1.0/gems/debug-1.8.0/ext/debug
-/usr/bin/ruby3.1 -I /usr/lib/ruby/vendor_ruby -r ./siteconf20231119-128975-uubfof.rb extconf.rb
+/home/essohanam/.rvm/rubies/ruby-3.1.2/bin/ruby extconf.rb
 creating Makefile
 
 current directory: /home/essohanam/MICROVERSE/Module 5/my-budget-app/vendor/bundle/ruby/3.1.0/gems/debug-1.8.0/ext/debug
-make DESTDIR\= clean
+make DESTDIR\= sitearchdir\=./.gem.20240616-73748-8osjjt sitelibdir\=./.gem.20240616-73748-8osjjt clean
 
 current directory: /home/essohanam/MICROVERSE/Module 5/my-budget-app/vendor/bundle/ruby/3.1.0/gems/debug-1.8.0/ext/debug
-make DESTDIR\=
+make DESTDIR\= sitearchdir\=./.gem.20240616-73748-8osjjt sitelibdir\=./.gem.20240616-73748-8osjjt
 compiling debug.c
 compiling iseq_collector.c
 linking shared-object debug/debug.so
 
 current directory: /home/essohanam/MICROVERSE/Module 5/my-budget-app/vendor/bundle/ruby/3.1.0/gems/debug-1.8.0/ext/debug
-make DESTDIR\= install
-/usr/bin/install -c -m 0755 debug.so ./.gem.20231119-128975-xtkhc9/debug
+make DESTDIR\= sitearchdir\=./.gem.20240616-73748-8osjjt sitelibdir\=./.gem.20240616-73748-8osjjt install
+/usr/bin/install -c -m 0755 debug.so ./.gem.20240616-73748-8osjjt/debug
+
+current directory: /home/essohanam/MICROVERSE/Module 5/my-budget-app/vendor/bundle/ruby/3.1.0/gems/debug-1.8.0/ext/debug
+make DESTDIR\= sitearchdir\=./.gem.20240616-73748-8osjjt sitelibdir\=./.gem.20240616-73748-8osjjt clean

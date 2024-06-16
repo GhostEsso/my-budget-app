@@ -3,7 +3,7 @@
 
 Gem::Specification.new do |s|
   s.name = "timeout".freeze
-  s.version = "0.4.1"
+  s.version = "0.4.1".freeze
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0".freeze) if s.respond_to? :required_rubygems_version=
   s.metadata = { "homepage_uri" => "https://github.com/ruby/timeout", "source_code_uri" => "https://github.com/ruby/timeout" } if s.respond_to? :metadata=
@@ -15,8 +15,8 @@ Gem::Specification.new do |s|
   s.homepage = "https://github.com/ruby/timeout".freeze
   s.licenses = ["Ruby".freeze, "BSD-2-Clause".freeze]
   s.required_ruby_version = Gem::Requirement.new(">= 2.6.0".freeze)
-  s.rubygems_version = "3.3.15".freeze
+  s.rubygems_version = "3.5.0.dev".freeze
   s.summary = "Auto-terminate potentially long-running operations in Ruby.".freeze
 
-  s.installed_by_version = "3.3.15" if s.respond_to? :installed_by_version
+  s.installed_by_version = "3.5.13".freeze if s.respond_to? :installed_by_version
 end

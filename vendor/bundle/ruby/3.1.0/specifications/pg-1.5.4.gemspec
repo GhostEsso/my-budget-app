@@ -4,7 +4,7 @@
 
 Gem::Specification.new do |s|
   s.name = "pg".freeze
-  s.version = "1.5.4"
+  s.version = "1.5.4".freeze
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0".freeze) if s.respond_to? :required_rubygems_version=
   s.metadata = { "changelog_uri" => "https://github.com/ged/ruby-pg/blob/master/History.md", "documentation_uri" => "http://deveiate.org/code/pg", "homepage_uri" => "https://github.com/ged/ruby-pg", "source_code_uri" => "https://github.com/ged/ruby-pg" } if s.respond_to? :metadata=
@@ -21,8 +21,8 @@ Gem::Specification.new do |s|
   s.licenses = ["BSD-2-Clause".freeze]
   s.rdoc_options = ["--main".freeze, "README.md".freeze, "--title".freeze, "PG: The Ruby PostgreSQL Driver".freeze]
   s.required_ruby_version = Gem::Requirement.new(">= 2.5".freeze)
-  s.rubygems_version = "3.3.15".freeze
+  s.rubygems_version = "3.4.15".freeze
   s.summary = "Pg is the Ruby interface to the PostgreSQL RDBMS".freeze
 
-  s.installed_by_version = "3.3.15" if s.respond_to? :installed_by_version
+  s.installed_by_version = "3.5.13".freeze if s.respond_to? :installed_by_version
 end

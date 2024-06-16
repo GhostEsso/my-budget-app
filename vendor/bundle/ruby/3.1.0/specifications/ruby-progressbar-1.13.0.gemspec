@@ -3,7 +3,7 @@
 
 Gem::Specification.new do |s|
   s.name = "ruby-progressbar".freeze
-  s.version = "1.13.0"
+  s.version = "1.13.0".freeze
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0".freeze) if s.respond_to? :required_rubygems_version=
   s.metadata = { "bug_tracker_uri" => "https://github.com/jfelchner/ruby-progressbar/issues", "changelog_uri" => "https://github.com/jfelchner/ruby-progressbar/blob/master/CHANGELOG.md", "documentation_uri" => "https://github.com/jfelchner/ruby-progressbar/tree/releases/v1.13.0", "homepage_uri" => "https://github.com/jfelchner/ruby-progressbar", "source_code_uri" => "https://github.com/jfelchner/ruby-progressbar", "wiki_uri" => "https://github.com/jfelchner/ruby-progressbar/wiki" } if s.respond_to? :metadata=
@@ -15,24 +15,15 @@ Gem::Specification.new do |s|
   s.email = ["support@thekompanee.com".freeze]
   s.homepage = "https://github.com/jfelchner/ruby-progressbar".freeze
   s.licenses = ["MIT".freeze]
-  s.rubygems_version = "3.3.15".freeze
+  s.rubygems_version = "3.1.6".freeze
   s.summary = "Ruby/ProgressBar is a flexible text progress bar library for Ruby.".freeze
 
-  s.installed_by_version = "3.3.15" if s.respond_to? :installed_by_version
+  s.installed_by_version = "3.5.13".freeze if s.respond_to? :installed_by_version
 
-  if s.respond_to? :specification_version then
-    s.specification_version = 4
-  end
+  s.specification_version = 4
 
-  if s.respond_to? :add_runtime_dependency then
-    s.add_development_dependency(%q<rspec>.freeze, ["~> 3.7"])
-    s.add_development_dependency(%q<rspectacular>.freeze, ["~> 0.70.6"])
-    s.add_development_dependency(%q<fuubar>.freeze, ["~> 2.3"])
-    s.add_development_dependency(%q<timecop>.freeze, ["~> 0.9"])
-  else
-    s.add_dependency(%q<rspec>.freeze, ["~> 3.7"])
-    s.add_dependency(%q<rspectacular>.freeze, ["~> 0.70.6"])
-    s.add_dependency(%q<fuubar>.freeze, ["~> 2.3"])
-    s.add_dependency(%q<timecop>.freeze, ["~> 0.9"])
-  end
+  s.add_development_dependency(%q<rspec>.freeze, ["~> 3.7".freeze])
+  s.add_development_dependency(%q<rspectacular>.freeze, ["~> 0.70.6".freeze])
+  s.add_development_dependency(%q<fuubar>.freeze, ["~> 2.3".freeze])
+  s.add_development_dependency(%q<timecop>.freeze, ["~> 0.9".freeze])
 end

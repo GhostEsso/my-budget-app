@@ -4,7 +4,7 @@
 
 Gem::Specification.new do |s|
   s.name = "bigdecimal".freeze
-  s.version = "3.1.4"
+  s.version = "3.1.4".freeze
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0".freeze) if s.respond_to? :required_rubygems_version=
   s.require_paths = ["lib".freeze]
@@ -17,8 +17,8 @@ Gem::Specification.new do |s|
   s.homepage = "https://github.com/ruby/bigdecimal".freeze
   s.licenses = ["Ruby".freeze, "BSD-2-Clause".freeze]
   s.required_ruby_version = Gem::Requirement.new(">= 2.5.0".freeze)
-  s.rubygems_version = "3.3.15".freeze
+  s.rubygems_version = "3.3.13".freeze
   s.summary = "Arbitrary-precision decimal floating-point number library.".freeze
 
-  s.installed_by_version = "3.3.15" if s.respond_to? :installed_by_version
+  s.installed_by_version = "3.5.13".freeze if s.respond_to? :installed_by_version
 end

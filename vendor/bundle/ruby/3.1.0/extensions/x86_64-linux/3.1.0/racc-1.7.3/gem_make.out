@@ -1,15 +1,18 @@
 current directory: /home/essohanam/MICROVERSE/Module 5/my-budget-app/vendor/bundle/ruby/3.1.0/gems/racc-1.7.3/ext/racc/cparse
-/usr/bin/ruby3.1 -I /usr/lib/ruby/vendor_ruby -r ./siteconf20231119-128975-jy0rps.rb extconf.rb
+/home/essohanam/.rvm/rubies/ruby-3.1.2/bin/ruby extconf.rb
 creating Makefile
 
 current directory: /home/essohanam/MICROVERSE/Module 5/my-budget-app/vendor/bundle/ruby/3.1.0/gems/racc-1.7.3/ext/racc/cparse
-make DESTDIR\= clean
+make DESTDIR\= sitearchdir\=./.gem.20240616-73748-ys7z6l sitelibdir\=./.gem.20240616-73748-ys7z6l clean
 
 current directory: /home/essohanam/MICROVERSE/Module 5/my-budget-app/vendor/bundle/ruby/3.1.0/gems/racc-1.7.3/ext/racc/cparse
-make DESTDIR\=
+make DESTDIR\= sitearchdir\=./.gem.20240616-73748-ys7z6l sitelibdir\=./.gem.20240616-73748-ys7z6l
 compiling cparse.c
 linking shared-object racc/cparse.so
 
 current directory: /home/essohanam/MICROVERSE/Module 5/my-budget-app/vendor/bundle/ruby/3.1.0/gems/racc-1.7.3/ext/racc/cparse
-make DESTDIR\= install
-/usr/bin/install -c -m 0755 cparse.so ./.gem.20231119-128975-daf44a/racc
+make DESTDIR\= sitearchdir\=./.gem.20240616-73748-ys7z6l sitelibdir\=./.gem.20240616-73748-ys7z6l install
+/usr/bin/install -c -m 0755 cparse.so ./.gem.20240616-73748-ys7z6l/racc
+
+current directory: /home/essohanam/MICROVERSE/Module 5/my-budget-app/vendor/bundle/ruby/3.1.0/gems/racc-1.7.3/ext/racc/cparse
+make DESTDIR\= sitearchdir\=./.gem.20240616-73748-ys7z6l sitelibdir\=./.gem.20240616-73748-ys7z6l clean

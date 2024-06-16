@@ -3,7 +3,7 @@
 
 Gem::Specification.new do |s|
   s.name = "regexp_parser".freeze
-  s.version = "2.8.2"
+  s.version = "2.8.2".freeze
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0".freeze) if s.respond_to? :required_rubygems_version=
   s.metadata = { "bug_tracker_uri" => "https://github.com/ammar/regexp_parser/issues", "changelog_uri" => "https://github.com/ammar/regexp_parser/blob/master/CHANGELOG.md", "homepage_uri" => "https://github.com/ammar/regexp_parser", "source_code_uri" => "https://github.com/ammar/regexp_parser", "wiki_uri" => "https://github.com/ammar/regexp_parser/wiki" } if s.respond_to? :metadata=
@@ -15,8 +15,8 @@ Gem::Specification.new do |s|
   s.homepage = "https://github.com/ammar/regexp_parser".freeze
   s.licenses = ["MIT".freeze]
   s.required_ruby_version = Gem::Requirement.new(">= 2.0.0".freeze)
-  s.rubygems_version = "3.3.15".freeze
+  s.rubygems_version = "3.5.0.dev".freeze
   s.summary = "Scanner, lexer, parser for ruby's regular expressions".freeze
 
-  s.installed_by_version = "3.3.15" if s.respond_to? :installed_by_version
+  s.installed_by_version = "3.5.13".freeze if s.respond_to? :installed_by_version
 end
